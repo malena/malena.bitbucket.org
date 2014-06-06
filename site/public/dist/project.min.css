@@ -1,4 +1,6 @@
 *{margin:0;padding:0}
+a{color:#aca8a8;text-decoration:none}
+a:hover{color:#5a5a5a}
 body{background-color:#fff;font-family:'Roboto',sans-serif;font-size:16px}
 .splash{margin:2em auto;width:95%;}
 .splash p{font-size:2em;font-weight:bold}

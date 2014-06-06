@@ -1,3 +1,3 @@
-$(function() {
-    console.log( "ready!" );
-});
+var mandrade = angular.module('mandrade', []);
+
+
