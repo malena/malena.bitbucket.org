@@ -7,8 +7,8 @@ html
 		link(type="text/css", rel="stylesheet", href="public/dist/project.min.css")
 
 	body(ng-app="mandrade")
-		.splash
-			p Hello!
+		.panel.splash
+			h2 Hello!
 			p My name is Malena Andrade. I work at <a href="http://www.igniter.com">Igniter</a> as a Web Developer, doing all sorts of awesome. I am currently revamping this website so stay tuned!!
 
 			.social-icons
@@ -19,9 +19,32 @@ html
 				a.github(href="https://github.com/malena") GitHub
 				a.instagram(href="http://instagram.com/malena_andrade") Instagram
 
+		.panel.projects
+			h2 Current Projects
+
+			.box
+				h3 Hangman
+
+			.box
+				h3 Training Guide 
+
+		.panel.skills
+			h2 Skills
+			p Ultimately my goal is to create beautiful and intuitive interfaces maintaining integrity with today’s web standards. 
+
+			h3 HTML 
+			p Experience writing semantic HTML5, as well as Jade.
+
+			h3 CSS 
+			p Experience with LESS, Stylus, Bootstrap, Semantic UI.
+
+			h3 JAVASCRIPT 
+			p Experience writing javascript as well as using jQuery, Backbone, Angular, Node and configuring Grunt tasks.
+
+
 
 		script(src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js")
 		script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.js")
 		script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular-resource.js")
-		script(src="public/dist/project.min.js")
 		script(src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.8/TweenMax.min.js")
+		script(src="public/dist/project.min.js")
