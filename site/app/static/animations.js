@@ -36,7 +36,7 @@ Animations.prototype.splashPage = function(){
 			        {css:{bottom: '900px'},
 			    	ease:Back.easeOut}),
 		      	TweenMax.to(this.splash_panel, .7,
-		      		{css:{height: -600}})
+		      		{css:{height: -800}})
 			]),
 	  	1000 // scroll duration of tween
 	);
@@ -44,16 +44,23 @@ Animations.prototype.splashPage = function(){
 
 // PROJECTS PAGE ANIMATIONS 
 Animations.prototype.projectsPage = function(){
+	/*
+	TweenMax.fromTo(this.projects, 1, 
+        {css:{opacity:0}}, 
+        {css:{opacity:1, scale: 10}, immediateRender:true}),
+    */
+
 	this.controller.addTween('#projects',
 	  	(new TimelineLite())
 	    	.append([
-		    	TweenMax.fromTo(this.projects, 1, 
-			        {css:{opacity:0}, immediateRender:true}, 
-			        {css:{opacity:1, scale: 2}}),
+		    	TweenMax.fromTo(this.projects, .4, 
+			        {css:{opacity:0}}, 
+			        {css:{opacity:1, scale: 10}, immediateRender:true}),
 		      	TweenMax.fromTo(this.project_tagline, 1, 
 			        {css:{top: 500}, immediateRender:true}, 
 			        {css:{top: -1250}})
 			]),
-	  	1000 // scroll duration of tween
+	  	1000, // scroll duration of tween
+	  	200
 	);	
 };
