@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 				livereload: true,
 			},
 			scripts: {
-				files: ['app/static/project.js'],
+				files: ['app/static/*.js'],
 				tasks: ['uglify'],
 				options: {
 					spawn: false,
