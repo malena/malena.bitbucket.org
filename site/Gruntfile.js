@@ -34,7 +34,12 @@ module.exports = function(grunt) {
 
 		uglify : {
 			build: {
-				src: ['app/static/project.js', 'public/libs/js/*.js'],
+				src: [
+					'app/static/scroll.js', 
+					'app/static/animations.js', 
+					'app/static/project.js', 
+					'public/libs/js/*.js'
+				],
 				dest: 'public/dist/project.min.js' 
 			}
 		},
