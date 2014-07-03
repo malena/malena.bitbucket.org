@@ -2,6 +2,17 @@
 	margin: 0
 	padding: 0
 
+html
+	height: 100%
+
+body
+	margin: 0
+	padding: 0
+	height: 100%
+	background-color: #fff
+	font-family: 'Roboto', sans-serif
+	font-size: 16px
+
 a 
 	color: #ACA8A8
 	text-decoration: none
@@ -9,18 +20,45 @@ a
 a:hover
 	color: #5A5A5A
 
-body
-	background-color: #fff
-	font-family: 'Roboto', sans-serif
-	font-size: 16px
+ul
+	li 
+		list-style-position: inside
+		padding: 0
+
+.panel
+	margin: auto
+	width: 95%
+	height: 100%
+	border: solid 1px red
+
+
 
 .splash
-	margin: 2em auto
-	width: 95%
+	padding: 2em 0
 
 	p
 		font-size: 2em
 		font-weight: bold
+
+.projects
+	.projects-container
+		width: 100%
+		display: block
+		margin: auto auto
+		text-align: center
+	.box
+		display: inline-block
+		border: solid 1px black
+	h2
+		text-align: center
+
+.skills
+	h2 
+		text-align: center
+	.resume	
+		margin: auto auto
+		width: 80%
+		border: solid 1px #eee
 
 .social-icons
 	margin: 1em auto
@@ -48,4 +86,6 @@ body
 .github
 	background-image: url('images/github.png')
 
-
+img
+	position: relative
+	float: left 

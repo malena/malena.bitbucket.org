@@ -7,9 +7,11 @@ html
 		link(type="text/css", rel="stylesheet", href="public/dist/project.min.css")
 
 	body(ng-app="mandrade")
-		.panel.splash
-			h2 Hello!
-			p My name is Malena Andrade. I work at <a href="http://www.igniter.com">Igniter</a> as a Web Developer, doing all sorts of awesome. I am currently revamping this website so stay tuned!!
+		.panel.splash(id="splash")
+			img(src="public/dist/images/character.png")
+			.tagline
+				h2 Hello!
+				p My name is Malena Andrade. I work at <a href="http://www.igniter.com">Igniter</a> as a Web Developer, doing all sorts of awesome.
 
 			.social-icons
 				a.flickr(href="http://www.flickr.com/photos/activitybubble/") Flickr
@@ -19,27 +21,41 @@ html
 				a.github(href="https://github.com/malena") GitHub
 				a.instagram(href="http://instagram.com/malena_andrade") Instagram
 
-		.panel.projects
-			h2 Current Projects
+		.panel.projects(id="projects")
+			h2 Projects
 
-			.box
-				h3 Hangman
+			.projects-container
+				.box
+					h3 Hangman
 
-			.box
-				h3 Training Guide 
+				.box
+					h3 Training Guide 
+
+				.box
+					h3 Beer Wheel
+
+				.box
+					h3 Calculator
 
 		.panel.skills
 			h2 Skills
 			p Ultimately my goal is to create beautiful and intuitive interfaces maintaining integrity with today’s web standards. 
 
-			h3 HTML 
-			p Experience writing semantic HTML5, as well as Jade.
+			.resume
+				h3 HTML 
+				ul 
+					li Experience writing semantic HTML5, as well as Jade.
 
-			h3 CSS 
-			p Experience with LESS, Stylus, Bootstrap, Semantic UI.
+				h3 CSS 
+				ul
+					li Experience with LESS, Stylus, Bootstrap, Semantic UI.
 
-			h3 JAVASCRIPT 
-			p Experience writing javascript as well as using jQuery, Backbone, Angular, Node and configuring Grunt tasks.
+				h3 JAVASCRIPT 
+				ul 
+					li Experience writing javascript as well as using jQuery, Backbone, Angular, Node and configuring Grunt tasks.
+
+		.panel.experience
+			h2 Experience 
 
 
 

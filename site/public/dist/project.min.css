@@ -1,9 +1,17 @@
 *{margin:0;padding:0}
+html{height:100%}
+body{margin:0;padding:0;height:100%;background-color:#fff;font-family:'Roboto',sans-serif;font-size:16px}
 a{color:#aca8a8;text-decoration:none}
 a:hover{color:#5a5a5a}
-body{background-color:#fff;font-family:'Roboto',sans-serif;font-size:16px}
-.splash{margin:2em auto;width:95%;}
+ul li{list-style-position:inside;padding:0}
+.panel{margin:auto;width:95%;height:100%;border:solid 1px #f00}
+.splash{padding:2em 0;}
 .splash p{font-size:2em;font-weight:bold}
+.projects .projects-container{width:100%;display:block;margin:auto auto;text-align:center}
+.projects .box{display:inline-block;border:solid 1px #000}
+.projects h2{text-align:center}
+.skills h2{text-align:center}
+.skills .resume{margin:auto auto;width:80%;border:solid 1px #eee}
 .social-icons{margin:1em auto;}
 .social-icons a{background-repeat:no-repeat;text-indent:-3000px;display:block;float:left;width:28px;height:28px;margin-right:.5em}
 .flickr{background-image:url("images/flickr.png")}
@@ -11,3 +19,4 @@ body{background-color:#fff;font-family:'Roboto',sans-serif;font-size:16px}
 .facebook{background-image:url("images/facebook.png")}
 .linkedin{background-image:url("images/linkedin.png")}
 .github{background-image:url("images/github.png")}
+img{position:relative;float:left}
