@@ -7,8 +7,7 @@ html
 		link(type="text/css", rel="stylesheet", href="public/dist/project.min.css")
 
 	body(ng-app="mandrade")
-		.panel.splash(id="splash")
-			img(src="public/dist/images/character.png")
+		.panel.panel-1.splash(id="splash")
 			.tagline
 				h2 Hello!
 				p My name is Malena Andrade. I work at <a href="http://www.igniter.com">Igniter</a> as a Web Developer, doing all sorts of awesome.
@@ -21,13 +20,11 @@ html
 					a.github(href="https://github.com/malena") GitHub
 					a.instagram(href="http://instagram.com/malena_andrade") Instagram
 
-		.panel.projects.guides-section(id="projects")
+		.panel.panel-2.projects(id="projects")
+			h2 Projects
 
-			header.container
-				h2.xxlarge Projects
-
-			ul.guides-list.container-medium
-				li.guides-list__item.g--half.theme--multi-device-layouts 
+			ul.guides-list
+				li
 					.primary-content
 						h3 
 							a(href="http://malena.github.io/angular-hangman") Hangman
@@ -37,7 +34,7 @@ html
 						span.icon-circle.themed--background 
 							i.icon.icon-lessons
 
-				li.guides-list__item.g--half.theme--introduction-to-media.g--last
+				li
 					.primary-content
 						h3
 							a(href="http://malena.github.io/angular-hangman") Training Guide 
@@ -46,7 +43,7 @@ html
 						span.icon-circle.themed--background 
 							i.icon.icon-lessons
 
-				li.guides-list__item.g--half.theme--multi-device-layouts 
+				li
 					.primary-content
 						h3 
 							a(href="http://malena.github.io/angular-hangman") Beer Wheel 
@@ -55,7 +52,7 @@ html
 						span.icon-circle.themed--background 
 							i.icon.icon-lessons
 
-				li.guides-list__item.g--half.theme--performance.g--last
+				li
 					.primary-content
 						h3 
 							a(href="http://malena.github.io/angular-hangman") Calculator 
@@ -64,25 +61,27 @@ html
 						span.icon-circle.themed--background 
 							i.icon.icon-lessons
 
-		.panel.skills
-			h2 Skills
-			p Ultimately my goal is to create beautiful and intuitive interfaces maintaining integrity with today’s web standards. 
+		.panel.panel-3
+			.panel-3-overlay
+				h2 Skills
 
-			.resume
-				h3 HTML 
-				ul 
-					li Experience writing semantic HTML5, as well as Jade.
+				.resume
 
-				h3 CSS 
-				ul
-					li Experience with LESS, Stylus, Bootstrap, Semantic UI.
+					h3.resume-html HTML 
+					ul 
+						li Experience writing semantic HTML5, as well as Jade.
 
-				h3 JAVASCRIPT 
-				ul 
-					li Experience writing javascript as well as using jQuery, Backbone, Angular, Node and configuring Grunt tasks.
+					h3.resume-css CSS 
+					ul
+						li Experience with LESS, Stylus, Bootstrap, Semantic UI.
 
-		.panel.experience
-			h2 Experience 
+					h3.resume-js JS
+					ul 
+						li Experience writing javascript as well as using jQuery, Backbone, Angular, Node and configuring Grunt tasks.
+
+		.panel.panel-4
+			.panel-4-overlay
+				h2 About 
 
 
 
