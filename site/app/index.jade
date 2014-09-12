@@ -3,14 +3,14 @@ html
 	head
 		title Malena Andrade: Web Interface Developer
 
-		link(href='http://fonts.googleapis.com/css?family=Roboto:400,900' rel='stylesheet' type='text/css')
+		link(href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css')
 		link(type="text/css", rel="stylesheet", href="public/dist/project.min.css")
 
 	body(ng-app="mandrade")
-		.panel.panel-1.splash(id="splash")
+		.panel.panel-1(id="splash")
 			.tagline
-				h2 Hello!
-				p My name is Malena Andrade. I work at <a href="http://www.igniter.com">Igniter</a> as a Web Developer, doing all sorts of awesome.
+				h2 HELLO!
+				p My name is Malena Andrade. I currently work at <a href="http://www.igniter.com">Igniter</a> as a Web Developer doing all sorts of awesome.
 
 				.social-icons
 					a.flickr(href="http://www.flickr.com/photos/activitybubble/") Flickr
@@ -63,9 +63,8 @@ html
 
 		.panel.panel-3
 			.panel-3-overlay
-				h2 Skills
-
 				.resume
+					h2 Skills
 
 					h3.resume-html HTML 
 					ul 
@@ -81,7 +80,8 @@ html
 
 		.panel.panel-4
 			.panel-4-overlay
-				h2 About 
+				.about
+					h2 About 
 
 
 
