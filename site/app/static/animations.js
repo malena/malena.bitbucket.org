@@ -1,11 +1,8 @@
 function Animations(){
 	// DECLARE ANIMATING ELEMENTS
-	this.splash_panel = $('.panel.splash');
-	this.splash_tagline = $('.splash .tagline');
-	this.splash_image = $('.splash img');
-	this.project_tagline = $('.projects .tagline');
-	this.projects = $('.projects .box');
-	this.skills_tagline = $('.skills .tagline');
+	this.splash_panel = $('.panel-1');
+	this.splash_tagline = $('.tagline');
+	this.splash_image = $('.panel-1-body');
 	this.resume = $('.resume');
 };
 
@@ -19,21 +16,18 @@ Animations.prototype.initializeScrollorama = function(){
 
 // SPLASH PAGE ANIMATIONS 
 Animations.prototype.splashPage = function(){
-  	TweenMax.fromTo(this.splash_image, .7, 
-        {css:{bottom: '-900px'}, immediateRender:true}, 
-        {css:{bottom: '0'}});
-
-  	TweenMax.fromTo(this.splash_tagline, 2.5, 
-        {css:{opacity:0}, immediateRender:true}, 
-        {css:{opacity:1}});
+  	TweenMax.from(this.splash_tagline, .5, 
+        {css:{left:'80em'}});
+  	TweenMax.from(this.splash_image, .5,
+  		{css:{top:'-900px'}});
 
 	this.controller.addTween('#splash',
 	  	(new TimelineLite())
 	    	.append([
 		    	TweenMax.to(this.splash_tagline, .1, 
-			        {css:{opacity: 0}}),
+			        {css:{left: '40em', top:'-10em'}}),
 		      	TweenMax.to(this.splash_image, .2, 
-			        {css:{bottom: '900px'},
+			        {css:{transform: 'rotate(-90deg)',top:'-500px'},
 			    	ease:Back.easeOut}),
 		      	TweenMax.to(this.splash_panel, .7,
 		      		{css:{height: -800}})

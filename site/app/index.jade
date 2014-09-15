@@ -7,59 +7,65 @@ html
 		link(type="text/css", rel="stylesheet", href="public/dist/project.min.css")
 
 	body(ng-app="mandrade")
-		.panel.panel-1(id="splash")
-			.tagline
-				h2 HELLO!
-				p My name is Malena Andrade. I currently work at <a href="http://www.igniter.com">Igniter</a> as a Web Developer doing all sorts of awesome.
+		.splash(id="splash")
+			.panel.panel-1
+				img.panel-1-body(src="public/dist/images/panel-1.png")
 
-				.social-icons
-					a.flickr(href="http://www.flickr.com/photos/activitybubble/") Flickr
-					a.linkedin(href="http://www.linkedin.com/pub/malena-andrade/14/b14/425") LinkedIn
-					a.twitter(href="http://twitter.com/malena_andrade") Twitter
-					a.facebook(href="http://www.facebook.com/people/Malena-Andrade/714909781") Facebook
-					a.github(href="https://github.com/malena") GitHub
-					a.instagram(href="http://instagram.com/malena_andrade") Instagram
+				.tagline
+					h2 HELLO!
+					p My name is Malena Andrade. I currently work at <a href="http://www.igniter.com">Igniter</a> as a Web Developer doing all sorts of awesome.
 
-		.panel.panel-2.projects(id="projects")
-			h2 Projects
+					.social-icons
+						a.flickr(href="http://www.flickr.com/photos/activitybubble/") Flickr
+						a.linkedin(href="http://www.linkedin.com/pub/malena-andrade/14/b14/425") LinkedIn
+						a.twitter(href="http://twitter.com/malena_andrade") Twitter
+						a.facebook(href="http://www.facebook.com/people/Malena-Andrade/714909781") Facebook
+						a.github(href="https://github.com/malena") GitHub
+						a.instagram(href="http://instagram.com/malena_andrade") Instagram
 
-			ul.guides-list
-				li
-					.primary-content
-						h3 
-							a(href="http://malena.github.io/angular-hangman") Hangman
-						p This game is built with angular. It was an experiment to learn how to use the framwork. 
+		.projects(id="projects")
+			.panel.panel-2
+				img.panel-2-tree(src="public/dist/images/panel-2.png")
 
-					.secondary-content 
-						span.icon-circle.themed--background 
-							i.icon.icon-lessons
+				h2 Projects
 
-				li
-					.primary-content
-						h3
-							a(href="http://malena.github.io/angular-hangman") Training Guide 
-						p This training guide was built for training resources at one of my jobs.
-					.secondary-content 
-						span.icon-circle.themed--background 
-							i.icon.icon-lessons
+				ul.guides-list
+					li
+						.primary-content
+							h3 
+								a(href="http://malena.github.io/angular-hangman") Hangman
+							p This game is built with angular. It was an experiment to learn how to use the framwork. 
 
-				li
-					.primary-content
-						h3 
-							a(href="http://malena.github.io/angular-hangman") Beer Wheel 
-						p This beer wheel was created for my partner how brews beer. 
-					.secondary-content 
-						span.icon-circle.themed--background 
-							i.icon.icon-lessons
+						.secondary-content 
+							span.icon-circle.themed--background 
+								i.icon.icon-lessons
 
-				li
-					.primary-content
-						h3 
-							a(href="http://malena.github.io/angular-hangman") Calculator 
-						p This was the first time I wrote a program using best javascript practices. 
-					.secondary-content 
-						span.icon-circle.themed--background 
-							i.icon.icon-lessons
+					li
+						.primary-content
+							h3
+								a(href="http://malena.github.io/angular-hangman") Training Guide 
+							p This training guide was built for training resources at one of my jobs.
+						.secondary-content 
+							span.icon-circle.themed--background 
+								i.icon.icon-lessons
+
+					li
+						.primary-content
+							h3 
+								a(href="http://malena.github.io/angular-hangman") Beer Wheel 
+							p This beer wheel was created for my partner how brews beer. 
+						.secondary-content 
+							span.icon-circle.themed--background 
+								i.icon.icon-lessons
+
+					li
+						.primary-content
+							h3 
+								a(href="http://malena.github.io/angular-hangman") Calculator 
+							p This was the first time I wrote a program using best javascript practices. 
+						.secondary-content 
+							span.icon-circle.themed--background 
+								i.icon.icon-lessons
 
 		.panel.panel-3
 			.panel-3-overlay
@@ -83,10 +89,10 @@ html
 				.about
 					h2 About 
 
-
+		footer
+			p www.mandrade.com
 
 		script(src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js")
-		script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.js")
-		script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular-resource.js")
 		script(src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.8/TweenMax.min.js")
+		script(src="public/dist/jquery.superscrollorama.js")
 		script(src="public/dist/project.min.js")
