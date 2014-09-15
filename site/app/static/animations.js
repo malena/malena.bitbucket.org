@@ -3,6 +3,7 @@ function Animations(){
 	this.splash_panel = $('.panel-1');
 	this.splash_tagline = $('.tagline');
 	this.splash_image = $('.panel-1-body');
+	this.splash_leaves = $('.panel-1');
 	this.resume = $('.resume');
 };
 
@@ -20,17 +21,25 @@ Animations.prototype.splashPage = function(){
         {css:{left:'80em'}});
   	TweenMax.from(this.splash_image, .5,
   		{css:{top:'-900px'}});
+  	/*
+  	TweenMax.from(this.splash_leaves, 1.5,
+  		{css:{backgroundPosition:'700px -900px'}, delay: .1});
+  	*/
 
-	this.controller.addTween('#splash',
+	this.controller.addTween('.panel-1',
 	  	(new TimelineLite())
 	    	.append([
 		    	TweenMax.to(this.splash_tagline, .1, 
-			        {css:{left: '40em', top:'-10em'}}),
+			        {css:{top:'-40em'}}),
 		      	TweenMax.to(this.splash_image, .2, 
 			        {css:{transform: 'rotate(-90deg)',top:'-500px'},
 			    	ease:Back.easeOut}),
-		      	TweenMax.to(this.splash_panel, .7,
-		      		{css:{height: -800}})
+		      	TweenMax.to(this.splash_panel, .2,
+		      		{css:{height: '10px'}})
+		      	/*
+		      	TweenMax.to(this.splash_leaves, .4,
+		      		{css:{backgroundPosition: '700px -900px'}})
+				*/
 			]),
 	  	1000 // scroll duration of tween
 	);

@@ -1,14 +1,21 @@
+.panel-1,
+.panel-2,
+.panel-3
+	position: relative
+
+
 .panel
 	margin: auto
 	height: 850px
 
+
 .panel-1
-	z-index: 1
-	/*background: url('images/panel-1.png') no-repeat black top left 
-	*/
-	color: #fff
-	background-color: #000
+	color: #000
+	background-color: transparent 
 	padding-top: 2em
+	z-index: 4
+	//background: url('images/panel-1-leaves.png') no-repeat transparent
+	background-position: 700px 0px
 
 	.tagline
 		position: absolute
@@ -31,8 +38,6 @@ img.panel-1-body
 	position: relative
 	z-index: 3
 	height: 1050px
-	/*background: url('images/panel-2.png') no-repeat transparent top left 
-	*/
 
 	h2
 		margin-left: 18em
@@ -45,6 +50,34 @@ img.panel-1-body
 		.primary-content
 			p 
 				margin-top: 0
+
+	.panel-2-tree,
+	.pulses
+		position: relative
+
+	.pulse 
+		position: absolute
+
+	.pulse-1
+		top: 384px
+		left: 121px
+
+	.pulse-2
+		top: 276px
+		left: 325px
+
+	.pulse-3
+		top: 148px
+		left: 550px
+
+	.pulse-4
+		top: 57px
+		left: 356px
+
+	.pulse-5
+		top: 380px
+		left: 630px
+
 
 
 .panel-3

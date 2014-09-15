@@ -7,8 +7,9 @@ html
 		link(type="text/css", rel="stylesheet", href="public/dist/project.min.css")
 
 	body(ng-app="mandrade")
-		.splash(id="splash")
-			.panel.panel-1
+
+		.panel.panel-1
+			.splash
 				img.panel-1-body(src="public/dist/images/panel-1.png")
 
 				.tagline
@@ -23,8 +24,15 @@ html
 						a.github(href="https://github.com/malena") GitHub
 						a.instagram(href="http://instagram.com/malena_andrade") Instagram
 
-		.projects(id="projects")
-			.panel.panel-2
+		.panel.panel-2
+			.projects
+				div.pulses
+					img.pulse.pulse-1(src="public/dist/images/pulse-1.png")
+					img.pulse.pulse-2(src="public/dist/images/pulse-1.png")
+					img.pulse.pulse-3(src="public/dist/images/pulse-1.png")
+					img.pulse.pulse-4(src="public/dist/images/pulse-1.png")
+					img.pulse.pulse-5(src="public/dist/images/pulse-1.png")
+						
 				img.panel-2-tree(src="public/dist/images/panel-2.png")
 
 				h2 Projects
