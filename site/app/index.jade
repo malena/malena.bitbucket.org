@@ -9,7 +9,7 @@ html
 	body(ng-app="mandrade")
 
 		.panel.panel-1
-			.splash
+			.panel-inner.splash
 				img.panel-1-body(src="public/dist/images/panel-1.png")
 
 				.tagline
@@ -25,17 +25,17 @@ html
 						a.instagram(href="http://instagram.com/malena_andrade") Instagram
 
 		.panel.panel-2
-			.projects
+			.panel-inner.projects
+				h2 Projects
 				div.pulses
 					img.pulse.pulse-1(src="public/dist/images/pulse-1.png")
 					img.pulse.pulse-2(src="public/dist/images/pulse-1.png")
 					img.pulse.pulse-3(src="public/dist/images/pulse-1.png")
 					img.pulse.pulse-4(src="public/dist/images/pulse-1.png")
 					img.pulse.pulse-5(src="public/dist/images/pulse-1.png")
-						
+
 				img.panel-2-tree(src="public/dist/images/panel-2.png")
 
-				h2 Projects
 
 				ul.guides-list
 					li
@@ -76,9 +76,11 @@ html
 								i.icon.icon-lessons
 
 		.panel.panel-3
-			.panel-3-overlay
+			.panel-inner
+				h2 Skills
 				.resume
-					h2 Skills
+
+					img.panel-3-overlay(src="public/dist/images/panel-3-overlay.png")
 
 					h3.resume-html HTML 
 					ul 
@@ -93,9 +95,10 @@ html
 						li Experience writing javascript as well as using jQuery, Backbone, Angular, Node and configuring Grunt tasks.
 
 		.panel.panel-4
-			.panel-4-overlay
+			.panel-inner
+				h2 About 
+
 				.about
-					h2 About 
 
 		footer
 			p www.mandrade.com
