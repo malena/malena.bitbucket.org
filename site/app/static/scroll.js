@@ -3,5 +3,5 @@ function MandradeScrollView(){
 
 	animate.initializeScrollorama();
 	animate.splashPage();
-	//animate.projectsPage();
+	animate.projectsPage();
 };
