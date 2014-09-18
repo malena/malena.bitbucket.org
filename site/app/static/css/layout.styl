@@ -3,6 +3,11 @@
 .panel-3
 	position: relative
 
+.panel-inner
+	display: block
+	width:  800px
+	margin: auto auto
+	position: relative
 
 .panel
 	margin: auto
@@ -40,6 +45,7 @@ img.panel-1-body
 	height: 1050px
 
 	h2
+		position: absolute
 		margin-left: 18em
 		padding-top: 1.5em
 
@@ -59,36 +65,54 @@ img.panel-1-body
 		position: absolute
 
 	.pulse-1
-		top: 384px
+		top: -340px
 		left: 121px
+		//top: 384px
+		//left: 121px
 
 	.pulse-2
-		top: 276px
+		top: -330px
 		left: 325px
+		//top: 276px
+		//left: 325px
 
 	.pulse-3
-		top: 148px
-		left: 550px
+		top: -334px
+		left: 350px
+		//top: 148px
+		//left: 550px
 
 	.pulse-4
-		top: 57px
+		top: -350px
 		left: 356px
+		//top: 57px
+		//left: 356px
 
 	.pulse-5
-		top: 380px
-		left: 630px
+		top: -355px
+		left: 220px
+		//top: 380px
+		//left: 630px
 
 
 
 .panel-3
+	border-top: 100px solid transparent 
+	border-image: url('images/flowers-border.png') 100% 0% 0% 0% repeat;
 	z-index: 2
-	background: url('images/panel-3.png') no-repeat black top left 
-	margin-top: -435px
-	height: 1215px
+	background: url('images/panel-3-big.png') no-repeat black top center 
+	margin-top: -534px
+	height: 1286px
+
+	h2
+		position: absolute
+		margin-left: 20em;
+		margin-top: 16em;
+		color: #fff;
 
 	.resume	
-		position: relative 
-		margin: auto auto
+		position: absolute 
+		margin: 8em auto 0
 		width: 100%
 		top: 21em
 
@@ -125,21 +149,22 @@ img.panel-1-body
 			top: 204px
 
 
-	.panel-3-overlay
-		background: url('images/panel-3-overlay.png') no-repeat transparent bottom left 
-		margin: auto
-		height: 100%
+	img.panel-3-overlay
+		margin: 0 
+		position: relative
 
 .panel-4
 	height: 500px
-	background-color: #000
+	background-color: #fff
 
-	.panel-4-overlay
+	h2 
 		position: absolute
-		width: 100%
-		height: 100%
-		background: url('images/panel-4.png') no-repeat transparent top left 
-		margin-top: -210px
+		margin-left: 20em
+		margin-top: 1em	
+
+	img.panel-4-waves
+		position: relative
+		margin-top: -60px
 
 	.about
 		position: relative
