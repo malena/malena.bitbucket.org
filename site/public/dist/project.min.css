@@ -37,13 +37,10 @@ img.panel-1-body{position:absolute;top:0;-ms-transform:rotate(-30deg);-webkit-tr
 .panel-3 .resume h3.resume-js{background-image:url("images/flower-js.png");top:28px;left:42px}
 .panel-3 .resume h3.resume-css{background-image:url("images/flower-css.png");left:433px;top:204px}
 .panel-3 img.panel-3-overlay{margin:0;position:relative}
-.panel-4{height:500px;background-color:#fff;}
-.panel-4 h2{position:absolute;margin-left:20em;margin-top:1em}
-.panel-4 img.panel-4-waves{position:relative;margin-top:-60px}
-.panel-4 .about{position:relative;top:6em;}
-.panel-4 .about h2{margin-left:19em}
-footer{background-color:#000;}
-footer p{color:#fff;padding:.5em}
+.panel-4{height:900px;background-color:#fff;}
+.panel-4 .about{width:250px;position:relative;display:inline-block;}
+.panel-4 .about h2{margin-left:0;padding-top:3em}
+.panel-4 img{position:absolute;right:0}
 
 *{margin:0;padding:0}
 html{height:100%}
@@ -52,7 +49,7 @@ body{background:#fff;margin:0;padding:0;height:100%;font-size:16px;font-family:'
 a{color:#00e}
 a:visited{color:#551a8b}
 a:hover{color:#06e}
-p{font-size:1.3em}
+p{font-size:1.6em}
 h1,h2,h3,h4,h5,h6{font-family:'Architects Daughter',cursive}
 img{vertical-align:middle}
 fieldset{border:0;margin:0;padding:0}

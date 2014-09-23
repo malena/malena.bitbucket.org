@@ -72,7 +72,7 @@ Animations.prototype.splashPage = function(){
 
 // SKILLS ANIMATIONS 
 Animations.prototype.projectsPage = function(){
-	this.controller.addTween('.panel-3',
+	this.controller.addTween('.panel-2',
 	  	(new TimelineLite())
 	    	.append([
 		      	TweenMax.to(this.html, 3,
