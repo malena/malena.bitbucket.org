@@ -4,9 +4,10 @@ html
 		title Malena Andrade: Web Interface Developer
 
 		link(href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css')
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css")
 		link(type="text/css", rel="stylesheet", href="public/dist/project.min.css")
 
-	body(ng-app="mandrade")
+	body(class="mandrade", ng-app="mandrade")
 
 		.panel.panel-1
 			.panel-inner.splash
@@ -21,11 +22,11 @@ html
 			.panel-inner.projects
 				h2 Projects
 				div.pulses
-					img.pulse.pulse-1(src="public/dist/images/pulse-1.png")
-					img.pulse.pulse-2(src="public/dist/images/pulse-1.png")
-					img.pulse.pulse-3(src="public/dist/images/pulse-1.png")
-					img.pulse.pulse-4(src="public/dist/images/pulse-1.png")
-					img.pulse.pulse-5(src="public/dist/images/pulse-1.png")
+					a.pulse.pulse-1(data-toggle="modal", data-target="#pulse", href="http://www.google.com"): img(src="public/dist/images/pulse-1.png")
+					a.pulse.pulse-2(href="#"): img(src="public/dist/images/pulse-1.png")
+					a.pulse.pulse-3(href="#"): img(src="public/dist/images/pulse-1.png")
+					a.pulse.pulse-4(href="#"): img(src="public/dist/images/pulse-1.png")
+					a.pulse.pulse-5(href="#"): img(src="public/dist/images/pulse-1.png")
 
 				img.panel-2-tree(src="public/dist/images/panel-2.png")
 
@@ -101,10 +102,20 @@ html
 						a.github(href="https://github.com/malena") GitHub
 						a.instagram(href="http://instagram.com/malena_andrade") Instagram
 					a(href="http://www.mandrade.com/blog") www.mandrade.com/blog
-				img(src="public/dist/images/panel-1.png")
+				img(src="public/dist/images/panel-1.png") 
+
+		.modal.fade(id="pulse")
+			.modal-dialog 
+				.modal-content 
+					.modal-header 
+						h1 header
+					.modal-body 
+						p hello 
+
 
 
 		script(src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js")
+		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js")
 		script(src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.8/TweenMax.min.js")
 		script(src="public/dist/jquery.superscrollorama.js")
 		script(src="public/dist/project.min.js")
