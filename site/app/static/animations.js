@@ -1,5 +1,4 @@
 function Animations(){
-	// DECLARE ANIMATING ELEMENTS
 	this.splash_panel = $('.panel-1');
 	this.splash_tagline = $('.tagline');
 	this.splash_image = $('.panel-1-body');
@@ -18,7 +17,6 @@ function Animations(){
 	this.pulse_text = $('.pulse span')
 };
 
-// INSTANTIATE SUPERSCROLLORAMA	
 Animations.prototype.initializeScrollorama = function(){
 	this.controller = $.superscrollorama({
 		triggerAtCenter: false,
@@ -26,24 +24,22 @@ Animations.prototype.initializeScrollorama = function(){
 	});
 };
 
-// SPLASH PAGE ANIMATIONS 
 Animations.prototype.splashPage = function(){
 
+	// Leaves starting position and pulsating 
+  	TweenMax.from(this.pulse_all, .5,
+  		{css:{top:'-900px'}});
 	TweenMax.to(this.pulse, 2, 
 		{css:{opacity:0}, repeat: -1, yoyo:true});
 
+
+	// Splash panel tagline and image entry
   	TweenMax.from(this.splash_tagline, .5, 
         {css:{left:'80em'}});
   	TweenMax.from(this.splash_image, .5,
   		{css:{top:'-900px'}});
-  	TweenMax.from(this.pulse_all, .5,
-  		{css:{top:'-900px'}});
 
-  	/*
-  	TweenMax.from(this.splash_leaves, 1.5,
-  		{css:{backgroundPosition:'700px -900px'}, delay: .1});
-  	*/
-
+  	//Splash panel tagline and image exit, leaves falling on splash panel scroll out
 	this.controller.addTween('.panel-1',
 	  	(new TimelineLite())
 	    	.append([
@@ -66,20 +62,13 @@ Animations.prototype.splashPage = function(){
 		      		{css:{top:'57px', left:'356px'}}),
 		      	TweenMax.to(this.pulse_5, .07,
 		      		{css:{top:'380px', left:'630px'}})
-
-		      	/*
-		      	TweenMax.to(this.splash_leaves, .4,
-		      		{css:{backgroundPosition: '700px -900px'}})
-				*/
 			]),
 	  	1000 // scroll duration of tween
 	);
-
 };
 
-
-// SKILLS ANIMATIONS 
 Animations.prototype.projectsPage = function(){
+	// Skills panel flowers rotating on projects panel scroll out 
 	this.controller.addTween('.panel-2',
 	  	(new TimelineLite())
 	    	.append([
@@ -89,9 +78,7 @@ Animations.prototype.projectsPage = function(){
 		      		{rotation: 360}),
 		      	TweenMax.to(this.js, 3,
 		      		{rotation: 360})
-
 			]),
 	  	1000 // scroll duration of tween
 	);
-
 };
