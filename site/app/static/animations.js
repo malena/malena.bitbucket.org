@@ -14,6 +14,8 @@ function Animations(){
 	this.html = $('.resume-html');
 	this.css = $('.resume-css');
 	this.js = $('.resume-js');
+	this.pulse = $('.img-pulse');
+	this.pulse_text = $('.pulse span')
 };
 
 // INSTANTIATE SUPERSCROLLORAMA	
@@ -26,6 +28,10 @@ Animations.prototype.initializeScrollorama = function(){
 
 // SPLASH PAGE ANIMATIONS 
 Animations.prototype.splashPage = function(){
+
+	TweenMax.to(this.pulse, 2, 
+		{css:{opacity:0}, repeat: -1, yoyo:true});
+
   	TweenMax.from(this.splash_tagline, .5, 
         {css:{left:'80em'}});
   	TweenMax.from(this.splash_image, .5,
@@ -41,6 +47,8 @@ Animations.prototype.splashPage = function(){
 	this.controller.addTween('.panel-1',
 	  	(new TimelineLite())
 	    	.append([
+	    		TweenMax.to(this.pulse_text, .1,
+	    			{css:{opacity:1}}),
 		    	TweenMax.to(this.splash_tagline, .1, 
 			        {css:{top:'-40em'}}),
 		      	TweenMax.to(this.splash_image, .2, 
@@ -85,4 +93,5 @@ Animations.prototype.projectsPage = function(){
 			]),
 	  	1000 // scroll duration of tween
 	);
+
 };

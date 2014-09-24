@@ -22,52 +22,24 @@ html
 			.panel-inner.projects
 				h2 Projects
 				div.pulses
-					a.pulse.pulse-1(data-toggle="modal", data-target="#pulse", href="http://www.google.com"): img(class="img-pulse" data-toggle="tooltip" data-placement="left" title="Tooltip on left" src="public/dist/images/pulse-1.png")
-					a.pulse.pulse-2(href="#"): img(src="public/dist/images/pulse-1.png")
-					a.pulse.pulse-3(href="#"): img(src="public/dist/images/pulse-1.png")
-					a.pulse.pulse-4(href="#"): img(src="public/dist/images/pulse-1.png")
-					a.pulse.pulse-5(href="#"): img(src="public/dist/images/pulse-1.png")
+					a.pulse.pulse-1(data-toggle="modal", data-target="#pulse", href="http://www.google.com")
+						span Fun
+						img(class="img-pulse" src="public/dist/images/pulse-1.png")
+					a.pulse.pulse-2(data-toggle="modal", data-target="#pulse", href="http://www.google.com") 
+						span Experiments 
+						img(class="img-pulse" src="public/dist/images/pulse-1.png")
+					a.pulse.pulse-3(data-toggle="modal", data-target="#pulse", href="http://www.google.com") 
+						span Websites 
+						img(class="img-pulse" src="public/dist/images/pulse-1.png")
+					a.pulse.pulse-4(data-toggle="modal", data-target="#pulse", href="http://www.google.com") 
+						span Apps 
+						img(class="img-pulse" src="public/dist/images/pulse-1.png")
+					a.pulse.pulse-5(data-toggle="modal", data-target="#pulse", href="http://www.google.com") 
+						span Training
+						img(class="img-pulse" src="public/dist/images/pulse-1.png")
 
 				img.panel-2-tree(src="public/dist/images/panel-2.png")
 
-
-				ul.guides-list
-					li
-						.primary-content
-							h3 
-								a(href="http://malena.github.io/angular-hangman") Hangman
-							p This game is built with angular. It was an experiment to learn how to use the framwork. 
-
-						.secondary-content 
-							span.icon-circle.themed--background 
-								i.icon.icon-lessons
-
-					li
-						.primary-content
-							h3
-								a(href="http://malena.github.io/angular-hangman") Training Guide 
-							p This training guide was built for training resources at one of my jobs.
-						.secondary-content 
-							span.icon-circle.themed--background 
-								i.icon.icon-lessons
-
-					li
-						.primary-content
-							h3 
-								a(href="http://malena.github.io/angular-hangman") Beer Wheel 
-							p This beer wheel was created for my partner how brews beer. 
-						.secondary-content 
-							span.icon-circle.themed--background 
-								i.icon.icon-lessons
-
-					li
-						.primary-content
-							h3 
-								a(href="http://malena.github.io/angular-hangman") Calculator 
-							p This was the first time I wrote a program using best javascript practices. 
-						.secondary-content 
-							span.icon-circle.themed--background 
-								i.icon.icon-lessons
 
 		.panel.panel-3
 			.panel-inner
@@ -107,8 +79,6 @@ html
 		.modal.fade(id="pulse")
 			.modal-dialog 
 				.modal-content 
-					.modal-header 
-						h1 header
 					.modal-body 
 						p hello 
 
