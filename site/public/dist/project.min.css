@@ -26,8 +26,8 @@ a:hover{color:#5a5a5a}
 .mandrade .panel-2{position:relative;z-index:3;height:1050px;}
 .mandrade .panel-2 .panel-inner{height:100%}
 .mandrade .panel-2 h2{position:absolute;margin-left:18em;padding-top:1.5em}
-.mandrade .panel-2 .guides-list{display:none;padding-bottom:2em;}
-.mandrade .panel-2 .guides-list .primary-content p{margin-top:0}
+.mandrade .panel-2 ul.project-list{display:block;}
+.mandrade .panel-2 ul.project-list li{list-style-type:none}
 .mandrade .panel-2 .panel-2-tree{position:absolute}
 .mandrade .panel-2 .pulses{position:absolute;height:100%;width:100%;z-index:1}
 .mandrade .panel-2 .pulse{position:absolute}
