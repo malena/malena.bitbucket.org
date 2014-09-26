@@ -8,10 +8,12 @@ a:hover{color:#5a5a5a}
 .facebook{background-image:url("images/facebook.png")}
 .linkedin{background-image:url("images/linkedin.png")}
 .github{background-image:url("images/github.png")}
-.pulse span{opacity:0}
+.span-pulse{opacity:0}
 .modal-dialog{width:250px;height:250px}
 .modal-content{border-radius:140px;width:100%;height:100%}
-.modal-body{height:100%;text-align:center}
+.modal-body{height:100%;text-align:center;}
+.modal-body a{text-align:center;display:block}
+.modal-backdrop{z-index:2}
 
 .mandrade .panel{background-color:transparent}
 .mandrade .panel-1,.mandrade .panel-2,.mandrade .panel-3{position:relative}

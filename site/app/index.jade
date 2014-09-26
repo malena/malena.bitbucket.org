@@ -22,22 +22,68 @@ html
 				h2 Projects
 				div.pulses
 					a.pulse.pulse-1(data-toggle="modal", data-target="#fun", href="http://www.google.com")
-						span Fun
+						span(class="span-pulse") Fun
 						img(class="img-pulse" src="public/dist/images/pulse-1.png")
 					a.pulse.pulse-2(data-toggle="modal", data-target="#experiments", href="http://www.google.com") 
-						span Experiments 
+						span(class="span-pulse") Experiments 
 						img(class="img-pulse" src="public/dist/images/pulse-1.png")
 					a.pulse.pulse-3(data-toggle="modal", data-target="#websites", href="http://www.google.com") 
-						span Websites 
+						span(class="span-pulse") Websites 
 						img(class="img-pulse" src="public/dist/images/pulse-1.png")
 					a.pulse.pulse-4(data-toggle="modal", data-target="#apps", href="http://www.google.com") 
-						span Apps 
+						span(class="span-pulse") Apps 
 						img(class="img-pulse" src="public/dist/images/pulse-1.png")
-					a.pulse.pulse-5(data-toggle="modal", data-target="#traning", href="http://www.google.com") 
-						span Training
+					a.pulse.pulse-5(data-toggle="modal", data-target="#campaigns", href="http://www.google.com") 
+						span(class="span-pulse") Campaigns 
 						img(class="img-pulse" src="public/dist/images/pulse-1.png")
 
 				img.panel-2-tree(src="public/dist/images/panel-2.png")
+
+				.modal.fade(id="fun")
+					.modal-dialog 
+						.modal-content 
+							.modal-body 
+								h3 Fun 
+								a(href="http://malena.github.io/angular-hangman/#/") Hangman 
+								a(href="http://malena.github.io/javascript-experiments/calculator/") Calculator
+								a(href="http://malena.github.io/training/") JS/jQuery Intro
+
+				.modal.fade(id="experiments")
+					.modal-dialog 
+						.modal-content 
+							.modal-body 
+								h3 Experiments 
+								a(href="http://malena.github.io/javascript-experiments/google_maps/") Google Map Tabs
+								a(href="http://malena.github.io/javascript-experiments/animated_input_box/") Animated Input
+
+				.modal.fade(id="websites")
+					.modal-dialog 
+						.modal-content 
+							.modal-body 
+								h3 Websites 
+								a(href="http://www.gibsonsfinest.ca/") Gibsons Finest
+								a(href="http://www.shelsilverstein.ca/") Shel Silverstein
+								a(href="http://www.homedepot.ca/") Home Depot
+								a(href="http://www.royallepage.ca/") Royal LePage 
+								a(href="http://www.gm.ca/") GM
+								a(href="http://www.meadjohnson.com/") Mead Johnson
+
+				.modal.fade(id="apps")
+					.modal-dialog 
+						.modal-content 
+							.modal-body 
+								h3 Apps 
+								a(href="http://www.jumptools.ca/") Jumptools
+								a(href="https://socialsca.pe/#/entries") socialsca.pe
+
+				.modal.fade(id="campaigns")
+					.modal-dialog 
+						.modal-content 
+							.modal-body 
+								h3 Campaigns 
+								a(href="http://www.holtrenfrew.com/") Holt Renfrew
+								a(href="http://www.shoppersdrugmart.ca/") Shoppers Drug Mart
+
 
 
 		.panel.panel-3
@@ -75,14 +121,7 @@ html
 					a(href="http://www.mandrade.com/blog") www.mandrade.com/blog
 				img(src="public/dist/images/panel-1.png") 
 
-		.modal.fade(id="app")
-			.modal-dialog 
-				.modal-content 
-					.modal-body 
-						p hello 
-
-
-
+		
 		script(src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js")
 		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js")
 		script(src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.8/TweenMax.min.js")

@@ -14,7 +14,7 @@ function Animations(){
 	this.css = $('.resume-css');
 	this.js = $('.resume-js');
 	this.pulse = $('.img-pulse');
-	this.pulse_text = $('.pulse span')
+	this.pulse_text = $('.span-pulse');
 };
 
 Animations.prototype.initializeScrollorama = function(){
@@ -29,8 +29,10 @@ Animations.prototype.splashPage = function(){
 	// Leaves starting position and pulsating 
   	TweenMax.from(this.pulse_all, .5,
   		{css:{top:'-900px'}});
+  	/*
 	TweenMax.to(this.pulse, 2, 
 		{css:{opacity:0}, repeat: -1, yoyo:true});
+	*/
 
 
 	// Splash panel tagline and image entry
@@ -40,11 +42,14 @@ Animations.prototype.splashPage = function(){
   		{css:{top:'-900px'}});
 
   	//Splash panel tagline and image exit, leaves falling on splash panel scroll out
+
+	var that = this;
+	var timeline = new TimelineLite();
+
 	this.controller.addTween('.panel-1',
-	  	(new TimelineLite())
-	    	.append([
-	    		TweenMax.to(this.pulse_text, .1,
-	    			{css:{opacity:1}}),
+	  	timeline.append([
+	    		TweenMax.to(this.pulse_text, .05,
+	    			{css:{opacity:1}, delay: .05}),
 		    	TweenMax.to(this.splash_tagline, .1, 
 			        {css:{top:'-40em'}}),
 		      	TweenMax.to(this.splash_image, .2, 
