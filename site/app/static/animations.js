@@ -10,9 +10,9 @@ function Animations(){
 	this.pulse_4 = $('.pulse-4');
 	this.pulse_5 = $('.pulse-5');
 	this.pulse_all = $('.pulse');
-	this.html = $('.resume-html');
-	this.css = $('.resume-css');
-	this.js = $('.resume-js');
+	this.html = $('.resume-html h3');
+	this.css = $('.resume-css h3');
+	this.js = $('.resume-js h3');
 	this.pulse = $('.img-pulse');
 	this.pulse_text = $('.span-pulse');
 };

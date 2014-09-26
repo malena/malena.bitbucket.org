@@ -39,12 +39,28 @@ a:hover{color:#5a5a5a}
 .mandrade .panel-3{border-top:100px solid transparent;border-image:url("images/flowers-border.png") 100% 0% 0% 0% repeat;z-index:2;background:url("images/panel-3-big.png") no-repeat #000 top center;margin-top:-534px;height:1391px;}
 .mandrade .panel-3 h2{position:absolute;margin-left:20em;margin-top:16em;color:#fff}
 .mandrade .panel-3 .resume{position:absolute;margin:8em auto 0;width:100%;top:21em;}
-.mandrade .panel-3 .resume ul{display:none}
 .mandrade .panel-3 .resume h2{color:#fff;margin-left:18em}
 .mandrade .panel-3 .resume h3{color:#fff;text-align:center;line-height:265px;width:250px;height:265px;position:absolute;background-size:100%;background-repeat:no-repeat;background-position:top center;background-color:transparent}
-.mandrade .panel-3 .resume h3.resume-html{background-image:url("images/flower-html.png");top:390px;left:135px;width:232px}
-.mandrade .panel-3 .resume h3.resume-js{background-image:url("images/flower-js.png");top:28px;left:42px}
-.mandrade .panel-3 .resume h3.resume-css{background-image:url("images/flower-css.png");left:433px;top:204px}
+.mandrade .panel-3 .resume ul{color:#6a6a6b;position:absolute;}
+.mandrade .panel-3 .resume ul li{position:absolute;list-style-type:none}
+.mandrade .panel-3 .resume .resume-html h3{background-image:url("images/flower-html.png");top:390px;left:135px;width:232px}
+.mandrade .panel-3 .resume .resume-html ul{top:391px;left:70px;width:440px;height:400px;}
+.mandrade .panel-3 .resume .resume-html ul .jade{left:300px;top:43px}
+.mandrade .panel-3 .resume .resume-html ul .sem-html{left:300px;top:270px}
+.mandrade .panel-3 .resume .resume-html ul .accessible{left:100px;top:320px}
+.mandrade .panel-3 .resume .resume-js h3{background-image:url("images/flower-js.png");top:28px;left:42px;width:232px}
+.mandrade .panel-3 .resume .resume-js ul{top:28px;left:42px;width:438px;height:315px;}
+.mandrade .panel-3 .resume .resume-js ul .jquery{left:250px;top:30px}
+.mandrade .panel-3 .resume .resume-js ul .backb{left:330px;top:100px}
+.mandrade .panel-3 .resume .resume-js ul .angular{left:270px;top:160px}
+.mandrade .panel-3 .resume .resume-js ul .node{left:250px;top:230px}
+.mandrade .panel-3 .resume .resume-js ul .grunt{left:100px;top:270px}
+.mandrade .panel-3 .resume .resume-css h3{background-image:url("images/flower-css.png");left:433px;top:204px;width:232px}
+.mandrade .panel-3 .resume .resume-css ul{left:533px;top:310px;width:300px;height:400px;}
+.mandrade .panel-3 .resume .resume-css ul .less{left:150px;top:30px}
+.mandrade .panel-3 .resume .resume-css ul .styl{left:180px;top:140px}
+.mandrade .panel-3 .resume .resume-css ul .boot{left:50px;top:230px}
+.mandrade .panel-3 .resume .resume-css ul .sem-ui{left:90px;top:320px}
 .mandrade .panel-3 img.panel-3-overlay{margin:0;position:relative}
 .mandrade .panel-4{height:900px;background-color:#fff;}
 .mandrade .panel-4 .about{width:250px;position:relative;display:inline-block;}
