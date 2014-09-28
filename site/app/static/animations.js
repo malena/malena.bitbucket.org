@@ -4,17 +4,17 @@ function Animations(){
 	this.splash_image = $('.panel-1-body');
 	this.splash_leaves = $('.panel-1');
 	this.resume = $('.resume');
-	this.pulse_1 = $('.pulse-1');
-	this.pulse_2 = $('.pulse-2');
-	this.pulse_3 = $('.pulse-3');
-	this.pulse_4 = $('.pulse-4');
-	this.pulse_5 = $('.pulse-5');
+	this.pulse_1 = $('.fun');
+	this.pulse_3 = $('.websites');
+	this.pulse_4 = $('.apps');
+	this.pulse_5 = $('.campaigns');
 	this.pulse_all = $('.pulse');
 	this.html = $('.resume-html h3');
 	this.css = $('.resume-css h3');
 	this.js = $('.resume-js h3');
 	this.pulse = $('.img-pulse');
 	this.pulse_text = $('.span-pulse');
+	this.project_list = $('.project-list');
 };
 
 Animations.prototype.initializeScrollorama = function(){
@@ -48,7 +48,7 @@ Animations.prototype.splashPage = function(){
 
 	this.controller.addTween('.panel-1',
 	  	timeline.append([
-	    		TweenMax.to(this.pulse_text, .05,
+	    		TweenMax.to([this.pulse_text, this.project_list], .05,
 	    			{css:{opacity:1}, delay: .05}),
 		    	TweenMax.to(this.splash_tagline, .1, 
 			        {css:{top:'-40em'}}),
@@ -58,15 +58,13 @@ Animations.prototype.splashPage = function(){
 		      	TweenMax.to(this.splash_panel, .2,
 		      		{css:{height: '10px'}}),
 		      	TweenMax.to(this.pulse_1, .07,
-		      		{css:{top:'384px', left:'121px'}}),
-		      	TweenMax.to(this.pulse_2, .07,
-		      		{css:{top:'276px', left:'325px'}}),
+		      		{css:{top:'309', left:'124'}}),
 		      	TweenMax.to(this.pulse_3, .07,
-		      		{css:{top:'148px', left:'550px'}}),
+		      		{css:{top:'290px', left:'550px'}}),
 		      	TweenMax.to(this.pulse_4, .07,
-		      		{css:{top:'57px', left:'356px'}}),
+		      		{css:{top:'113px', left:'200px'}}),
 		      	TweenMax.to(this.pulse_5, .07,
-		      		{css:{top:'380px', left:'630px'}})
+		      		{css:{top:'272px', left:'415px'}})
 			]),
 	  	1000 // scroll duration of tween
 	);

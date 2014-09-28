@@ -1,5 +1,5 @@
 a{color:#aca8a8;text-decoration:none}
-h2{margin-left:23em;padding-top:2em;text-transform:uppercase;font-size:1.9em}
+h2{text-transform:uppercase;font-size:1.9em}
 a:hover{color:#5a5a5a}
 .social-icons{margin:1em auto;}
 .social-icons a{background-repeat:no-repeat;text-indent:-3000px;display:block;float:left;width:28px;height:28px;margin-right:.5em}
@@ -8,7 +8,6 @@ a:hover{color:#5a5a5a}
 .facebook{background-image:url("images/facebook.png")}
 .linkedin{background-image:url("images/linkedin.png")}
 .github{background-image:url("images/github.png")}
-.span-pulse{opacity:0}
 .modal-dialog{width:250px;height:250px}
 .modal-content{border-radius:140px;width:100%;height:100%}
 .modal-body{height:100%;text-align:center;}
@@ -25,17 +24,39 @@ a:hover{color:#5a5a5a}
 .mandrade img.panel-1-body{position:absolute;top:0;-ms-transform:rotate(-30deg);-webkit-transform:rotate(-30deg);transform:rotate(-30deg)}
 .mandrade .panel-2{position:relative;z-index:3;height:1050px;}
 .mandrade .panel-2 .panel-inner{height:100%}
-.mandrade .panel-2 h2{position:absolute;margin-left:18em;padding-top:1.5em}
-.mandrade .panel-2 ul.project-list{display:block;}
-.mandrade .panel-2 ul.project-list li{list-style-type:none}
+.mandrade .panel-2 h2,.mandrade .panel-2 h3{position:absolute;right:0}
+.mandrade .panel-2 h3{font-size:13px;top:30px;width:200px;text-align:right}
+.mandrade .panel-2 .span-pulse{opacity:0;color:#30bf43}
+.mandrade .panel-2 ul.project-list{opacity:0;display:block;}
+.mandrade .panel-2 ul.project-list li{list-style-type:none;width:150px;}
+.mandrade .panel-2 ul.project-list li a{color:#666;font-size:13px}
 .mandrade .panel-2 .panel-2-tree{position:absolute}
-.mandrade .panel-2 .pulses{position:absolute;height:100%;width:100%;z-index:1}
-.mandrade .panel-2 .pulse{position:absolute}
-.mandrade .panel-2 .pulse-1{top:-340px;left:121px}
-.mandrade .panel-2 .pulse-2{top:-330px;left:325px}
-.mandrade .panel-2 .pulse-3{top:-334px;left:350px}
-.mandrade .panel-2 .pulse-4{top:-350px;left:356px}
-.mandrade .panel-2 .pulse-5{top:-355px;left:220px}
+.mandrade .panel-2 .projects{position:absolute;height:100%;width:100%;z-index:1}
+.mandrade .panel-2 .pulse{position:absolute;}
+.mandrade .panel-2 .pulse span,.mandrade .panel-2 .pulse img,.mandrade .panel-2 .pulse ul li{position:absolute}
+.mandrade .panel-2 .fun{top:-340px;left:121px;}
+.mandrade .panel-2 .fun .span-pulse{top:43px;left:46px}
+.mandrade .panel-2 .fun .hangman{top:43px;left:-145px}
+.mandrade .panel-2 .fun .calculator{top:104px;left:-115px}
+.mandrade .panel-2 .fun .training{top:-35px;left:-174px}
+.mandrade .panel-2 .fun .googlemaps{left:-160px;top:-90px}
+.mandrade .panel-2 .fun .animatedinput{left:-2px;top:129px}
+.mandrade .panel-2 .websites{top:-334px;left:350px;}
+.mandrade .panel-2 .websites .span-pulse{top:55px}
+.mandrade .panel-2 .websites .gibsons{top:-150px;left:30px}
+.mandrade .panel-2 .websites .shel{top:-100px;left:150px}
+.mandrade .panel-2 .websites .home{top:-40px;left:150px}
+.mandrade .panel-2 .websites .royal{top:0;left:130px}
+.mandrade .panel-2 .websites .gm{top:30px;left:80px}
+.mandrade .panel-2 .websites .mead{top:60px;left:180px}
+.mandrade .panel-2 .apps{top:-350px;left:356px;}
+.mandrade .panel-2 .apps .span-pulse{top:-16px;left:-38px}
+.mandrade .panel-2 .apps .jumptools{top:0;left:-133px}
+.mandrade .panel-2 .apps .socialscape{top:-80px;left:-104px}
+.mandrade .panel-2 .campaigns{top:-355px;left:220px;}
+.mandrade .panel-2 .campaigns .span-pulse{top:20px;left:-77px}
+.mandrade .panel-2 .campaigns .shoppers{top:-96px;left:-108px}
+.mandrade .panel-2 .campaigns .holt{top:-125px}
 .mandrade .panel-3{border-top:100px solid transparent;border-image:url("images/flowers-border.png") 100% 0% 0% 0% repeat;z-index:2;background:url("images/panel-3-big.png") no-repeat #000 top center;margin-top:-534px;height:1391px;}
 .mandrade .panel-3 h2{position:absolute;margin-left:20em;margin-top:16em;color:#fff}
 .mandrade .panel-3 .resume{position:absolute;margin:8em auto 0;width:100%;top:21em;}
