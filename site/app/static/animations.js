@@ -48,7 +48,7 @@ Animations.prototype.splashPage = function(){
 
 	this.controller.addTween('.panel-1',
 	  	timeline.append([
-	    		TweenMax.to([this.pulse_text, this.project_list], .05,
+	    		TweenMax.to([this.pulse_text, this.project_list], .04,
 	    			{css:{opacity:1}, delay: .05}),
 		    	TweenMax.to(this.splash_tagline, .1, 
 			        {css:{top:'-40em'}}),
