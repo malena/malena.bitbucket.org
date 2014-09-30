@@ -9,18 +9,23 @@ function Animations(){
 	this.pulse_4 = $('.apps');
 	this.pulse_5 = $('.campaigns');
 	this.pulse_all = $('.pulse');
+	this.resume = $('.resume');
 	this.html = $('.resume-html h3');
 	this.css = $('.resume-css h3');
 	this.js = $('.resume-js h3');
 	this.pulse = $('.img-pulse');
 	this.pulse_text = $('.span-pulse');
 	this.project_list = $('.project-list');
+	this.tree_top = $('.tree-top');
+	this.tree_bottom = $('.tree-bottom');
+	this.panel_3 = $('.panel-3');
+	this.panel_3_header = $('.panel-3-header');
 };
 
 Animations.prototype.initializeScrollorama = function(){
 	this.controller = $.superscrollorama({
 		triggerAtCenter: false,
-		playoutAnimations: false 
+		playoutAnimations: true 
 	});
 };
 
@@ -50,6 +55,11 @@ Animations.prototype.splashPage = function(){
 	  	timeline.append([
 	    		TweenMax.to([this.pulse_text, this.project_list], .04,
 	    			{css:{opacity:1}, delay: .05}),
+	    		TweenMax.fromTo([this.tree_top,this.tree_bottom], .08,
+	    			{css:{top: "300px", left: "7px"}},
+	    			{css:{top:"-90px"}}),
+	    		TweenMax.from(this.panel_3, .03,
+	    			{css:{marginTop: "0"}}),
 		    	TweenMax.to(this.splash_tagline, .1, 
 			        {css:{top:'-40em'}}),
 		      	TweenMax.to(this.splash_image, .2, 
@@ -75,6 +85,8 @@ Animations.prototype.projectsPage = function(){
 	this.controller.addTween('.panel-2',
 	  	(new TimelineLite())
 	    	.append([
+	    		TweenMax.from([this.panel_3_header, this.resume], 3,
+	    			{css:{top: '600px'}, ease:'Elatic.easeOut'}),
 		      	TweenMax.to(this.html, 3,
 		      		{rotation: 360}),
 		      	TweenMax.to(this.css, 3,

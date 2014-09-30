@@ -109,6 +109,11 @@
 		.panel-2-tree
 			position: absolute
 
+			img.tree-top, img.tree-bottom
+				top: -39px
+				position: relative
+				z-index: -1
+
 		.projects
 			position: absolute 
 			height: 100%
@@ -211,18 +216,20 @@
 		border-image: url('images/flowers-border.png') 100% 0% 0% 0% repeat;
 		z-index: 2
 		background: url('images/panel-3-big.png') no-repeat black top center 
-		margin-top: -534px
+		margin-top: -548px
 		height: 1391px
 
 		header
 			color: #fff
-			top: 480px
+
+		.panel-3-header
+			top: 300px
 
 		.resume	
 			position: absolute 
-			margin: 8em auto 0
+			margin: auto auto
 			width: 100%
-			top: 21em
+			top: 300px
 
 			h3
 				color: #fff
