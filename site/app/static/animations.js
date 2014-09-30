@@ -20,7 +20,7 @@ function Animations(){
 Animations.prototype.initializeScrollorama = function(){
 	this.controller = $.superscrollorama({
 		triggerAtCenter: false,
-		playoutAnimations: true
+		playoutAnimations: false 
 	});
 };
 
