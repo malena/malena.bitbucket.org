@@ -79,7 +79,7 @@ Animations.prototype.splashPage = function(){
 		      	TweenMax.to(this.pulse_5, .07,
 		      		{css:{top:'272px', left:'415px'}}),
 		      	TweenMax.from(this.work_header, .07,
-		      		{css:{top:'30px', right:'-1000px'}})
+		      		{css:{top:'30px', right:'-2500px'}})
 			]),
 	  	1000 // scroll duration of tween
 	);
