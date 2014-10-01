@@ -59,7 +59,7 @@ a:hover{color:#5a5a5a}
 .mandrade .panel-2 .projects .campaigns .span-pulse{top:20px;left:-77px}
 .mandrade .panel-2 .projects .campaigns .shoppers{top:-96px;left:-108px}
 .mandrade .panel-2 .projects .campaigns .holt{top:-125px}
-.mandrade .panel-3{border-top:100px solid transparent;border-image:url("images/flowers-border.png") 100% 0% 0% 0% repeat;z-index:2;background:url("images/panel-3-big.png") no-repeat #000 top center;margin-top:-548px;height:1500px;}
+.mandrade .panel-3{border-top:100px solid transparent;border-image:url("images/flowers-border.png") 100% 0% 0% 0% repeat;z-index:2;background:url("images/panel-3-big.png") no-repeat #000 top center;margin-top:-548px;height:1650px;}
 .mandrade .panel-3 header{color:#fff}
 .mandrade .panel-3 .panel-3-header{top:300px}
 .mandrade .panel-3 .resume{position:absolute;margin:auto auto;width:100%;top:300px;}
@@ -89,10 +89,10 @@ a:hover{color:#5a5a5a}
 .mandrade .panel-4 .panel-inner{height:100%;z-index:2}
 .mandrade .panel-4 header{position:relative;top:200px;}
 .mandrade .panel-4 header h2,.mandrade .panel-4 header h3{text-align:left}
-.mandrade .panel-4 img.mountains{top:-155px;right:-80px;position:absolute}
+.mandrade .panel-4 img.mountains{top:-271px;left:-166px;position:absolute}
 .mandrade .panel-4 .about{width:300px;position:relative;display:block;float:left;margin-top:220px;}
 .mandrade .panel-4 .about h2{margin-left:0;padding-top:3em}
-.mandrade .panel-4 img.about-me{position:absolute;right:0}
+.mandrade .panel-4 img.about-me{position:absolute;right:0;top:195px}
 
 *{margin:0;padding:0}
 html{height:100%}
