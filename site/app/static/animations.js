@@ -20,6 +20,9 @@ function Animations(){
 	this.tree_bottom = $('.tree-bottom');
 	this.panel_3 = $('.panel-3');
 	this.panel_3_header = $('.panel-3-header');
+	this.work_header = $('.panel-2 .header-work');
+
+	var projectDisplay;
 };
 
 Animations.prototype.initializeScrollorama = function(){
@@ -53,8 +56,8 @@ Animations.prototype.splashPage = function(){
 
 	this.controller.addTween('.panel-1',
 	  	timeline.append([
-	    		TweenMax.to([this.pulse_text, this.project_list], .04,
-	    			{css:{opacity:1}, delay: .05}),
+	    		TweenMax.to(this.pulse_text, .02,
+	    			{css:{opacity:1}, delay: .04, onComplete: showProjects, onReverseComplete: hideProjects}),
 	    		TweenMax.fromTo([this.tree_top,this.tree_bottom], .08,
 	    			{css:{top: "300px", left: "7px"}},
 	    			{css:{top:"-90px"}}),
@@ -74,10 +77,21 @@ Animations.prototype.splashPage = function(){
 		      	TweenMax.to(this.pulse_4, .07,
 		      		{css:{top:'113px', left:'200px'}}),
 		      	TweenMax.to(this.pulse_5, .07,
-		      		{css:{top:'272px', left:'415px'}})
+		      		{css:{top:'272px', left:'415px'}}),
+		      	TweenMax.from(this.work_header, .07,
+		      		{css:{top:'30px', right:'-415px'}})
 			]),
 	  	1000 // scroll duration of tween
 	);
+	function showProjects (){
+		$('.pulse').hover(function(){
+			$(this).find('ul.project-list').show();
+		});
+	};
+	function hideProjects(){
+		$('ul.project-list').hide();
+	};
+
 };
 
 Animations.prototype.projectsPage = function(){
