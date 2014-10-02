@@ -87,6 +87,16 @@ a:hover{color:#5a5a5a}
 .mandrade .panel-3 img.panel-3-overlay{margin:0;position:relative}
 .mandrade .panel-4{height:900px;background-color:#fff;}
 .mandrade .panel-4 .panel-inner{height:100%;z-index:2}
+.mandrade .panel-4 .stars{position:absolute;top:-400px;}
+.mandrade .panel-4 .stars img{position:absolute}
+.mandrade .panel-4 .stars img.star-1{left:800px;top:30px}
+.mandrade .panel-4 .stars img.star-2{left:830px;top:213px}
+.mandrade .panel-4 .stars img.star-3{left:600px;top:160px}
+.mandrade .panel-4 .stars img.star-4{left:500px;top:300px}
+.mandrade .panel-4 .stars img.star-5{left:400px;top:0}
+.mandrade .panel-4 .stars img.star-6{left:200px;top:100px}
+.mandrade .panel-4 .stars img.star-7{left:0;top:200px}
+.mandrade .panel-4 .stars img.star-8{left:-100px;top:100px}
 .mandrade .panel-4 header{position:relative;top:40px;}
 .mandrade .panel-4 header h2,.mandrade .panel-4 header h3{text-align:left}
 .mandrade .panel-4 img.mountains{top:-267px;left:-166px;position:absolute}
