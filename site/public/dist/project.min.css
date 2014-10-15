@@ -104,6 +104,30 @@ a:hover{color:#5a5a5a}
 .mandrade .panel-4 .about h2{margin-left:0;padding-top:3em}
 .mandrade .panel-4 img.about-me{position:absolute;right:0;top:35px}
 
+@media (max-width: 600px){body{height:100%}
+img{display:none;position:relative !important}
+p,h3{text-align:center !important;font-size:26px !important;margin:auto}
+ul{height:auto !important}
+div,ul,li,header,span,h2,h3{display:block;width:100% !important;text-align:center !important;position:relative !important;top:initial !important;left:initial !important}
+.mandrade .panel,.mandrade .panel-inner{width:100%}
+.mandrade .panel header{margin-top:50px !important;margin-bottom:30px !important;}
+.mandrade .panel header h2{font-size:70px}
+.mandrade .panel header p{padding:60px 60px 0 60px !important}
+.mandrade div{margin:0 !important;padding:0 !important}
+.mandrade .panel-1 img.panel-1-body{position:relative;margin:auto auto;width:40%;display:block;transform:initial;top:auto}
+.mandrade .panel-1 .tagline{width:100%;position:relative;left:auto;top:auto;}
+.mandrade .panel-1 .tagline h2{background-position:center center;margin:auto}
+.mandrade .panel-1 .tagline p{margin:60px}
+.mandrade .panel-3{height:auto;}
+.mandrade .panel-3 .resume .resume-html h3,.mandrade .panel-3 .resume .resume-js h3,.mandrade .panel-3 .resume .resume-css h3{width:auto;top:initial;left:initial;display:block;width:auto;height:auto;position:relative;line-height:60px;background-image:none}
+.mandrade .panel-2 .pulse{position:relative;height:auto;}
+.mandrade .panel-2 .pulse ul.project-list{display:block;height:auto;margin-bottom:35px;}
+.mandrade .panel-2 .pulse ul.project-list li a{font-size:16px}
+.mandrade .panel-2 .pulse .span-pulse{font-size:25px;opacity:1;display:block;top:initial;left:initial}
+.mandrade .panel-4 .about{margin:auto;float:none}
+.mandrade .panel-4 .social-icons{width:180px;margin:auto auto;}
+.mandrade .panel-4 .social-icons a{float:none;display:inline-block}
+}
 *{margin:0;padding:0}
 html{height:100%}
 html,button,input,select,textarea{color:#222}
