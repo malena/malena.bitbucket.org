@@ -60,7 +60,7 @@ Animations.prototype.splashPage = function(){
 	    			{css:{opacity:1}, delay: .04, onComplete: showProjects, onReverseComplete: hideProjects}),
 	    		TweenMax.fromTo([this.tree_top,this.tree_bottom], .08,
 	    			{css:{top: "300px", left: "7px"}},
-	    			{css:{top:"-90px"}}),
+	    			{css:{top:"40px"}}),
 	    		TweenMax.from(this.panel_3, .03,
 	    			{css:{marginTop: "0"}}),
 		    	TweenMax.to(this.splash_tagline, .1, 
@@ -77,12 +77,17 @@ Animations.prototype.splashPage = function(){
 		      	TweenMax.to(this.pulse_4, .07,
 		      		{css:{top:'113px', left:'200px'}}),
 		      	TweenMax.to(this.pulse_5, .07,
-		      		{css:{top:'272px', left:'415px'}}),
-		      	TweenMax.from(this.work_header, .07,
-		      		{css:{top:'30px', right:'-2500px'}})
+		      		{css:{top:'272px', left:'415px'}, onComplete: enterText})
 			]),
 	  	1000 // scroll duration of tween
 	);
+
+	function enterText() {
+      	TweenMax.fromTo(that.work_header, .5,
+      		{css:{opacity:'0'}},
+      		{css:{opacity:'1'}})
+
+	};
 	function showProjects (){
 		$('.pulse').hover(function(){
 			$(this).find('ul.project-list').show();

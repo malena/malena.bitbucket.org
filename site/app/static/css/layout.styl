@@ -49,23 +49,24 @@
 
 		.tagline
 			position: absolute
-			left: 29em
-			width: 348px
+			left: 500px 
+			width: 395px
 			top: 1em
 
 			h2
 				position: relative
-				background: url('images/alo.png') no-repeat transparent
+				background: url('images/alo.png') no-repeat top right transparent
 				text-indent: -80000px
 				margin: 0
 				height: 160px
-				width: 300px
-			p
-				margin-left: 20px
+
+			p 
+				text-align: right
 
 		img.panel-1-body 
 			position: absolute
-			top: 0
+			top: -270px
+			left: -145px
 			-ms-transform: rotate(-30deg) 
 			-webkit-transform: rotate(-30deg) 
 			transform: rotate(-30deg)
@@ -79,7 +80,12 @@
 	.panel-2
 		position: relative
 		z-index: 3
-		height: 1050px
+		height: 1150px
+
+		header
+			top: 150px
+			width: 40%	
+			opacity: 0
 
 		.panel-inner
 			height: 100%	
@@ -111,6 +117,7 @@
 
 		.panel-2-tree
 			position: absolute
+			left: -250px
 
 			img.tree-top, img.tree-bottom
 				top: -39px
@@ -122,6 +129,8 @@
 			height: 100%
 			width: 100%
 			z-index: 1
+			top: 120px
+			left: -245px
 
 			.fun
 				top: -340px
@@ -393,23 +402,29 @@
 				top: 100px
 
 		header
-			position: relative
-			top: 40px
+			width: 100%;
+			position: relative;
+			text-align: center;
+			top: auto;
+			right: auto;
+			padding-top: 40px
 
 			h2,h3
-				text-align: left
+				text-align: center 
 
 		img.mountains
 			top: -267px
 			left: -166px
 			position: absolute
 
+		.blog
+			width: 100%
+			text-align: center
+			display: block
 
 		.about
-			width: 300px
 			position: relative
 			display: block
-			float: left
 			margin-top: 60px
 
 			h2
@@ -420,3 +435,6 @@
 			position: absolute 
 			right: 0
 			top: 35px
+
+		.social-icons
+			clear: both
