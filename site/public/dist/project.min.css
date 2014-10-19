@@ -1,7 +1,8 @@
+body{overflow-x:hidden}
 a{color:#aca8a8;text-decoration:none}
 a:hover{color:#5a5a5a}
-.social-icons{margin:1em auto;}
-.social-icons a{background-repeat:no-repeat;text-indent:-3000px;display:block;float:left;width:28px;height:28px;margin-right:.5em}
+.social-icons{text-align:center;margin:1em auto;}
+.social-icons a{background-repeat:no-repeat;text-indent:-3000px;display:inline-block;width:28px;height:28px;margin-right:.5em}
 .flickr{background-image:url("images/flickr.png")}
 .twitter{background-image:url("images/twitter.png")}
 .facebook{background-image:url("images/facebook.png")}
@@ -14,18 +15,19 @@ a:hover{color:#5a5a5a}
 .modal-backdrop{z-index:2}
 
 .mandrade .panel-1,.mandrade .panel-2,.mandrade .panel-3{position:relative}
-.mandrade .panel-inner{display:block;width:800px;margin:auto auto;position:relative}
+.mandrade .panel-inner{display:block;width:900px;margin:auto auto;position:relative}
 .mandrade .panel{border-radius:0;background-color:transparent;margin:auto;height:850px;}
 .mandrade .panel header{position:absolute;top:30px;right:0;text-align:right;width:270px;}
 .mandrade .panel header h2,.mandrade .panel header h3{margin:0}
 .mandrade .panel header h2{text-transform:uppercase;font-size:1.9em}
 .mandrade .panel header h3{font-size:13px}
 .mandrade .panel-1{color:#000;background-color:transparent;padding-top:2em;z-index:4;background-position:700px 0;}
-.mandrade .panel-1 .tagline{position:absolute;left:29em;width:348px;top:1em;}
-.mandrade .panel-1 .tagline h2{position:relative;background:url("images/alo.png") no-repeat transparent;text-indent:-80000px;margin:0;height:160px;width:300px}
-.mandrade .panel-1 .tagline p{margin-left:20px}
-.mandrade .panel-1 img.panel-1-body{position:absolute;top:0;-ms-transform:rotate(-30deg);-webkit-transform:rotate(-30deg);transform:rotate(-30deg)}
-.mandrade .panel-2{position:relative;z-index:3;height:1050px;}
+.mandrade .panel-1 .tagline{position:absolute;left:500px;width:395px;top:1em;}
+.mandrade .panel-1 .tagline h2{position:relative;background:url("images/alo.png") no-repeat top right transparent;text-indent:-80000px;margin:0;height:160px}
+.mandrade .panel-1 .tagline p{text-align:right}
+.mandrade .panel-1 img.panel-1-body{position:absolute;top:-270px;left:-145px;-ms-transform:rotate(-30deg);-webkit-transform:rotate(-30deg);transform:rotate(-30deg)}
+.mandrade .panel-2{position:relative;z-index:3;height:1177px;}
+.mandrade .panel-2 header{top:150px;width:35%;opacity:0}
 .mandrade .panel-2 .panel-inner{height:100%}
 .mandrade .panel-2 .pulse{width:200px;height:200px;position:absolute;}
 .mandrade .panel-2 .pulse span,.mandrade .panel-2 .pulse img,.mandrade .panel-2 .pulse ul li{position:absolute}
@@ -33,9 +35,9 @@ a:hover{color:#5a5a5a}
 .mandrade .panel-2 .pulse ul.project-list{display:none;width:200px;height:200px;}
 .mandrade .panel-2 .pulse ul.project-list li{list-style-type:none;width:150px;}
 .mandrade .panel-2 .pulse ul.project-list li a{color:#666;font-size:13px}
-.mandrade .panel-2 .panel-2-tree{position:absolute;}
+.mandrade .panel-2 .panel-2-tree{position:absolute;left:-160px;}
 .mandrade .panel-2 .panel-2-tree img.tree-top,.mandrade .panel-2 .panel-2-tree img.tree-bottom{top:-39px;position:relative;z-index:-1}
-.mandrade .panel-2 .projects{position:absolute;height:100%;width:100%;z-index:1;}
+.mandrade .panel-2 .projects{position:absolute;height:100%;width:100%;z-index:1;top:120px;left:-150px;}
 .mandrade .panel-2 .projects .fun{top:-340px;left:121px;}
 .mandrade .panel-2 .projects .fun .span-pulse{top:43px;left:46px}
 .mandrade .panel-2 .projects .fun .hangman{top:43px;left:-145px}
@@ -59,7 +61,7 @@ a:hover{color:#5a5a5a}
 .mandrade .panel-2 .projects .campaigns .span-pulse{top:20px;left:-77px}
 .mandrade .panel-2 .projects .campaigns .shoppers{top:-96px;left:-108px}
 .mandrade .panel-2 .projects .campaigns .holt{top:-125px}
-.mandrade .panel-3{border-top:100px solid transparent;border-image:url("images/flowers-border.png") 100% 0% 0% 0% repeat;z-index:2;background:url("images/panel-3-big.png") no-repeat #000 top center;margin-top:-548px;height:1650px;}
+.mandrade .panel-3{border-top:100px solid transparent;border-image:url("images/flowers-border.png") 100% 0% 0% 0% repeat;z-index:2;background:url("images/panel-3-big.png") no-repeat #000 top center;margin-top:-548px;height:1850px;}
 .mandrade .panel-3 header{color:#fff}
 .mandrade .panel-3 .panel-3-header{top:300px}
 .mandrade .panel-3 .resume{position:absolute;margin:auto auto;width:100%;top:300px;}
@@ -85,7 +87,7 @@ a:hover{color:#5a5a5a}
 .mandrade .panel-3 .resume .resume-css ul .boot{left:50px;top:230px}
 .mandrade .panel-3 .resume .resume-css ul .sem-ui{left:90px;top:320px}
 .mandrade .panel-3 img.panel-3-overlay{margin:0;position:relative}
-.mandrade .panel-4{height:900px;background-color:#fff;}
+.mandrade .panel-4{height:450px;background-color:#fff;}
 .mandrade .panel-4 .panel-inner{height:100%;z-index:2}
 .mandrade .panel-4 .stars{position:absolute;top:-400px;}
 .mandrade .panel-4 .stars img{position:absolute}
@@ -97,12 +99,14 @@ a:hover{color:#5a5a5a}
 .mandrade .panel-4 .stars img.star-6{left:200px;top:100px}
 .mandrade .panel-4 .stars img.star-7{left:0;top:200px}
 .mandrade .panel-4 .stars img.star-8{left:-100px;top:100px}
-.mandrade .panel-4 header{position:relative;top:40px;}
-.mandrade .panel-4 header h2,.mandrade .panel-4 header h3{text-align:left}
-.mandrade .panel-4 img.mountains{top:-267px;left:-166px;position:absolute}
-.mandrade .panel-4 .about{width:300px;position:relative;display:block;float:left;margin-top:60px;}
+.mandrade .panel-4 header{width:50%;position:relative;text-align:center;top:auto;right:auto;padding-top:40px;margin:auto auto;}
+.mandrade .panel-4 header h2,.mandrade .panel-4 header h3{text-align:center}
+.mandrade .panel-4 img.mountains{top:-267px;left:-166px;position:absolute;z-index:-1}
+.mandrade .panel-4 .blog{width:100%;text-align:center;display:block}
+.mandrade .panel-4 .about{position:relative;display:block;margin-top:60px;}
 .mandrade .panel-4 .about h2{margin-left:0;padding-top:3em}
 .mandrade .panel-4 img.about-me{position:absolute;right:0;top:35px}
+.mandrade .panel-4 .social-icons{clear:both}
 
 *{margin:0;padding:0}
 html{height:100%}
@@ -111,7 +115,7 @@ body{background:#fff;margin:0;padding:0;height:100%;font-size:16px;font-family:'
 a{color:#00e}
 a:visited{color:#551a8b}
 a:hover{color:#06e}
-p{font-size:1.6em}
+p{font-size:1.4em}
 h1,h2,h3,h4,h5,h6{font-family:'Architects Daughter',cursive}
 img{vertical-align:middle}
 fieldset{border:0;margin:0;padding:0}
