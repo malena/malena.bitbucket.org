@@ -8,7 +8,7 @@ function Animations(){
 	this.pulse_3 = $('.websites');
 	this.pulse_4 = $('.apps');
 	this.pulse_5 = $('.campaigns');
-	this.pulse_all = $('.pulse');
+	this.pulse_all = $('.img-pulse');
 	this.resume = $('.resume');
 	this.html = $('.resume-html h3');
 	this.css = $('.resume-css h3');
@@ -35,8 +35,8 @@ Animations.prototype.initializeScrollorama = function(){
 Animations.prototype.splashPage = function(){
 
 	// Leaves starting position and pulsating 
-  	TweenMax.from(this.pulse_all, .5,
-  		{css:{top:'-900px'}});
+  	//TweenMax.from(this.pulse_all, .5,
+  	//	{css:{top:'-900px'}});
   	/*
 	TweenMax.to(this.pulse, 2, 
 		{css:{opacity:0}, repeat: -1, yoyo:true});
@@ -46,8 +46,8 @@ Animations.prototype.splashPage = function(){
 	// Splash panel tagline and image entry
   	TweenMax.from(this.splash_tagline, .5, 
         {css:{left:'80em'}});
-  	TweenMax.from(this.splash_image, .5,
-  		{css:{top:'-900px'}});
+  	//TweenMax.from(this.splash_image, .5,
+  	//	{css:{top:'-900px'}});
 
   	//Splash panel tagline and image exit, leaves falling on splash panel scroll out
 
@@ -58,6 +58,8 @@ Animations.prototype.splashPage = function(){
 	  	timeline.append([
 	    		TweenMax.to(this.pulse_text, .02,
 	    			{css:{opacity:1}, delay: .04, onComplete: showProjects, onReverseComplete: hideProjects}),
+			  	TweenMax.to(this.pulse_all, .1,
+			  		{css:{opacity:'1'}}),
 	    		TweenMax.fromTo([this.tree_top,this.tree_bottom], .08,
 	    			{css:{top: "300px", left: "7px"}},
 	    			{css:{top:"40px"}}),
@@ -71,7 +73,7 @@ Animations.prototype.splashPage = function(){
 		      	TweenMax.to(this.splash_panel, .2,
 		      		{css:{height: '10px'}}),
 		      	TweenMax.to(this.pulse_1, .07,
-		      		{css:{top:'309', left:'124'}}),
+		      		{css:{top:'309px', left:'124px'}}),
 		      	TweenMax.to(this.pulse_3, .07,
 		      		{css:{top:'290px', left:'550px'}}),
 		      	TweenMax.to(this.pulse_4, .07,
@@ -94,6 +96,7 @@ Animations.prototype.splashPage = function(){
 		});
 	};
 	function hideProjects(){
+		$('.pulse').unbind();
 		$('ul.project-list').hide();
 	};
 
