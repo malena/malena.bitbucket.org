@@ -27,41 +27,41 @@ a:hover{color:#5a5a5a}
 .mandrade .panel-1 .tagline p{text-align:right}
 .mandrade .panel-1 img.panel-1-body{position:absolute;top:-270px;left:-145px;-ms-transform:rotate(-30deg);-webkit-transform:rotate(-30deg);transform:rotate(-30deg)}
 .mandrade .panel-2{position:relative;z-index:3;height:1177px;}
-.mandrade .panel-2 header{top:150px;width:35%;opacity:0}
+.mandrade .panel-2 header{top:150px;width:32%;opacity:0}
 .mandrade .panel-2 .panel-inner{height:100%}
-.mandrade .panel-2 .pulse{width:200px;height:200px;position:absolute;}
+.mandrade .panel-2 .pulse{width:200px;height:200px;position:absolute;cursor:pointer;}
 .mandrade .panel-2 .pulse span,.mandrade .panel-2 .pulse img,.mandrade .panel-2 .pulse ul li{position:absolute}
 .mandrade .panel-2 .pulse .span-pulse{opacity:0;color:#f00}
 .mandrade .panel-2 .pulse ul.project-list{display:none;width:200px;height:200px;}
 .mandrade .panel-2 .pulse ul.project-list li{list-style-type:none;width:150px;}
-.mandrade .panel-2 .pulse ul.project-list li a{color:#666;font-size:13px}
-.mandrade .panel-2 .panel-2-tree{position:absolute;left:-160px;}
+.mandrade .panel-2 .pulse ul.project-list li a{font-size:13px}
+.mandrade .panel-2 .panel-2-tree{position:absolute;left:-212px;}
 .mandrade .panel-2 .panel-2-tree img.tree-top,.mandrade .panel-2 .panel-2-tree img.tree-bottom{top:-39px;position:relative;z-index:-1}
-.mandrade .panel-2 .projects{position:absolute;height:100%;width:100%;z-index:1;top:120px;left:-150px;}
-.mandrade .panel-2 .projects .fun{top:-440px;left:281px;}
+.mandrade .panel-2 .projects{position:absolute;height:100%;width:100%;z-index:1;top:120px;left:-195px;}
+.mandrade .panel-2 .projects .img-pulse{opacity:0}
+.mandrade .panel-2 .projects .fun{top:-440px;left:300px;}
 .mandrade .panel-2 .projects .fun .span-pulse{top:43px;left:46px}
-.mandrade .panel-2 .projects .fun .img-pulse{opacity:.5;-ms-transform:rotate(-30deg);-webkit-transform:rotate(-30deg);transform:rotate(-30deg)}
+.mandrade .panel-2 .projects .fun .img-pulse{-ms-transform:rotate(-30deg);-webkit-transform:rotate(-30deg);transform:rotate(-30deg)}
 .mandrade .panel-2 .projects .fun .hangman{top:43px;left:-145px}
 .mandrade .panel-2 .projects .fun .calculator{top:104px;left:-115px}
 .mandrade .panel-2 .projects .fun .training{top:-35px;left:-174px}
 .mandrade .panel-2 .projects .fun .googlemaps{left:-160px;top:-90px}
 .mandrade .panel-2 .projects .fun .animatedinput{left:-2px;top:129px}
-.mandrade .panel-2 .projects .websites{top:-468px;left:530px;}
+.mandrade .panel-2 .projects .websites{top:-468px;left:560px;}
 .mandrade .panel-2 .projects .websites .span-pulse{top:55px}
-.mandrade .panel-2 .projects .websites .img-pulse{opacity:.5;-ms-transform:rotate(-80deg);-webkit-transform:rotate(-80deg);transform:rotate(-80deg)}
+.mandrade .panel-2 .projects .websites .img-pulse{-ms-transform:rotate(-80deg);-webkit-transform:rotate(-80deg);transform:rotate(-80deg)}
 .mandrade .panel-2 .projects .websites .gibsons{top:-150px;left:30px}
 .mandrade .panel-2 .projects .websites .shel{top:-100px;left:150px}
 .mandrade .panel-2 .projects .websites .home{top:-40px;left:150px}
 .mandrade .panel-2 .projects .websites .royal{top:0;left:130px}
 .mandrade .panel-2 .projects .websites .gm{top:30px;left:80px}
 .mandrade .panel-2 .projects .websites .mead{top:60px;left:180px}
-.mandrade .panel-2 .projects .apps{top:-553px;left:440px;}
+.mandrade .panel-2 .projects .apps{top:-553px;left:470px;}
 .mandrade .panel-2 .projects .apps .span-pulse{top:-16px;left:-38px}
-.mandrade .panel-2 .projects .apps .img-pulse{opacity:.5}
 .mandrade .panel-2 .projects .apps .jumptools{top:0;left:-133px}
 .mandrade .panel-2 .projects .apps .socialscape{top:-80px;left:-104px}
-.mandrade .panel-2 .projects .campaigns{top:-375px;left:429px;}
-.mandrade .panel-2 .projects .campaigns .img-pulse{opacity:.5;-ms-transform:rotate(-45deg);-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}
+.mandrade .panel-2 .projects .campaigns{top:-375px;left:460px;}
+.mandrade .panel-2 .projects .campaigns .img-pulse{-ms-transform:rotate(-45deg);-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}
 .mandrade .panel-2 .projects .campaigns .span-pulse{top:20px;left:-77px}
 .mandrade .panel-2 .projects .campaigns .shoppers{top:-96px;left:-108px}
 .mandrade .panel-2 .projects .campaigns .holt{top:-125px}
@@ -146,7 +146,7 @@ body{background:#fff;margin:0;padding:0;height:100%;font-size:16px;font-family:'
 a{color:#f00}
 a:visited{color:#830202}
 a:hover{color:#830202}
-p{font-size:1.4em}
+p{font-size:1.1em}
 h1,h2,h3,h4,h5,h6{font-family:'Architects Daughter',cursive}
 img{vertical-align:middle}
 fieldset{border:0;margin:0;padding:0}

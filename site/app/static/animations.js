@@ -44,10 +44,13 @@ Animations.prototype.splashPage = function(){
 
 
 	// Splash panel tagline and image entry
-  	TweenMax.from(this.splash_tagline, .5, 
-        {css:{left:'80em'}});
-  	//TweenMax.from(this.splash_image, .5,
-  	//	{css:{top:'-900px'}});
+  	TweenMax.from(this.splash_tagline, 1, 
+        {css:{top:'-80em'}, ease:Back.easeOut, delay: 1.4});
+  	TweenMax.from(this.splash_image, 1.5,
+  		{css:{transform: 'rotate(90deg)',top:'-900px'}});
+  	TweenMax.to(this.pulse_all, 4, 
+        {css:{opacity:'.3'}, ease:Back.easeOut, delay: 2});
+
 
   	//Splash panel tagline and image exit, leaves falling on splash panel scroll out
 
