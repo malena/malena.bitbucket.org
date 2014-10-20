@@ -4,10 +4,10 @@ function Animations(){
 	this.splash_image = $('.panel-1-body');
 	this.splash_leaves = $('.panel-1');
 	this.resume = $('.resume');
-	this.pulse_1 = $('.fun');
-	this.pulse_3 = $('.websites');
-	this.pulse_4 = $('.apps');
-	this.pulse_5 = $('.campaigns');
+	this.fun = $('.fun');
+	this.website = $('.websites');
+	this.apps = $('.apps');
+	this.campaigns = $('.campaigns');
 	this.pulse_all = $('.img-pulse');
 	this.resume = $('.resume');
 	this.html = $('.resume-html h3');
@@ -63,9 +63,6 @@ Animations.prototype.splashPage = function(){
 	    			{css:{opacity:1}, delay: .04, onComplete: showProjects, onReverseComplete: hideProjects}),
 			  	TweenMax.to(this.pulse_all, .1,
 			  		{css:{opacity:'1'}}),
-	    		TweenMax.fromTo([this.tree_top,this.tree_bottom], .08,
-	    			{css:{top: "300px", left: "7px"}},
-	    			{css:{top:"40px"}}),
 	    		TweenMax.from(this.panel_3, .03,
 	    			{css:{marginTop: "0"}}),
 		    	TweenMax.to(this.splash_tagline, .1, 
@@ -75,14 +72,14 @@ Animations.prototype.splashPage = function(){
 			    	ease:Back.easeOut}),
 		      	TweenMax.to(this.splash_panel, .2,
 		      		{css:{height: '10px'}}),
-		      	TweenMax.to(this.pulse_1, .07,
-		      		{css:{top:'309px', left:'124px'}}),
-		      	TweenMax.to(this.pulse_3, .07,
-		      		{css:{top:'290px', left:'550px'}}),
-		      	TweenMax.to(this.pulse_4, .07,
-		      		{css:{top:'113px', left:'200px'}}),
-		      	TweenMax.to(this.pulse_5, .07,
-		      		{css:{top:'272px', left:'415px'}, onComplete: enterText})
+		      	TweenMax.to(this.fun, .07,
+		      		{css:{top:'371px', left:'210px'}}),
+		      	TweenMax.to(this.website, .07,
+		      		{css:{top:'350px', left:'486px'}}),
+		      	TweenMax.to(this.apps, .07,
+		      		{css:{top:'140px', left:'200px'}}),
+		      	TweenMax.to(this.campaigns, .07,
+		      		{css:{top:'318px', left:'385px'}, onComplete: enterText})
 			]),
 	  	1000 // scroll duration of tween
 	);

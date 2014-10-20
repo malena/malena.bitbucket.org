@@ -35,34 +35,35 @@ a:hover{color:#5a5a5a}
 .mandrade .panel-2 .pulse ul.project-list{display:none;width:200px;height:200px;}
 .mandrade .panel-2 .pulse ul.project-list li{list-style-type:none;width:150px;}
 .mandrade .panel-2 .pulse ul.project-list li a{font-size:13px}
-.mandrade .panel-2 .panel-2-tree{position:absolute;left:-212px;}
+.mandrade .panel-2 .panel-2-tree{position:absolute;left:-212px;top:180px;}
 .mandrade .panel-2 .panel-2-tree img.tree-top,.mandrade .panel-2 .panel-2-tree img.tree-bottom{top:-39px;position:relative;z-index:-1}
-.mandrade .panel-2 .projects{position:absolute;height:100%;width:100%;z-index:1;top:120px;left:-195px;}
+.mandrade .panel-2 .panel-2-tree img.tree-bottom{left:146px}
+.mandrade .panel-2 .projects{position:absolute;height:100%;width:100%;z-index:1;top:120px;left:-200px;}
 .mandrade .panel-2 .projects .img-pulse{opacity:0}
 .mandrade .panel-2 .projects .fun{top:-440px;left:300px;}
-.mandrade .panel-2 .projects .fun .span-pulse{top:43px;left:46px}
+.mandrade .panel-2 .projects .fun .span-pulse{top:43px;left:15px}
 .mandrade .panel-2 .projects .fun .img-pulse{-ms-transform:rotate(-30deg);-webkit-transform:rotate(-30deg);transform:rotate(-30deg)}
-.mandrade .panel-2 .projects .fun .hangman{top:43px;left:-145px}
-.mandrade .panel-2 .projects .fun .calculator{top:104px;left:-115px}
+.mandrade .panel-2 .projects .fun .hangman{top:17px;left:-181px}
+.mandrade .panel-2 .projects .fun .calculator{top:115px;left:-157px}
 .mandrade .panel-2 .projects .fun .training{top:-35px;left:-174px}
-.mandrade .panel-2 .projects .fun .googlemaps{left:-160px;top:-90px}
-.mandrade .panel-2 .projects .fun .animatedinput{left:-2px;top:129px}
+.mandrade .panel-2 .projects .fun .googlemaps{left:-153px;top:-76px}
+.mandrade .panel-2 .projects .fun .animatedinput{left:-27px;top:91px}
 .mandrade .panel-2 .projects .websites{top:-468px;left:560px;}
 .mandrade .panel-2 .projects .websites .span-pulse{top:55px}
 .mandrade .panel-2 .projects .websites .img-pulse{-ms-transform:rotate(-80deg);-webkit-transform:rotate(-80deg);transform:rotate(-80deg)}
-.mandrade .panel-2 .projects .websites .gibsons{top:-150px;left:30px}
-.mandrade .panel-2 .projects .websites .shel{top:-100px;left:150px}
-.mandrade .panel-2 .projects .websites .home{top:-40px;left:150px}
-.mandrade .panel-2 .projects .websites .royal{top:0;left:130px}
-.mandrade .panel-2 .projects .websites .gm{top:30px;left:80px}
+.mandrade .panel-2 .projects .websites .gibsons{top:-175px;left:70px}
+.mandrade .panel-2 .projects .websites .shel{top:-100px;left:180px}
+.mandrade .panel-2 .projects .websites .home{top:-30px;left:150px}
+.mandrade .panel-2 .projects .websites .royal{top:10px;left:160px}
+.mandrade .panel-2 .projects .websites .gm{top:110px;left:128px}
 .mandrade .panel-2 .projects .websites .mead{top:60px;left:180px}
 .mandrade .panel-2 .projects .apps{top:-553px;left:470px;}
-.mandrade .panel-2 .projects .apps .span-pulse{top:-16px;left:-38px}
-.mandrade .panel-2 .projects .apps .jumptools{top:0;left:-133px}
-.mandrade .panel-2 .projects .apps .socialscape{top:-80px;left:-104px}
+.mandrade .panel-2 .projects .apps .span-pulse{top:30px;left:-30px}
+.mandrade .panel-2 .projects .apps .jumptools{top:44px;left:-133px}
+.mandrade .panel-2 .projects .apps .socialscape{top:-32px;left:-105px}
 .mandrade .panel-2 .projects .campaigns{top:-375px;left:460px;}
 .mandrade .panel-2 .projects .campaigns .img-pulse{-ms-transform:rotate(-45deg);-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}
-.mandrade .panel-2 .projects .campaigns .span-pulse{top:20px;left:-77px}
+.mandrade .panel-2 .projects .campaigns .span-pulse{top:-15px;left:40px}
 .mandrade .panel-2 .projects .campaigns .shoppers{top:-96px;left:-108px}
 .mandrade .panel-2 .projects .campaigns .holt{top:-125px}
 .mandrade .panel-3{border-top:100px solid transparent;border-image:url("images/flowers-border.png") 100% 0% 0% 0% repeat;z-index:2;background:url("images/panel-3-big.png") no-repeat #000 top center;margin-top:-548px;height:1850px;}
