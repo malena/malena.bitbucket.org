@@ -67,7 +67,8 @@ a:hover{color:#5a5a5a}
 .mandrade .panel-2 .projects .campaigns .shoppers{top:-96px;left:-108px}
 .mandrade .panel-2 .projects .campaigns .holt{top:-125px}
 .mandrade .panel-3{border-top:100px solid transparent;border-image:url("images/flowers-border.png") 100% 0% 0% 0% repeat;z-index:2;background:url("images/panel-3-big.png") no-repeat #000 top center;margin-top:-548px;height:1850px;}
-.mandrade .panel-3 header{color:#fff}
+.mandrade .panel-3 .panel-inner{margin-top:300px}
+.mandrade .panel-3 header{width:350px;color:#fff}
 .mandrade .panel-3 .panel-3-header{top:300px}
 .mandrade .panel-3 .resume{position:absolute;margin:auto auto;width:100%;top:300px;}
 .mandrade .panel-3 .resume h3{color:#fff;text-align:center;line-height:265px;width:250px;height:265px;position:absolute;background-size:100%;background-repeat:no-repeat;background-position:top center;background-color:transparent}
@@ -99,7 +100,7 @@ a:hover{color:#5a5a5a}
 .mandrade .panel-4 .stars img.star-1{left:800px;top:30px}
 .mandrade .panel-4 .stars img.star-2{left:830px;top:213px}
 .mandrade .panel-4 .stars img.star-3{left:600px;top:160px}
-.mandrade .panel-4 .stars img.star-4{left:500px;top:300px}
+.mandrade .panel-4 .stars img.star-4{left:500px;top:180px}
 .mandrade .panel-4 .stars img.star-5{left:400px;top:0}
 .mandrade .panel-4 .stars img.star-6{left:200px;top:100px}
 .mandrade .panel-4 .stars img.star-7{left:0;top:200px}
