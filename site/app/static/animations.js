@@ -21,6 +21,7 @@ function Animations(){
 	this.panel_3 = $('.panel-3');
 	this.panel_3_header = $('.panel-3-header');
 	this.work_header = $('.panel-2 .header-work');
+	this.star = $('img.star');
 
 	var projectDisplay;
 };
@@ -30,6 +31,8 @@ Animations.prototype.initializeScrollorama = function(){
 		triggerAtCenter: false,
 		playoutAnimations: true 
 	});
+
+	this.splashPage();
 };
 
 Animations.prototype.splashPage = function(){
@@ -100,6 +103,8 @@ Animations.prototype.splashPage = function(){
 		$('ul.project-list').hide();
 	};
 
+	this.projectsPage();
+
 };
 
 Animations.prototype.projectsPage = function(){
@@ -114,8 +119,27 @@ Animations.prototype.projectsPage = function(){
 		      	TweenMax.to(this.css, 3,
 		      		{rotation: 360}),
 		      	TweenMax.to(this.js, 3,
-		      		{rotation: 360})
+		      		{rotation: 360, onComplete: startAbout})
 			]),
 	  	1000 // scroll duration of tween
+	);
+
+	function startAbout(){
+		console.log('about');
+		var that = this;
+
+		that.aboutPage();
+	}
+};
+
+Animations.prototype.aboutPage = function(){
+	// Skills panel flowers rotating on projects panel scroll out 
+	this.controller.addTween('.panel-3',
+	  	(new TimelineLite())
+	    	.append([
+		      	TweenMax.to(this.star, 3,
+		      		{rotation: 360})
+			]),
+	  	3000 // scroll duration of tween
 	);
 };
