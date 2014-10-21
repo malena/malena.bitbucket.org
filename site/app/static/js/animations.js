@@ -21,7 +21,7 @@ function Animations(){
 	this.panel_3 = $('.panel-3');
 	this.panel_3_header = $('.panel-3-header');
 	this.work_header = $('.panel-2 .header-work');
-	this.star = $('img.star');
+	this.star = $('.star');
 
 };
 
@@ -29,7 +29,7 @@ Animations.prototype.initializeScrollorama = function(){
 
 	this.controller = $.superscrollorama({
 		triggerAtCenter: false,
-		playoutAnimations: true
+		playoutAnimations: true 
 	});
 
 	this.splashPage();
@@ -112,7 +112,8 @@ Animations.prototype.projectsPage = function(){
 	      	TweenMax.to(this.js, 3,
 	      		{rotation: 360})
 			]),
-	  	900 // scroll duration of tween
+	  	900,
+	  	300 // scroll duration of tween
 	);
 
 	function timelineDone(){
@@ -122,23 +123,19 @@ Animations.prototype.projectsPage = function(){
 
 Animations.prototype.skillsPage = function(){
 	console.log('skills page');
-
-	var that = this;
-	var timeline = new TimelineLite({onComplete:timelineDone, onCompleteScope:that});
-
-	this.controller.addTween('.panel-3',
-		timeline.append([
-	      	TweenMax.to(this.star, 3,
-	      		{rotation: 360})
-			]),
-	  	900 // scroll duration of tween
-	);
-
-	function timelineDone(){
-		this.aboutPage();
-	};
+	this.aboutPage();
 };
 
 Animations.prototype.aboutPage = function(){
 	console.log('about page');
+	var that = this;
+	var timeline = new TimelineMax({});
+
+	this.controller.addTween('.panel-3',
+		timeline.append([
+	      	TweenMax.to(this.star, 3,
+	      		{opacity:0, repeat:-1, yoyo:true})
+			]),
+	  	900 // scroll duration of tween
+	);
 };
