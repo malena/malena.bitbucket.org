@@ -85,7 +85,7 @@ Animations.prototype.splashPage = function(){
 		      	TweenMax.to(this.campaigns, .07,
 		      		{css:{top:'318px', left:'385px'}, onComplete: enterText})
 			]),
-	  	300 // scroll duration of tween
+	  	800 // scroll duration of tween
 	);
 
 	function enterText() {
@@ -117,7 +117,6 @@ Animations.prototype.projectsPage = function(){
 	var that = this;
 	var timeline = new TimelineLite({onComplete:timelineDone, onCompleteScope:that});
 
-	// Skills panel flowers rotating on projects panel scroll out 
 	this.controller.addTween('.panel-2',
 	  	timeline.append([
     		TweenMax.from([this.panel_3_header, this.resume], 3,
@@ -129,29 +128,25 @@ Animations.prototype.projectsPage = function(){
 	      	TweenMax.to(this.js, 3,
 	      		{rotation: 360})
 			]),
-	  	1000 // scroll duration of tween
+	  	800 // scroll duration of tween
 	);
 
-	function startAbout(){
-		console.log('about');
-		var that = this;
-	};
-
 	function timelineDone(){
-		that.aboutPage();
+		this.skillsPage();
 	};
 };
 
-Animations.prototype.aboutPage = function(){
+Animations.prototype.skillsPage = function(){
+	console.log('skills page');
 
-	console.log('about pagae');
-	// Skills panel flowers rotating on projects panel scroll out 
+	var that = this;
+	var timeline = new TimelineLite({});
+
 	this.controller.addTween('.panel-3',
-	  	(new TimelineLite())
-	    	.append([
-		      	TweenMax.to(this.star, 3,
-		      		{rotation: 360})
+		timeline.append([
+	      	TweenMax.to(this.star, 3,
+	      		{rotation: 360})
 			]),
-	  	3000 // scroll duration of tween
+	  	800 // scroll duration of tween
 	);
 };
