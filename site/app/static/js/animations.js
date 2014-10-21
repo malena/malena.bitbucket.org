@@ -29,8 +29,7 @@ Animations.prototype.initializeScrollorama = function(){
 
 	this.controller = $.superscrollorama({
 		triggerAtCenter: false,
-		playoutAnimations: true,
-		reverse: true 
+		playoutAnimations: true
 	});
 
 	this.splashPage();
@@ -106,8 +105,6 @@ Animations.prototype.projectsPage = function(){
 
 	this.controller.addTween('.panel-2',
 	  	timeline.append([
-    		TweenMax.from([this.panel_3_header, this.resume], 3,
-    			{css:{top: '600px'}, ease:'Elatic.easeOut'}),
 	      	TweenMax.to(this.html, 3,
 	      		{rotation: 360}),
 	      	TweenMax.to(this.css, 3,
