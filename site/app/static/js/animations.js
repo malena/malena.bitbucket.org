@@ -140,7 +140,7 @@ Animations.prototype.skillsPage = function(){
 	console.log('skills page');
 
 	var that = this;
-	var timeline = new TimelineLite({});
+	var timeline = new TimelineLite({onComplete:timelineDone, onCompleteScope:that});
 
 	this.controller.addTween('.panel-3',
 		timeline.append([
@@ -149,4 +149,12 @@ Animations.prototype.skillsPage = function(){
 			]),
 	  	800 // scroll duration of tween
 	);
+
+	function timelineDone(){
+		this.aboutPage();
+	};
+};
+
+Animations.prototype.aboutPage = function(){
+	console.log('about page');
 };
