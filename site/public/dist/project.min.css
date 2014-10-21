@@ -66,7 +66,11 @@ a:hover{color:#5a5a5a}
 .mandrade .panel-2 .projects .campaigns .span-pulse{top:-15px;left:40px}
 .mandrade .panel-2 .projects .campaigns .shoppers{top:-96px;left:-108px}
 .mandrade .panel-2 .projects .campaigns .holt{top:-125px}
+<<<<<<< HEAD
 .mandrade .panel-3{border-top:100px solid transparent;border-image:url("images/flowers-border.png") 100% 0% 0% 0% repeat;z-index:2;background:url("images/panel-3-big.png") no-repeat #000 top center;margin-top:-548px;height:2000px;}
+=======
+.mandrade .panel-3{border-top:100px solid transparent;border-image:url("images/flowers-border.png") 100% 0% 0% 0% repeat;z-index:2;background:url("images/panel-3-big.png") no-repeat #000 top center;margin-top:-548px;height:2000px;border-bottom:0;border-left:0;border-right:0;}
+>>>>>>> develop
 .mandrade .panel-3 .panel-inner{margin-top:200px}
 .mandrade .panel-3 header{width:350px;color:#fff}
 .mandrade .panel-3 .panel-3-header{top:300px}
