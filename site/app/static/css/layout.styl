@@ -1,0 +1,472 @@
+.mandrade 
+
+	.panel-1,
+	.panel-2,
+	.panel-3
+		position: relative
+
+	.panel-inner
+		display: block
+		width:  900px
+		margin: auto auto
+		position: relative
+
+	.panel
+		border-radius: 0px 
+		background-color: transparent
+		margin: auto
+		height: 850px
+
+		header
+			position: absolute
+			top: 30px 
+			right: 0px
+			text-align: right
+			width: 270px
+
+			h2,h3
+				margin: 0
+
+			h2
+				text-transform: uppercase
+				font-size: 1.9em
+
+			h3
+				font-size: 13px
+
+	/*
+	//////////////////////////////////////////////////////////////////////////////////////////////////
+		PANEL 1
+	//////////////////////////////////////////////////////////////////////////////////////////////////
+	*/
+
+	.panel-1
+		color: #000
+		background-color: transparent 
+		padding-top: 2em
+		z-index: 3
+		background-position: 700px 0px
+
+		.tagline
+			position: absolute
+			left: 500px 
+			width: 395px
+			top: 1em
+
+			h2
+				position: relative
+				background: url('images/alo.png') no-repeat top right transparent
+				text-indent: -80000px
+				margin: 0
+				height: 160px
+
+			p 
+				text-align: right
+
+		img.panel-1-body 
+			position: absolute
+			top: -270px
+			left: -145px
+			-ms-transform: rotate(-30deg) 
+			-webkit-transform: rotate(-30deg) 
+			transform: rotate(-30deg)
+
+	/*
+	//////////////////////////////////////////////////////////////////////////////////////////////////
+		PANEL 2
+	//////////////////////////////////////////////////////////////////////////////////////////////////
+	*/
+
+	.panel-2
+		position: relative
+		z-index: 3
+		height: 1177px
+
+		header
+			top: 150px
+			width: 32%	
+			opacity: 0
+
+		.panel-inner
+			height: 100%	
+
+		.pulse
+			width: 200px
+			height: 200px
+			position: absolute
+			cursor: pointer 
+
+			span, img, ul li
+				position: absolute
+
+			.span-pulse
+				opacity: 0 
+				color: red 
+
+			ul.project-list
+				display: none 
+				width: 200px
+				height: 200px
+
+				li
+					list-style-type: none
+					width: 150px 
+
+					a
+						font-size: 13px
+
+		.panel-2-tree
+			position: absolute
+			left: -212px
+			top: 180px
+
+			img.tree-top, img.tree-bottom
+				top: -39px
+				position: relative
+				z-index: -1
+
+			img.tree-bottom
+				left: 146px 
+
+		.projects
+			position: absolute 
+			height: 100%
+			width: 100%
+			z-index: 1
+			top: 120px
+			left: -200px
+
+			.img-pulse
+				opacity: 0
+
+			.fun
+				top: -440px
+				left: 300px
+
+				.span-pulse
+					top: 43px
+					left: 15px	
+
+				.img-pulse
+					-ms-transform: rotate(-30deg) 
+					-webkit-transform: rotate(-30deg) 
+					transform: rotate(-30deg)
+
+				.hangman
+					top: 17px
+					left: -181px	
+				.calculator
+					top: 115px 
+					left: -157px
+				.training
+					top: -35px
+					left: -174px
+				.googlemaps
+					left: -153px
+					top: -76px
+				.animatedinput
+					left: -27px
+					top: 91px
+
+			.websites
+				top: -468px
+				left: 560px
+
+				.span-pulse
+					top: 55px
+
+				.img-pulse
+					-ms-transform: rotate(-80deg) 
+					-webkit-transform: rotate(-80deg) 
+					transform: rotate(-80deg)
+
+				.gibsons
+					top: -175px
+					left: 70px
+
+				.shel
+					top: -100px
+					left: 180px
+				.home
+					top: -30px
+					left: 150px
+
+				.royal
+					top: 10px
+					left: 160px
+
+				.gm
+					top: 110px
+					left: 128px
+
+				.mead
+					top: 60px
+					left: 180px
+
+			.apps
+				top: -553px
+				left: 470px
+
+				.span-pulse
+					top: 30px
+					left: -30px
+
+
+				.jumptools
+					top: 44px
+					left: -133px
+
+				.socialscape
+					top: -32px
+					left: -105px 
+
+			.campaigns
+				top: -375px
+				left: 460px
+
+				.img-pulse
+					-ms-transform: rotate(-45deg) 
+					-webkit-transform: rotate(-45deg) 
+					transform: rotate(-45deg)
+
+				.span-pulse
+					top: -15px
+					left: 40px
+
+				.shoppers
+					top: -96px
+					left: -108px
+
+				.holt
+					top: -125px
+
+
+	/*
+	//////////////////////////////////////////////////////////////////////////////////////////////////
+		PANEL 3
+	//////////////////////////////////////////////////////////////////////////////////////////////////
+	*/
+
+	.panel-3
+		border-top: 100px solid transparent 
+		border-image: url('images/flowers-border.png') 100% 0% 0% 0% repeat;
+		z-index: 2
+		background: url('images/panel-3-big.png') no-repeat black top center 
+		margin-top: -548px
+		height: 2000px
+		border-bottom: 0
+		border-left: 0
+		border-right: 0
+
+		.panel-inner
+			margin-top: 200px
+
+		header
+			width: 350px
+			color: #fff
+
+		.panel-3-header
+			top: 300px
+
+		.resume	
+			position: absolute 
+			margin: auto auto
+			width: 100%
+			top: 300px
+
+			h3
+				color: #fff
+				text-align: center
+				line-height: 265px
+				width: 250px
+				height: 265px
+				position: absolute
+				background-size: 100%
+				background-repeat: no-repeat
+				background-position: top center
+				background-color: transparent
+
+			ul
+				color: #6a6a6b
+				position: absolute
+				width: 232px
+
+				li 
+					//position: absolute
+					list-style-type: circle
+					text-align: left 
+
+
+			.resume-html 
+				h3
+					background-image: url('images/flower-html.png')
+					top: 362px
+					left: 135px
+					height: 290px
+
+				ul
+					top: 695px;
+					left: 202px;
+					width: 440px;
+					height: 400px;
+
+					.jade
+						//left: 300px;
+						//top: 43px;
+
+					.sem-html
+						//left: 300px;
+						//top: 270px
+
+					.accessible
+						//left: 100px;
+						//top: 320px;
+
+
+			.resume-js
+				h3
+					background-image: url('images/flower-js.png')
+					top: 28px
+					left: 42px
+				ul
+					top: 157px
+					left: 320px
+					height: 315px
+
+					.jquery
+						left: 250px
+						top: 30px
+
+					.backb
+						left: 330px
+						top: 100px
+
+					.angular
+						left: 270px
+						top: 160px
+
+					.node
+						left: 250px
+						top: 230px
+
+					.grunt
+						left: 100px
+						top: 270px
+
+			.resume-css
+				h3
+					background-image: url('images/flower-css.png')
+					left: 460px
+					top: 270px
+				ul
+					left: 570px
+					top: 545px
+					width: 300px
+					height: 400px
+
+					.less
+						left: 150px
+						top: 30px
+
+					.styl
+						left: 180px
+						top: 140px
+
+					.boot
+						left: 50px
+						top: 230px
+
+					.sem-ui
+						left: 90px
+						top: 320px
+
+
+		img.panel-3-overlay
+			margin: 0 
+			position: relative
+
+	/*
+	//////////////////////////////////////////////////////////////////////////////////////////////////
+		PANEL 4
+	//////////////////////////////////////////////////////////////////////////////////////////////////
+	*/
+
+	.panel-4
+		height: 380px
+		background-color: #fff
+
+		.panel-inner
+			height: 100%
+			z-index: 2
+
+		.stars
+			position: absolute
+			top: -400px
+
+			img
+				position: absolute
+
+			img.star-1
+				left: 800px
+				top: 30px
+			img.star-2
+				left: 830px
+				top: 213px
+			img.star-3
+				left: 600px
+				top: 160px
+			img.star-4
+				left: 500px
+				top: 180px
+			img.star-5
+				left: 400px
+				top: 0px
+			img.star-6
+				left: 200px
+				top: 100px
+			img.star-7
+				left: 0px
+				top: 200px
+			img.star-8
+				left: -100px
+				top: 100px
+
+		header
+			width: 50%;
+			position: relative;
+			text-align: center;
+			top: auto;
+			right: auto;
+			padding-top: 40px
+			margin: auto auto
+
+			h2,h3
+				text-align: center 
+
+		img.mountains
+			top: -267px
+			left: -166px
+			position: absolute
+			z-index: -1
+
+		.blog
+			width: 100%
+			text-align: center
+			display: block
+
+		.about
+			position: relative
+			display: block
+			margin-top: 60px
+
+			h2
+				margin-left: 0em 
+				padding-top: 3em
+
+		img.about-me
+			position: absolute 
+			right: 0
+			top: 35px
+
+		.social-icons
+			clear: both

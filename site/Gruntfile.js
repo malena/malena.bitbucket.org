@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 				livereload: true,
 			},
 			scripts: {
-				files: ['app/static/project.js'],
+				files: ['app/static/js/*.js'],
 				tasks: ['uglify'],
 				options: {
 					spawn: false,
@@ -34,7 +34,12 @@ module.exports = function(grunt) {
 
 		uglify : {
 			build: {
-				src: ['app/static/project.js', 'public/libs/js/*.js'],
+				src: [
+					'app/static/js/scroll.js', 
+					'app/static/js/animations.js', 
+					'app/static/js/project.js', 
+					'public/libs/js/*.js'
+				],
 				dest: 'public/dist/project.min.js' 
 			}
 		},
