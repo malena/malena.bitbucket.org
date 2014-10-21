@@ -29,7 +29,8 @@ Animations.prototype.initializeScrollorama = function(){
 
 	this.controller = $.superscrollorama({
 		triggerAtCenter: false,
-		playoutAnimations: false 
+		playoutAnimations: true,
+		reverse: true 
 	});
 
 	this.splashPage();
@@ -38,25 +39,12 @@ Animations.prototype.initializeScrollorama = function(){
 Animations.prototype.splashPage = function(){
 	console.log('splash page');
 
-	// Leaves starting position and pulsating 
-  	//TweenMax.from(this.pulse_all, .5,
-  	//	{css:{top:'-900px'}});
-  	/*
-	TweenMax.to(this.pulse, 2, 
-		{css:{opacity:0}, repeat: -1, yoyo:true});
-	*/
-
-
-	// Splash panel tagline and image entry
   	TweenMax.from(this.splash_tagline, 1, 
         {css:{top:'-80em'}, ease:Back.easeOut, delay: 1.4});
   	TweenMax.from(this.splash_image, 1.5,
   		{css:{transform: 'rotate(90deg)',top:'-900px'}});
   	TweenMax.to(this.pulse_all, 4, 
         {css:{opacity:'.3'}, ease:Back.easeOut, delay: 2});
-
-
-  	//Splash panel tagline and image exit, leaves falling on splash panel scroll out
 
 	var that = this;
 	var timeline = new TimelineLite({onComplete:timelineDone, onCompleteScope:that});
@@ -67,8 +55,6 @@ Animations.prototype.splashPage = function(){
 	    			{css:{opacity:1}, delay: .04, onComplete: showProjects, onReverseComplete: hideProjects}),
 			  	TweenMax.to(this.pulse_all, .1,
 			  		{css:{opacity:'1'}}),
-	    		//TweenMax.from(this.panel_3, .03,
-	    		//	{css:{marginTop: "0"}}),
 		    	TweenMax.to(this.splash_tagline, .1, 
 			        {css:{top:'-40em'}}),
 		      	TweenMax.to(this.splash_image, .2, 
@@ -85,7 +71,7 @@ Animations.prototype.splashPage = function(){
 		      	TweenMax.to(this.campaigns, .07,
 		      		{css:{top:'318px', left:'385px'}, onComplete: enterText})
 			]),
-	  	800 // scroll duration of tween
+	  	900 // scroll duration of tween
 	);
 
 	function enterText() {
@@ -94,6 +80,7 @@ Animations.prototype.splashPage = function(){
       		{css:{opacity:'1'}})
 
 	};
+
 	function showProjects (){
 		$('.pulse').hover(function(){
 			$(this).find('ul.project-list').show();
@@ -128,7 +115,7 @@ Animations.prototype.projectsPage = function(){
 	      	TweenMax.to(this.js, 3,
 	      		{rotation: 360})
 			]),
-	  	800 // scroll duration of tween
+	  	900 // scroll duration of tween
 	);
 
 	function timelineDone(){
@@ -147,7 +134,7 @@ Animations.prototype.skillsPage = function(){
 	      	TweenMax.to(this.star, 3,
 	      		{rotation: 360})
 			]),
-	  	800 // scroll duration of tween
+	  	900 // scroll duration of tween
 	);
 
 	function timelineDone(){
