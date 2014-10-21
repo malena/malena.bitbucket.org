@@ -63,7 +63,7 @@ module.exports = function(grunt) {
 					}
 				},
 				files: {
-					'index.html' : 'app/index.jade'
+					'../index.html' : 'app/index.jade'
 				}
 			}
 		},
