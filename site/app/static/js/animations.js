@@ -23,19 +23,20 @@ function Animations(){
 	this.work_header = $('.panel-2 .header-work');
 	this.star = $('img.star');
 
-	var projectDisplay;
 };
 
 Animations.prototype.initializeScrollorama = function(){
+
 	this.controller = $.superscrollorama({
 		triggerAtCenter: false,
-		playoutAnimations: true 
+		playoutAnimations: false 
 	});
 
 	this.splashPage();
 };
 
 Animations.prototype.splashPage = function(){
+	console.log('splash page');
 
 	// Leaves starting position and pulsating 
   	//TweenMax.from(this.pulse_all, .5,
@@ -58,7 +59,7 @@ Animations.prototype.splashPage = function(){
   	//Splash panel tagline and image exit, leaves falling on splash panel scroll out
 
 	var that = this;
-	var timeline = new TimelineLite();
+	var timeline = new TimelineLite({onComplete:timelineDone, onCompleteScope:that});
 
 	this.controller.addTween('.panel-1',
 	  	timeline.append([
@@ -84,7 +85,7 @@ Animations.prototype.splashPage = function(){
 		      	TweenMax.to(this.campaigns, .07,
 		      		{css:{top:'318px', left:'385px'}, onComplete: enterText})
 			]),
-	  	1000 // scroll duration of tween
+	  	300 // scroll duration of tween
 	);
 
 	function enterText() {
@@ -98,28 +99,35 @@ Animations.prototype.splashPage = function(){
 			$(this).find('ul.project-list').show();
 		});
 	};
+
 	function hideProjects(){
 		$('.pulse').unbind();
 		$('ul.project-list').hide();
 	};
 
-	this.projectsPage();
+	function timelineDone(){
+		this.projectsPage();
+	};
 
 };
 
 Animations.prototype.projectsPage = function(){
+	console.log('projects page');
+	
+	var that = this;
+	var timeline = new TimelineLite({onComplete:timelineDone, onCompleteScope:that});
+
 	// Skills panel flowers rotating on projects panel scroll out 
 	this.controller.addTween('.panel-2',
-	  	(new TimelineLite())
-	    	.append([
-	    		TweenMax.from([this.panel_3_header, this.resume], 3,
-	    			{css:{top: '600px'}, ease:'Elatic.easeOut'}),
-		      	TweenMax.to(this.html, 3,
-		      		{rotation: 360}),
-		      	TweenMax.to(this.css, 3,
-		      		{rotation: 360}),
-		      	TweenMax.to(this.js, 3,
-		      		{rotation: 360, onComplete: startAbout})
+	  	timeline.append([
+    		TweenMax.from([this.panel_3_header, this.resume], 3,
+    			{css:{top: '600px'}, ease:'Elatic.easeOut'}),
+	      	TweenMax.to(this.html, 3,
+	      		{rotation: 360}),
+	      	TweenMax.to(this.css, 3,
+	      		{rotation: 360}),
+	      	TweenMax.to(this.js, 3,
+	      		{rotation: 360})
 			]),
 	  	1000 // scroll duration of tween
 	);
@@ -127,12 +135,16 @@ Animations.prototype.projectsPage = function(){
 	function startAbout(){
 		console.log('about');
 		var that = this;
+	};
 
+	function timelineDone(){
 		that.aboutPage();
-	}
+	};
 };
 
 Animations.prototype.aboutPage = function(){
+
+	console.log('about pagae');
 	// Skills panel flowers rotating on projects panel scroll out 
 	this.controller.addTween('.panel-3',
 	  	(new TimelineLite())
