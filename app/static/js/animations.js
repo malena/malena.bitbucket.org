@@ -21,7 +21,14 @@ function Animations(){
 	this.panel_3 = $('.panel-3');
 	this.panel_3_header = $('.panel-3-header');
 	this.work_header = $('.panel-2 .header-work');
-	this.star = $('.star');
+	this.s_1 = $('.star-1');
+	this.s_2 = $('.star-2');
+	this.s_3 = $('.star-3');
+	this.s_4 = $('.star-4');
+	this.s_5 = $('.star-5');
+	this.s_6 = $('.star-6');
+	this.s_7 = $('.star-7');
+	this.s_8 = $('.star-8');
 	this.flower = $('.flower');
 
 };
@@ -41,8 +48,8 @@ Animations.prototype.splashPage = function(){
 
   	TweenMax.from(this.splash_tagline, 1, 
         {css:{top:'-80em'}, ease:Back.easeOut, delay: 1.4});
-  	TweenMax.from(this.splash_image, 1.5,
-  		{css:{transform: 'rotate(90deg)',top:'-900px'}});
+  	//TweenMax.from(this.splash_image, 1.5,
+  	//	{css:{transform: 'rotate(90deg)',top:'-900px'}});
   	TweenMax.to(this.pulse_all, 4, 
         {css:{opacity:'.3'}, ease:Back.easeOut, delay: 2});
 
@@ -58,7 +65,7 @@ Animations.prototype.splashPage = function(){
 		    	TweenMax.to(this.splash_tagline, .1, 
 			        {css:{top:'-40em'}}),
 		      	TweenMax.to(this.splash_image, .2, 
-			        {css:{transform: 'rotate(-90deg)',top:'-500px'},
+			       {css:{transform: 'rotate(-90deg)',top:'-500px'},
 			    	ease:Back.easeOut}),
 		      	TweenMax.to(this.splash_panel, .2,
 		      		{css:{height: '10px'}}),
@@ -126,6 +133,30 @@ Animations.prototype.skillsPage = function(){
 Animations.prototype.aboutPage = function(){
 	console.log('about page');
 
-  	TweenMax.to(this.star, 4, 
-        {opacity:0, repeat: -1, yoyo:true});
+  	var that = this;
+	var timeline = new TimelineLite({});
+
+	this.controller.addTween('.panel-1',
+	  	timeline.append([
+	    		TweenMax.to(this.s_1, 4,
+	    			{opacity:.2, repeat:-1, yoyo:true}),
+	    		TweenMax.to(this.s_2, 3,
+	    			{opacity:.2, repeat:-1, yoyo:true, delay: 2}),
+	    		TweenMax.to(this.s_3, 4,
+	    			{opacity:.3, repeat:-1, yoyo:true, delay: 4}),
+	    		TweenMax.to(this.s_4, 4,
+	    			{opacity:.7, repeat:-1, yoyo:true, dealy: 1}),
+	    		TweenMax.to(this.s_5, 4,
+	    			{opacity:.4, repeat:-1, yoyo:true, delay: 1}),
+	    		TweenMax.to(this.s_6, 4,
+	    			{opacity:.5, repeat:-1, yoyo:true, delay: 2}),
+	    		TweenMax.to(this.s_7, 4,
+	    			{opacity:.1, repeat:-1, yoyo:true, delay: 3}),
+	    		TweenMax.to(this.s_8, 3,
+	    			{opacity:.2, repeat:-1, yoyo:true, delay: 2})
+
+			]),
+	  	900 // scroll duration of tween
+	);	
+
 };

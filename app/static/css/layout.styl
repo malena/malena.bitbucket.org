@@ -65,11 +65,23 @@
 
 		img.panel-1-body 
 			position: absolute
-			top: -270px
-			left: -145px
 			-ms-transform: rotate(-30deg) 
 			-webkit-transform: rotate(-30deg) 
 			transform: rotate(-30deg)
+			left: -145px
+			top: -270px
+
+			-webkit-animation-duration: 3s;
+			-webkit-animation-name: slidein;
+			-webkit-animation-iteration-count: 1;
+
+		@keyframes slidein
+			from
+				top: -800px
+				left: -400px
+			to
+				left: -145px
+				top: -270px
 
 	/*
 	//////////////////////////////////////////////////////////////////////////////////////////////////
