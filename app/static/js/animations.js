@@ -48,8 +48,8 @@ Animations.prototype.splashPage = function(){
 
   	TweenMax.from(this.splash_tagline, 1, 
         {css:{top:'-80em'}, ease:Back.easeOut, delay: 1.4});
-  	//TweenMax.from(this.splash_image, 1.5,
-  	//	{css:{transform: 'rotate(90deg)',top:'-900px'}});
+  	TweenMax.from(this.splash_image, 1.5,
+  		{css:{transform: 'rotate(90deg)',top:'-900px'}});
   	TweenMax.to(this.pulse_all, 4, 
         {css:{opacity:'.3'}, ease:Back.easeOut, delay: 2});
 
@@ -69,14 +69,14 @@ Animations.prototype.splashPage = function(){
 			    	ease:Back.easeOut}),
 		      	TweenMax.to(this.splash_panel, .2,
 		      		{css:{height: '10px'}}),
-		      	TweenMax.to(this.fun, .07,
-		      		{css:{top:'371px', left:'210px'}}),
-		      	TweenMax.to(this.website, .07,
-		      		{css:{top:'350px', left:'486px'}}),
-		      	TweenMax.to(this.apps, .07,
-		      		{css:{top:'140px', left:'200px'}}),
-		      	TweenMax.to(this.campaigns, .07,
-		      		{css:{top:'318px', left:'385px'}, onComplete: enterText})
+		      	TweenMax.from(this.fun, .07,
+		      		{css:{top:'-440px', left:'300px'}}),
+		      	TweenMax.from(this.website, .07,
+		      		{css:{top:'-468px', left:'560px'}}),
+		      	TweenMax.from(this.apps, .07,
+		      		{css:{top:'-553px', left:'470px'}}),
+		      	TweenMax.from(this.campaigns, .07,
+		      		{css:{top:'-375px', left:'460px'}, onComplete: enterText}),
 			]),
 	  	900 // scroll duration of tween
 	);
