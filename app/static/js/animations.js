@@ -53,6 +53,9 @@ Animations.prototype.splashPage = function(){
   	TweenMax.to(this.pulse_all, 4, 
         {css:{opacity:'.3'}, ease:Back.easeOut, delay: 2});
 
+  	TweenMax.to(this.work_header, .1,
+  		{css:{opacity:'0'}});
+
 	var that = this;
 	var timeline = new TimelineLite({onComplete:timelineDone, onCompleteScope:that});
 
@@ -82,9 +85,8 @@ Animations.prototype.splashPage = function(){
 	);
 
 	function enterText() {
-      	TweenMax.fromTo(that.work_header, .5,
-      		{css:{opacity:'0'}},
-      		{css:{opacity:'1'}})
+      	TweenMax.to(that.work_header, 2,
+      		{css:{opacity:'1'}});
 
 	};
 
