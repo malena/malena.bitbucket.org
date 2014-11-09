@@ -5,7 +5,8 @@ function MandradeScrollView(){
     animate.elements = {
         $panels: $('.panel'),
         $star: $('.star'),
-        $resume: $('.resume')
+        $resume: $('.resume'),
+        $leaf: $('.img-pulse')
     };
 
 	animate.initializeScrollorama();
