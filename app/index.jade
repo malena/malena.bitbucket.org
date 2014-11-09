@@ -4,10 +4,9 @@ html
 		title Malena Andrade: Web Interface Developer
 
 		link(href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css')
-		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css")
 		link(type="text/css", rel="stylesheet", href="/public/dist/project.min.css")
 
-	body(class="mandrade")
+	body(class="mandrade", ng-app="mandrade")
 
 		.panel.panel-1
 			.panel-inner.splash
@@ -15,7 +14,7 @@ html
 					h2 ALOo!
 					p My name is Malena. I currently work remotely with an awesome team at <a href="http://www.igniter.com">Igniter</a>  as a Web Developer doing all sorts of awesome. 
 					p This site is a quick peek on my profession. Also just a tid bit about who I am. 
-				img.panel-1-body(src="/public/dist/images/malenafull.png")
+				img.img-malena(src="/public/dist/images/malenafull.png")
 
 		.panel.panel-2
 			.panel-inner
@@ -125,8 +124,7 @@ html
 				a.blog(href="http://www.mandrade.com/blog") www.mandrade.com/blog
 
 		
-	script(src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js")
-	script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js")
+	script(src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js")
 	script(src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.8/TweenMax.min.js")
 	script(src="/public/dist/jquery.superscrollorama.js")
 	script(src="/public/dist/project.min.js")

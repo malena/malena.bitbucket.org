@@ -1,39 +1,36 @@
-function Animations(){
-	this.splash_panel = $('.panel-1');
-	this.splash_tagline = $('.tagline');
-	this.splash_image = $('.panel-1-body');
-	this.splash_leaves = $('.panel-1');
-	this.resume = $('.resume');
-	this.fun = $('.fun');
-	this.website = $('.websites');
-	this.apps = $('.apps');
-	this.campaigns = $('.campaigns');
-	this.pulse_all = $('.img-pulse');
-	this.resume = $('.resume');
-	this.html = $('.resume-html h3');
-	this.css = $('.resume-css h3');
-	this.js = $('.resume-js h3');
-	this.pulse = $('.img-pulse');
-	this.pulse_text = $('.span-pulse');
-	this.project_list = $('.project-list');
-	this.tree_top = $('.tree-top');
-	this.tree_bottom = $('.tree-bottom');
-	this.panel_3 = $('.panel-3');
-	this.panel_3_header = $('.panel-3-header');
-	this.work_header = $('.panel-2 .header-work');
-	this.s_1 = $('.star-1');
-	this.s_2 = $('.star-2');
-	this.s_3 = $('.star-3');
-	this.s_4 = $('.star-4');
-	this.s_5 = $('.star-5');
-	this.s_6 = $('.star-6');
-	this.s_7 = $('.star-7');
-	this.s_8 = $('.star-8');
-	this.flower = $('.flower');
-
-};
+function Animations(){};
 
 Animations.prototype.initializeScrollorama = function(){
+	this.p_1 = this.elements.$panels[0],
+	this.p_2 = this.elements.$panels[1],
+	this.p_3 = this.elements.$panels[2], 
+	this.p_4 = this.elements.$panels[3];
+	this.s_1 = this.elements.$star[0];
+	this.s_2 = this.elements.$star[0];
+	this.s_3 = this.elements.$star[0];
+	this.s_4 = this.elements.$star[0];
+	this.s_5 = this.elements.$star[0];
+	this.s_6 = this.elements.$star	[0];
+	this.s_7 = this.elements.$star[0];
+	this.s_8 = this.elements.$star[0];
+	this.resume = this.elements.$resume;
+	
+	this.img_malena = $(this.p_1).find('.img-malena');
+	this.tagline = $(this.p_1).find('.tagline');
+
+	this.fun = $(this.p_2).find('fun');
+	this.website = $(this.p_2).find('.websites');
+	this.campaigns = $(this.p_2).find('.campaigns');
+	this.apps = $(this.p_2).find('.apps');
+	this.projects_list = $(this.p_2).find('.project-list');
+	this.p2_header = $(this.p_2).find('.header-work');
+	this.pulse = $(this.p_2).find('.img-pulse');
+	this.pulse_text = $(this.p_2).find('.span-pulse');
+
+	this.html = $(this.resume).find('.resume-html h3');
+	this.css = $(this.resume).find('.resume-css h3');
+	this.js = $(this.resume).find('.resume-js h3');
+
 
 	this.controller = $.superscrollorama({
 		triggerAtCenter: false,
@@ -46,14 +43,14 @@ Animations.prototype.initializeScrollorama = function(){
 Animations.prototype.splashPage = function(){
 	console.log('splash page');
 
-  	TweenMax.from(this.splash_tagline, 1, 
+  	TweenMax.from(this.tagline, 1, 
         {css:{top:'-80em'}, ease:Back.easeOut, delay: 1.4});
-  	TweenMax.from(this.splash_image, 1.5,
+  	TweenMax.from(this.img_malena, 1.5,
   		{css:{transform: 'rotate(90deg)',top:'-900px'}});
-  	TweenMax.to(this.pulse_all, 4, 
+  	TweenMax.to(this.pulse, 4, 
         {css:{opacity:'.3'}, ease:Back.easeOut, delay: 2});
 
-  	TweenMax.to(this.work_header, .1,
+  	TweenMax.to(this.p2_header, .1,
   		{css:{opacity:'0'}});
 
 	var that = this;
@@ -63,14 +60,14 @@ Animations.prototype.splashPage = function(){
 	  	timeline.append([
 	    		TweenMax.to(this.pulse_text, .02,
 	    			{css:{opacity:1}, delay: .04, onComplete: showProjects, onReverseComplete: hideProjects}),
-			  	TweenMax.to(this.pulse_all, .1,
+			  	TweenMax.to(this.pulse, .1,
 			  		{css:{opacity:'1'}}),
-		    	TweenMax.to(this.splash_tagline, .1, 
+		    	TweenMax.to(this.tagline , .1, 
 			        {css:{top:'-40em'}}),
-		      	TweenMax.to(this.splash_image, .2, 
+		      	TweenMax.to(this.img_malena, .2, 
 			       {css:{transform: 'rotate(-90deg)',top:'-500px'},
 			    	ease:Back.easeOut}),
-		      	TweenMax.to(this.splash_panel, .2,
+		      	TweenMax.to(this.p_1, .2,
 		      		{css:{height: '10px'}}),
 		      	TweenMax.from(this.fun, .07,
 		      		{css:{top:'-440px', left:'300px'}}),
@@ -85,7 +82,7 @@ Animations.prototype.splashPage = function(){
 	);
 
 	function enterText() {
-      	TweenMax.to(that.work_header, 2,
+      	TweenMax.to(that.p2_header, 2,
       		{css:{opacity:'1'}});
 
 	};
