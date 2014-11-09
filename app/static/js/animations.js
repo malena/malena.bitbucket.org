@@ -10,10 +10,13 @@ Animations.prototype.initializeScrollorama = function(){
 	this.s_3 = this.elements.$star[0];
 	this.s_4 = this.elements.$star[0];
 	this.s_5 = this.elements.$star[0];
-	this.s_6 = this.elements.$star[0];
+	this.s_6 = this.elements.$star	[0];
 	this.s_7 = this.elements.$star[0];
 	this.s_8 = this.elements.$star[0];
 	this.resume = this.elements.$resume;
+	
+	this.img_malena = $(this.p_1).find('.img-malena');
+	this.tagline = $(this.p_1).find('.tagline');
 
 	this.fun = $(this.p_2).find('fun');
 	this.website = $(this.p_2).find('.websites');
@@ -28,8 +31,6 @@ Animations.prototype.initializeScrollorama = function(){
 	this.css = $(this.resume).find('.resume-css h3');
 	this.js = $(this.resume).find('.resume-js h3');
 
-	this.img_malena = $(this.p_1).find('.img-malena');
-	this.tagline = $(this.p_1).find('.tagline');
 
 	this.controller = $.superscrollorama({
 		triggerAtCenter: false,
