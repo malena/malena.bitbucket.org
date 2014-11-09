@@ -5,7 +5,9 @@ html
 
 		link(href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css')
 		link(type="text/css", rel="stylesheet", href="/public/dist/project.min.css")
-		script(src="/public/dist/modernizr.js")
+		<!--[if IE 8]>
+		<script src="/public/dist/modernizr.js"></script>
+		<![endif]-->
 
 	body(class="mandrade", ng-app="mandrade")
 
