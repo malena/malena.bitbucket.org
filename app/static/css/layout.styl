@@ -1,5 +1,4 @@
 .mandrade 
-
 	.panel-1,
 	.panel-2,
 	.panel-3
@@ -107,7 +106,7 @@
 			ul.project-list
 				display: none 
 				width: 200px
-				height: 200px
+				height: auto 
 
 				li
 					list-style-type: none
@@ -269,6 +268,10 @@
 		.panel-3-header
 			top: 300px
 
+		ul 
+			color: red 
+			height: auto
+
 		.resume	
 			position: absolute 
 			margin: auto auto
@@ -288,19 +291,18 @@
 				background-color: transparent
 
 			ul
-				color: #6a6a6b
 				position: absolute
-				width: 232px
+				width: auto 
 
 				li 
 					//position: absolute
-					list-style-type: circle
-					text-align: left 
+					list-style-type: none 
+					text-align: center
 
 
 			.resume-html 
 				h3
-					background-image: url('images/flower-html.png')
+					background-image: url('images/flower-js.png')
 					top: 362px
 					left: 135px
 					height: 290px
@@ -308,8 +310,6 @@
 				ul
 					top: 695px;
 					left: 202px;
-					width: 440px;
-					height: 400px;
 
 					.jade
 						//left: 300px;
@@ -332,7 +332,6 @@
 				ul
 					top: 157px
 					left: 320px
-					height: 315px
 
 					.jquery
 						left: 250px
@@ -356,14 +355,12 @@
 
 			.resume-css
 				h3
-					background-image: url('images/flower-css.png')
+					background-image: url('images/flower-js.png')
 					left: 460px
 					top: 270px
 				ul
 					left: 570px
 					top: 545px
-					width: 300px
-					height: 400px
 
 					.less
 						left: 150px
