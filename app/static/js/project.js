@@ -1,6 +1,8 @@
 // initialize jQuery Scroll View 
 $(function() {
+	new MandradeScrollView();
 
+/*
 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
  		// some code..
 	}
@@ -9,8 +11,8 @@ $(function() {
 		    $(window).on('beforeunload', function() {
 		        //$(window).scrollTop(0); 
 		    });
-			new MandradeScrollView();
 		};
 	}
+*/
 
 });
