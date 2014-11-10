@@ -55,8 +55,8 @@ Animations.prototype.splashPage = function(){
 
   	TweenMax.to(this.img_malena, 1.2,
   		{css:{transform: 'rotate(-30deg)', top:'-270px', left:'-145px'}, ease:Sine.easeIn});
-  	TweenMax.from(this.tagline, 1, 
-        {css:{top:'-80em'}, ease:Back.easeOut, delay: 1.5});
+  	TweenMax.to(this.tagline, 1, 
+        {css:{top:'20px'}, ease:Back.easeOut, delay: 1.5});
   	TweenMax.to(this.l_1, 1.8, 
         {css:{opacity:'.7'}, delay: 2});
   	TweenMax.to(this.l_2, 1.8, 
