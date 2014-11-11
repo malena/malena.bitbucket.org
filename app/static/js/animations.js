@@ -58,13 +58,13 @@ Animations.prototype.splashPage = function(){
   	TweenMax.to(this.tagline, 1, 
         {css:{top:'20px'}, ease:Back.easeOut, delay: 1.5});
   	TweenMax.to(this.l_1, 1.8, 
-        {css:{opacity:'.7'}, delay: 2});
+        {css:{opacity:'.6'}, delay: 2});
   	TweenMax.to(this.l_2, 1.8, 
-        {css:{opacity:'.7'}, delay: 2.8});
+        {css:{opacity:'.3'}, delay: 2.8});
   	TweenMax.to(this.l_3, 1.8, 
-        {css:{opacity:'.7'}, delay: 2.5});
+        {css:{opacity:'.6'}, delay: 2.5});
   	TweenMax.to(this.l_4, 1.8, 
-        {css:{opacity:'.7'}, delay: 3});
+        {css:{opacity:'.5'}, delay: 3});
   	TweenMax.to(this.p2_header, .1,
   		{css:{opacity:'0'}});
 
@@ -85,13 +85,13 @@ Animations.prototype.splashPage = function(){
 		      	TweenMax.to(this.p_1, .2,
 		      		{css:{height: '10px'}}),
 		      	TweenMax.from(this.fun, .07,
-		      		{css:{top:'-576px', left:'339px'}}),
+		      		{css:{top:'-200px', left:'250px'}, scale: .5}),
 		      	TweenMax.from(this.website, .07,
-		      		{css:{top:'-676px', left:'441px'}}),
+		      		{css:{top:'-306px', left:'370px'}}),
 		      	TweenMax.from(this.apps, .07,
-		      		{css:{top:'-620px', left:'438px'}}),
+		      		{css:{top:'-150px', left:'318px'}}),
 		      	TweenMax.from(this.campaigns, .07,
-		      		{css:{top:'-577px', left:'408px'}, onComplete: enterText}),
+		      		{css:{top:'-228px', left:'337px'}, onComplete: enterText}),
 			]),
 	  	900 // scroll duration of tween
 	);
