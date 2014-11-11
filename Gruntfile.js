@@ -15,7 +15,12 @@ module.exports = function(grunt) {
 				},
 			},
 			css: {
-				files: ['app/static/css/*.styl'],
+				files: [
+                        'app/reset.styl', 
+                        'app/static/css/base.styl',
+                        'app/static/css/layout.styl',
+                        'app/static/css/mobile.styl'
+                        ],
 				tasks: ['stylus'],
 				options: {
 					livereload: true,
@@ -40,7 +45,7 @@ module.exports = function(grunt) {
 					'app/static/js/project.js', 
 					'public/libs/js/*.js'
 				],
-				dest: 'public/dist/project.min.js' 
+				dest: 'public/dist/js/project.min.js' 
 			}
 		},
 
@@ -50,7 +55,7 @@ module.exports = function(grunt) {
 			},
 			compile: {
 				files: {
-					'public/dist/project.min.css' : 'app/static/css/*.styl'
+					'public/dist/css/project.min.css' : 'app/static/css/*.styl'
 				}
 			}
 		},

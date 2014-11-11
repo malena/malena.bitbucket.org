@@ -1,3 +1,5 @@
+$path = '../images/'
+
 body
 	overflow-x: hidden
 p
@@ -6,6 +8,9 @@ p
 a 
 	color: red 
 	text-decoration: none
+
+h3.test
+	font-size: 50px;
 
 a:hover
 	color: #5A5A5A
@@ -22,19 +27,19 @@ a:hover
 		margin-right: 0.5em
 
 .flickr
-	background-image: url('images/flickr.png')
+	background-image: url($path + 'flickr.png')
 
 .twitter
-	background-image: url('images/twitter.png')
+	background-image: url($path + 'twitter.png')
 
 .facebook
-	background-image: url('images/facebook.png')
+	background-image: url($path + 'facebook.png')
 
 .linkedin
-	background-image: url('images/linkedin.png')
+	background-image: url($path + 'linkedin.png')
 
 .github
-	background-image: url('images/github.png')
+	background-image: url($path + 'github.png')
 
 .modal-dialog
 	width: 250px	

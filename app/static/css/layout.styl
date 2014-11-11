@@ -1,3 +1,5 @@
+$path = '../images/'
+
 .mandrade 
 	.panel-1,
 	.panel-2,
@@ -56,7 +58,7 @@
 
 			h2
 				position: relative
-				background: url('images/alo.png') no-repeat top right transparent
+				background: url($path + 'alo.png') no-repeat top right transparent
 				text-indent: -80000px
 				margin: 0
 				height: 160px
@@ -248,9 +250,9 @@
 
 	.panel-3
 		border-top: 100px solid transparent 
-		border-image: url('images/flowers-border.png') 100% 0% 0% 0% repeat;
+		border-image: url($path + 'flowers-border.png') 100% 0% 0% 0% repeat;
 		z-index: 2
-		background: url('images/panel-3-big.png') no-repeat black top center 
+		background: url($path + 'panel-3-big.png') no-repeat black top center 
 		margin-top: -548px
 		height: 2000px
 		border-bottom: 0
@@ -300,7 +302,7 @@
 
 			.resume-html 
 				h3
-					background-image: url('images/flower-js.png')
+					background-image: url($path + 'flower-js.png')
 					top: 362px
 					left: 135px
 					height: 290px
@@ -311,7 +313,7 @@
 
 			.resume-js
 				h3
-					background-image: url('images/flower-js.png')
+					background-image: url($path + 'flower-js.png')
 					top: 28px
 					left: 42px
 				ul
@@ -340,7 +342,7 @@
 
 			.resume-css
 				h3
-					background-image: url('images/flower-js.png')
+					background-image: url($path+ 'flower-js.png')
 					left: 460px
 					top: 270px
 				ul
