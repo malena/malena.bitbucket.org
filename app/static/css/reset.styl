@@ -3,7 +3,10 @@
     padding: 0
 
 html
+    padding: 0px
+    margin: 0px
     height: 100%
+    width: 100%
 
 html,
 button,
@@ -18,8 +21,12 @@ body
     padding: 0
     height: 100%
     font-size: 16px
+    //font-size: 1.3vw
     font-family: 'Architects Daughter', cursive
     line-height: 1.4
+
+//body::-webkit-scrollbar 
+//    width: 1em
 
 a
     color: red 
@@ -32,6 +39,7 @@ a:hover
 
 p
     font-size: 1.2em
+    margin-bottom: .8em
 
 h1,h2,h3,h4,h5,h6 
     font-family: 'Architects Daughter', cursive
@@ -176,11 +184,15 @@ textarea[contenteditable] {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 800px) {
+@media only screen and (max-width: 800px) {
     /* Style adjustments for viewports that meet the condition */
+    body {
+        width: 106% 
+    }
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
        only screen and (min-resolution: 144dpi) {
     /* Style adjustments for viewports that meet the condition */
+
 }
