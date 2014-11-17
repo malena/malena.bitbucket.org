@@ -35,7 +35,6 @@ Animations.prototype.initializeScrollorama = function(){
 	this.p2_header = $(this.p_2).find('.header-work');
 	this.pulse = $(this.p_2).find('.img-pulse');
 	this.pulse_text = $(this.p_2).find('.span-pulse');
-	this.tree = $(this.p_2).find('.panel-2-tree');
 
 
 	this.html = $(this.resume).find('.resume-html h3');
