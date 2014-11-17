@@ -67,6 +67,14 @@ $path = '../images/'
 				text-indent: -80000px
 				margin: 0
 				height: 160px
+			img.img-malena
+			opacity: 0
+			-ms-transform: rotate(-30deg) 
+			-webkit-transform: rotate(-30deg) 
+			transform: rotate(-30deg)
+			position: absolute
+			top: -270px
+			left: -145px
 			*/
 
 			p 
@@ -255,10 +263,14 @@ $path = '../images/'
 	*/
 
 	.panel-3
-		border-top: 100px solid transparent 
+		border-top: 40px solid transparent 
+		-webkit-border-image: url($path + 'flowers-border.png') 100% 0% 0% 0% repeat;
+		-moz-border-image: url($path + 'flowers-border.png') 100% 0% 0% 0% repeat;
+		-ms-border-image: url($path + 'flowers-border.png') 100% 0% 0% 0% repeat;
+		-o-border-image: url($path + 'flowers-border.png') 100% 0% 0% 0% repeat;
 		border-image: url($path + 'flowers-border.png') 100% 0% 0% 0% repeat;
 		z-index: 2
-		margin-top: -548px
+		margin-top: -500px
 		height: 1770px
 		border-bottom: 0
 		border-left: 0

@@ -86,7 +86,7 @@ Animations.prototype.splashPage = function(){
 			       {css:{transform: 'rotate(-90deg)',top:'-500px'},
 			    	ease:Back.easeOut}),
 		      	TweenMax.to(this.p_1, .2,
-		      		{css:{height: '10px'}}),
+		      		{css:{height: '200px'}}),
 		      	TweenMax.from(this.fun, .07,
 		      		{css:{top:'-200px', left:'250px'}, scale: .5}),
 		      	TweenMax.from(this.website, .07,
