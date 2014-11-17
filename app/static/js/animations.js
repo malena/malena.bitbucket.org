@@ -35,6 +35,7 @@ Animations.prototype.initializeScrollorama = function(){
 	this.p2_header = $(this.p_2).find('.header-work');
 	this.pulse = $(this.p_2).find('.img-pulse');
 	this.pulse_text = $(this.p_2).find('.span-pulse');
+	this.tree = $(this.p_2).find('.panel-2-tree');
 
 
 	this.html = $(this.resume).find('.resume-html h3');
@@ -65,14 +66,16 @@ Animations.prototype.splashPage = function(){
         {css:{opacity:'.6'}, delay: 2.5});
   	TweenMax.to(this.l_4, 1.8, 
         {css:{opacity:'.5'}, delay: 3});
-  	TweenMax.to(this.p2_header, .1,
-  		{css:{opacity:'0'}});
 
 	var that = this;
 	var timeline = new TimelineLite({onComplete:timelineDone, onCompleteScope:that});
 
 	this.controller.addTween('.panel-1',
 	  	timeline.append([
+	    		TweenMax.to(this.tree, .02,
+	    			{css:{opacity:1}, delay: .04}),
+			  	TweenMax.to(this.p2_header, .1,
+			  		{css:{opacity:1}}),
 	    		TweenMax.to(this.pulse_text, .02,
 	    			{css:{opacity:1}, delay: .04, onComplete: showProjects, onReverseComplete: hideProjects}),
 			  	TweenMax.to(this.pulse, .1,
@@ -123,10 +126,12 @@ Animations.prototype.projectsPage = function(){
 	console.log('projects page');
 	
 	var that = this;
-	var timeline = new TimelineLite({onComplete:timelineDone, onCompleteScope:that});
+	var timeline = new TimelineLite({onComplete:timelineDone, onCompleteScope:that, offset: 400});
 
 	this.controller.addTween('.panel-2',
 	  	timeline.append([
+    		TweenMax.to($('.panel-3 > .panel-inner > .panel-container'), 3,
+    			{css:{opacity:1}}),
 	      	TweenMax.to([this.html, this.css, this.js], 8,
 	      		{rotation: 360, delay: 4}),
 			]),
@@ -141,6 +146,17 @@ Animations.prototype.projectsPage = function(){
 
 Animations.prototype.skillsPage = function(){
 	console.log('skills page');
+  	var that = this;
+	var timeline = new TimelineLite({});
+
+	this.controller.addTween('.panel-3',
+	  	timeline.append([
+	    		TweenMax.to($('.panel-4'), .3,
+	    			{opacity:1})
+
+			]),
+	  	900 // scroll duration of tween
+	);	
 	this.aboutPage();
 };
 
