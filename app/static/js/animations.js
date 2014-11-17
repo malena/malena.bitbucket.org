@@ -72,8 +72,6 @@ Animations.prototype.splashPage = function(){
 
 	this.controller.addTween('.panel-1',
 	  	timeline.append([
-	    		TweenMax.to(this.tree, .02,
-	    			{css:{opacity:1}, delay: .04}),
 			  	TweenMax.to(this.p2_header, .1,
 			  		{css:{opacity:1}}),
 	    		TweenMax.to(this.pulse_text, .02,
