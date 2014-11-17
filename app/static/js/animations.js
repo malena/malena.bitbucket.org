@@ -71,8 +71,6 @@ Animations.prototype.splashPage = function(){
 
 	this.controller.addTween('.panel-1',
 	  	timeline.append([
-			  	TweenMax.to(this.p2_header, .1,
-			  		{css:{opacity:1}}),
 	    		TweenMax.to(this.pulse_text, .02,
 	    			{css:{opacity:1}, delay: .04, onComplete: showProjects, onReverseComplete: hideProjects}),
 			  	TweenMax.to(this.pulse, .1,
@@ -97,8 +95,6 @@ Animations.prototype.splashPage = function(){
 	);
 
 	function enterText() {
-      	TweenMax.to(that.p2_header, 2,
-      		{css:{opacity:'1'}});
 
 	};
 
