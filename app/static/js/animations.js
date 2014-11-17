@@ -126,12 +126,10 @@ Animations.prototype.projectsPage = function(){
 	console.log('projects page');
 	
 	var that = this;
-	var timeline = new TimelineLite({onComplete:timelineDone, onCompleteScope:that, offset: 400});
+	var timeline = new TimelineLite({onComplete:timelineDone, onCompleteScope:that});
 
 	this.controller.addTween('.panel-2',
 	  	timeline.append([
-    		TweenMax.to($('.panel-3 > .panel-inner > .panel-container'), 3,
-    			{css:{opacity:1}}),
 	      	TweenMax.to([this.html, this.css, this.js], 8,
 	      		{rotation: 360, delay: 4}),
 			]),
@@ -145,19 +143,6 @@ Animations.prototype.projectsPage = function(){
 };
 
 Animations.prototype.skillsPage = function(){
-	console.log('skills page');
-  	var that = this;
-	var timeline = new TimelineLite({});
-
-	this.controller.addTween('.panel-1',
-	  	timeline.append([
-	    		TweenMax.to($('.panel-4'), 2,
-	    			{opacity:1})
-
-			]),
-	  	900, // scroll duration of tween
-	  	700
-	);	
 	this.aboutPage();
 };
 
