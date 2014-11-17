@@ -149,13 +149,14 @@ Animations.prototype.skillsPage = function(){
   	var that = this;
 	var timeline = new TimelineLite({});
 
-	this.controller.addTween('.panel-3',
+	this.controller.addTween('.panel-1',
 	  	timeline.append([
-	    		TweenMax.to($('.panel-4'), .3,
+	    		TweenMax.to($('.panel-4'), 2,
 	    			{opacity:1})
 
 			]),
-	  	900 // scroll duration of tween
+	  	900, // scroll duration of tween
+	  	700
 	);	
 	this.aboutPage();
 };
