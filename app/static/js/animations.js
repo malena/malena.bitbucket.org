@@ -53,9 +53,11 @@ Animations.prototype.initializeScrollorama = function(){
 Animations.prototype.splashPage = function(){
 	console.log('splash page');
 
-  	TweenMax.to(this.img_malena, 1.2,
+  	TweenMax.fromTo(this.img_malena, 1.2,
+  		{css:{top:'-1300px', left:'-300px'}},
   		{css:{transform: 'rotate(-30deg)', top:'-270px', left:'-145px'}, ease:Sine.easeIn});
-  	TweenMax.to(this.tagline, 1, 
+  	TweenMax.fromTo(this.tagline, 1, 
+  		{css:{top:'-2000px'}},
         {css:{top:'20px'}, ease:Back.easeOut, delay: 1.5});
   	TweenMax.to(this.l_1, 1.8, 
         {css:{opacity:'.6'}, delay: 2});
