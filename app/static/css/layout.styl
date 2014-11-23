@@ -58,24 +58,6 @@ $path = '../images/'
 			position: absolute
 			left: 500px 
 			width: 395px
-			//top: -2000px
-
-			/*
-			h2
-				position: relative
-				background: url($path + 'alo.png') no-repeat top right transparent
-				text-indent: -80000px
-				margin: 0
-				height: 160px
-			img.img-malena
-			opacity: 0
-			-ms-transform: rotate(-30deg) 
-			-webkit-transform: rotate(-30deg) 
-			transform: rotate(-30deg)
-			position: absolute
-			top: -270px
-			left: -145px
-			*/
 
 			p 
 				text-align: right
@@ -85,8 +67,6 @@ $path = '../images/'
 			position: absolute
 			top: -213px
 			left: -160px
-			//top: -1300px
-			//left: -300px
 
 	/*
 	//////////////////////////////////////////////////////////////////////////////////////////////////
@@ -149,7 +129,7 @@ $path = '../images/'
 			position: absolute 
 			height: 100%
 			z-index: 1
-			top: 120px
+			top: -10px
 			left: -100px
 
 			.img-pulse
@@ -264,12 +244,10 @@ $path = '../images/'
 	*/
 
 	.panel-3
-		border-top: 40px solid transparent 
-		-webkit-border-image: url($path + 'flowers-border.png') 100% 0% 0% 0% repeat;
-		-moz-border-image: url($path + 'flowers-border.png') 100% 0% 0% 0% repeat;
-		-ms-border-image: url($path + 'flowers-border.png') 100% 0% 0% 0% repeat;
-		-o-border-image: url($path + 'flowers-border.png') 100% 0% 0% 0% repeat;
-		border-image: url($path + 'flowers-border.png') 100% 0% 0% 0% repeat;
+		background-image: url($path + 'flowers-border.png') 
+		background-color: #000
+		background-repeat: repeat-x
+		background-size: 222px
 		z-index: 2
 		margin-top: -500px
 		height: 1770px
@@ -280,8 +258,6 @@ $path = '../images/'
 		.panel-inner
 			height: 100%
 			width: 100%
-			//background: url($path + 'panel-3-big-new.png') no-repeat black top center 
-			background-color: black;
 
 		.panel-container
 			width: 900px

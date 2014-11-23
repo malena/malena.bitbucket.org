@@ -32,6 +32,7 @@ Animations.prototype.initializeScrollorama = function(){
 	this.campaigns = $(this.p_2).find('.campaigns');
 	this.apps = $(this.p_2).find('.apps');
 	this.projects_list = $(this.p_2).find('.project-list');
+	this.projects = $(this.p_2).find('.projects');
 	this.p2_header = $(this.p_2).find('.header-work');
 	this.pulse = $(this.p_2).find('.img-pulse');
 	this.pulse_text = $(this.p_2).find('.span-pulse');
@@ -82,6 +83,8 @@ Animations.prototype.splashPage = function(){
 		      	TweenMax.to(this.img_malena, .2, 
 			       {css:{transform: 'rotate(-90deg)',top:'-500px'},
 			    	ease:Back.easeOut}),
+		    	TweenMax.to(this.projects, .1, 
+			        {css:{top:'114px', left:'-162px'}}),
 		      	TweenMax.to(this.p_1, .2,
 		      		{css:{height: '200px'}}),
 		      	TweenMax.from(this.fun, .07,
@@ -149,21 +152,21 @@ Animations.prototype.aboutPage = function(){
 
 	this.controller.addTween('.panel-1',
 	  	timeline.append([
-	    		TweenMax.to(this.s_1, 4,
+	    		TweenMax.to(this.s_1, 1,
 	    			{opacity:.2, repeat:-1, yoyo:true}),
-	    		TweenMax.to(this.s_2, 3,
+	    		TweenMax.to(this.s_2, 2,
 	    			{opacity:.2, repeat:-1, yoyo:true, delay: 2}),
-	    		TweenMax.to(this.s_3, 4,
+	    		TweenMax.to(this.s_3, 3,
 	    			{opacity:.3, repeat:-1, yoyo:true, delay: 4}),
-	    		TweenMax.to(this.s_4, 4,
+	    		TweenMax.to(this.s_4, 3,
 	    			{opacity:.7, repeat:-1, yoyo:true, dealy: 1}),
 	    		TweenMax.to(this.s_5, 4,
 	    			{opacity:.4, repeat:-1, yoyo:true, delay: 1}),
-	    		TweenMax.to(this.s_6, 4,
+	    		TweenMax.to(this.s_6, 3,
 	    			{opacity:.5, repeat:-1, yoyo:true, delay: 2}),
-	    		TweenMax.to(this.s_7, 4,
+	    		TweenMax.to(this.s_7, 3,
 	    			{opacity:.1, repeat:-1, yoyo:true, delay: 3}),
-	    		TweenMax.to(this.s_8, 3,
+	    		TweenMax.to(this.s_8, 2,
 	    			{opacity:.2, repeat:-1, yoyo:true, delay: 2})
 
 			]),
