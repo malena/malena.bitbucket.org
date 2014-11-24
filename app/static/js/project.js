@@ -3,6 +3,5 @@ $(function() {
 		new MandradeScrollView();
 	} 
 	$('img.img-malena').css('display', 'block');
-	$('img.img-malena').css('transform', 'rotate(-30deg)');
 
 });
