@@ -3,5 +3,4 @@ $(function() {
 		new MandradeScrollView();
 	} 
 	$('img.img-malena').css('display', 'block');
-
 });

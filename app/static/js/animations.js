@@ -1,11 +1,14 @@
 function Animations(){};
 
 Animations.prototype.initializeScrollorama = function(){
+
+	// paanel 
 	this.p_1 = this.elements.$panels[0],
 	this.p_2 = this.elements.$panels[1],
 	this.p_3 = this.elements.$panels[2], 
 	this.p_4 = this.elements.$panels[3];
 
+	// stars 
 	this.s_1 = this.elements.$star[0];
 	this.s_2 = this.elements.$star[1];
 	this.s_3 = this.elements.$star[2];
@@ -15,25 +18,26 @@ Animations.prototype.initializeScrollorama = function(){
 	this.s_7 = this.elements.$star[6];
 	this.s_8 = this.elements.$star[7];
 
+	// leafs 
 	this.l_1 = this.elements.$leaf[0];
 	this.l_2 = this.elements.$leaf[1];
 	this.l_3 = this.elements.$leaf[2];
 	this.l_4 = this.elements.$leaf[3];
-
 
 	this.resume = this.elements.$resume;
 	
 	this.img_malena = $(this.p_1).find('.img-malena');
 	this.tagline = $(this.p_1).find('.tagline');
 
+	// projects
+	this.projects = $(this.p_2).find('.projects');
+	this.p2_header = $(this.p_2).find('.header-work');
 
 	this.fun = $(this.p_2).find('.fun');
 	this.website = $(this.p_2).find('.websites');
 	this.campaigns = $(this.p_2).find('.campaigns');
 	this.apps = $(this.p_2).find('.apps');
-	this.projects_list = $(this.p_2).find('.project-list');
-	this.projects = $(this.p_2).find('.projects');
-	this.p2_header = $(this.p_2).find('.header-work');
+
 	this.pulse = $(this.p_2).find('.img-pulse');
 	this.pulse_text = $(this.p_2).find('.span-pulse');
 
@@ -54,19 +58,22 @@ Animations.prototype.initializeScrollorama = function(){
 Animations.prototype.splashPage = function(){
 	console.log('splash page');
 
-  	TweenMax.fromTo(this.img_malena, 1.2,
+	var t1 = new TimelineLite({});
+
+
+  	t1.fromTo(this.img_malena, 1.2,
   		{css:{top:'-1300px', left:'-300px', display:'none'}},
   		{css:{transform: 'rotate(-30deg)', top:'-270px', left:'-145px', display:'block'}, ease:Sine.easeIn});
-  	TweenMax.fromTo(this.tagline, 1, 
-  		{css:{top:'-2000px'}},
-        {css:{top:'20px'}, ease:Back.easeOut, delay: 1.5});
-  	TweenMax.to(this.l_1, 1.8, 
+  	t1.fromTo(this.tagline, 2, 
+  		{css:{top:'-1800px'}},
+        {css:{top:'0px'}, ease:Back.easeOut, delay: 1.5});
+  	t1.to(this.l_1, 1.8, 
         {css:{opacity:'.6'}, delay: 2});
-  	TweenMax.to(this.l_2, 1.8, 
+  	t1.to(this.l_2, 1.8, 
         {css:{opacity:'.3'}, delay: 2.8});
-  	TweenMax.to(this.l_3, 1.8, 
+  	t1.to(this.l_3, 1.8, 
         {css:{opacity:'.6'}, delay: 2.5});
-  	TweenMax.to(this.l_4, 1.8, 
+  	t1.to(this.l_4, 1.8, 
         {css:{opacity:'.5'}, delay: 3});
 
 	var that = this;
@@ -76,27 +83,32 @@ Animations.prototype.splashPage = function(){
 	  	timeline.append([
 	    		TweenMax.to(this.pulse_text, .02,
 	    			{css:{opacity:1}, delay: .04, onComplete: showProjects, onReverseComplete: hideProjects}),
-			  	TweenMax.to(this.pulse, .1,
-			  		{css:{opacity:'1'}}),
+	    		/*
 		    	TweenMax.to(this.tagline , .1, 
 			        {css:{top:'-40em'}}),
-		      	TweenMax.to(this.img_malena, .2, 
+	  	*		*/
+		      	TweenMax.to(this.img_malena, 1.5, 
 			       {css:{transform: 'rotate(-90deg)',top:'-500px'},
 			    	ease:Back.easeOut}),
-		    	TweenMax.to(this.projects, .1, 
-			        {css:{top:'114px', left:'-162px'}}),
+		    	TweenMax.from(this.projects, 1.5, 
+			        {css:{top:'-44em'}}),
+		      	/*
 		      	TweenMax.to(this.p_1, .2,
 		      		{css:{height: '200px'}}),
-		      	TweenMax.from(this.fun, .07,
-		      		{css:{top:'-200px', left:'250px'}, scale: .5}),
-		      	TweenMax.from(this.website, .07,
-		      		{css:{top:'-306px', left:'370px'}}),
-		      	TweenMax.from(this.apps, .07,
-		      		{css:{top:'-150px', left:'318px'}}),
-		      	TweenMax.from(this.campaigns, .07,
-		      		{css:{top:'-228px', left:'337px'}, onComplete: enterText}),
+				*/
+			  	TweenMax.to(this.pulse, 1,
+			  		{css:{opacity:'1'}, delay:.8}),
+		      	TweenMax.from(this.fun, 2,
+		      		{css:{top:'4em', left:'250px'}, scale: .5}),
+		      	TweenMax.from(this.website, 1.5,
+		      		{css:{top:'10em', left:'370px'}}),
+		      	TweenMax.from(this.apps, 1.5,
+		      		{css:{top:'17em', left:'318px'}}),
+		      	TweenMax.from(this.campaigns, 1.9,
+		      		{css:{top:'13em', left:'337px'}, onComplete: enterText}),
 			]),
-	  	900 // scroll duration of tween
+	  	900// scroll duration of tween
+
 	);
 
 	function enterText() {

@@ -8,7 +8,8 @@ $path = '../images/'
 
 	.panel-inner
 		display: block
-		width:  900px
+		width:  980px
+		height: 100%
 		margin: auto auto
 		position: relative
 
@@ -20,7 +21,6 @@ $path = '../images/'
 
 		header
 			position: absolute
-			top: 30px 
 			right: -30px
 			text-align: right
 			width: 270px
@@ -56,7 +56,7 @@ $path = '../images/'
 
 		.tagline
 			position: absolute
-			left: 500px 
+			right: 0px 
 			width: 395px
 
 			p 
@@ -78,18 +78,18 @@ $path = '../images/'
 	.panel-2
 		position: relative
 		z-index: 3
-		height: 1177px
-
-		header
-			top: 205px
-			width: 235px
+		height: auto 
 
 		.panel-inner
-			height: 100%	
+			top: 23em
+
+		header
+			top: 4em
+			width: 235px
 
 		.pulse
-			width: 200px
-			height: 200px
+			width: 50px
+			height: 50px
 			position: absolute
 			cursor: pointer 
 
@@ -114,30 +114,20 @@ $path = '../images/'
 						font-size: 13px
 
 		.panel-2-tree
-			position: absolute
-			left: -113px
-			top: 180px
-
-			img.tree-top, img.tree-bottom
-				top: -39px
-				position: relative
-				z-index: -1
-
-			img.tree-bottom
-				left: 146px 
+			top: 4em
+			position: relative 
 
 		.projects
 			position: absolute 
-			height: 100%
+			width: 680px
+			height: 600px
 			z-index: 1
-			top: -10px
-			left: -100px
 
 			.img-pulse
 				opacity: 0
 
 			.fun
-				top: 371px 
+				top: 25em 
 				left: 210px
 
 				.span-pulse
@@ -166,7 +156,7 @@ $path = '../images/'
 					top: 91px
 
 			.websites
-				top: 350px 
+				top: 380px 
 				left: 486px 
 
 				.span-pulse
@@ -218,7 +208,7 @@ $path = '../images/'
 					left: -105px 
 
 			.campaigns
-				top: 318px
+				top: 348px
 				left: 385px 
 
 				.img-pulse
@@ -238,6 +228,16 @@ $path = '../images/'
 					top: -125px
 
 
+	.panel-2-grass
+		background-image: url($path + 'flowers-border.png') 
+		background-repeat: repeat-x
+		background-position: bottom
+		background-size: 222px
+		display: block;
+		width: 100%;
+		height: 90px;
+
+
 	/*
 	//////////////////////////////////////////////////////////////////////////////////////////////////
 		PANEL 3
@@ -245,12 +245,8 @@ $path = '../images/'
 	*/
 
 	.panel-3
-		background-image: url($path + 'flowers-border.png') 
 		background-color: #000
-		background-repeat: repeat-x
-		background-size: 222px
 		z-index: 2
-		margin-top: -500px
 		height: 1770px
 		border-bottom: 0
 		border-left: 0
