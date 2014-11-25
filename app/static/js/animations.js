@@ -61,7 +61,7 @@ Animations.prototype.splashPage = function(){
 	var that = this;
 
 	var t1 = new TimelineMax({onComplete:timelineDone});
-	var t2 = new TimelineLite({});
+	var t2 = new TimelineLite({onComplete:leafOpacity});
 	var t3 = new TimelineLite({});
 
 
@@ -74,9 +74,9 @@ Animations.prototype.splashPage = function(){
 
   	
 
-  	t2.to(this.l_1, .5, 
+  	t2.to(this.l_1, .2, 
         {css:{opacity:'.6'}});
-  	t2.to(this.l_2, .3, 
+  	t2.to(this.l_2, .1, 
         {css:{opacity:'.3'}});
   	t2.to(this.l_3, .2, 
         {css:{opacity:'.6'}});
@@ -102,7 +102,10 @@ Animations.prototype.splashPage = function(){
 	function timelineDone(){
 		console.log('splash timeline done');
   		that.projects.css({top:'-44em'});
-		t2.play();
+		t2.resume();
+	};
+
+	function leafOpacity(){
 		that.projectsPage();
 	};
 
@@ -120,20 +123,18 @@ Animations.prototype.projectsPage = function(){
 			       {css:{transform: 'rotate(-90deg)',top:'-600px'},
 			    	ease:Back.easeOut}),
 	    		TweenMax.to(this.projects, 1,
-	    			{css:{top:'0'}, onComplete: showProjects, onReverseComplete: hideProjects}),
-		      	/*
-	    		TweenMax.to(this.pulse_text, .02,
-	    			{css:{opacity:1}, delay: .04, onComplete: showProjects, onReverseComplete: hideProjects}),
-		    	TweenMax.to(this.tagline , .1, 
-			        {css:{top:'-40em'}}),
-		      	TweenMax.to(this.p_1, .2,
-		      		{css:{height: '200px'}}),
+	    			{css:{top:0}, onComplete: showProjects, onReverseComplete: hideProjects}),
+	    		TweenMax.to(this.pulse_text, .5,
+	    			{css:{opacity:1}, delay: 2, onComplete: showProjects, onReverseComplete: hideProjects}),
 			  	TweenMax.to(this.pulse, 1,
-			  		{css:{opacity:'1'}, delay:.8}),
-				*/
+			  		{css:{opacity:1}, delay:1}),
+		    	TweenMax.to(this.tagline , 1, 
+			        {css:{top:'-40em'}}),
+		      	TweenMax.to(this.p_1, 1,
+		      		{css:{height: '200px'}}),
 		      
 			]),
-	  	900// scroll duration of tween
+	  	700// scroll duration of tween
 
 	);
 
