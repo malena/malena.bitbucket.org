@@ -49,7 +49,7 @@ Animations.prototype.initializeScrollorama = function(){
 
 	this.controller = $.superscrollorama({
 		triggerAtCenter: false,
-		playoutAnimations: true 
+		playoutAnimations: false 
 	});
 
 	this.splashPage();
@@ -58,62 +58,100 @@ Animations.prototype.initializeScrollorama = function(){
 Animations.prototype.splashPage = function(){
 	console.log('splash page');
 
-	var t1 = new TimelineLite({});
+	var that = this;
+
+	var t1 = new TimelineMax({onComplete:timelineDone});
+	var t2 = new TimelineLite({});
+	var t3 = new TimelineLite({});
 
 
-  	t1.fromTo(this.img_malena, 1.2,
+	t1.fromTo(this.img_malena, 1.2,
   		{css:{top:'-1300px', left:'-300px', display:'none'}},
   		{css:{transform: 'rotate(-30deg)', top:'-270px', left:'-145px', display:'block'}, ease:Sine.easeIn});
-  	t1.fromTo(this.tagline, 2, 
-  		{css:{top:'-1800px'}},
-        {css:{top:'0px'}, ease:Back.easeOut, delay: 1.5});
-  	t1.to(this.l_1, 1.8, 
-        {css:{opacity:'.6'}, delay: 2});
-  	t1.to(this.l_2, 1.8, 
-        {css:{opacity:'.3'}, delay: 2.8});
-  	t1.to(this.l_3, 1.8, 
-        {css:{opacity:'.6'}, delay: 2.5});
-  	t1.to(this.l_4, 1.8, 
-        {css:{opacity:'.5'}, delay: 3});
+  	t1.fromTo(this.tagline, 1.2, 
+        {css:{top:'-1880px', display: 'none'}},
+        {css:{top:'0px', display: 'block'}, ease:Back.easeOut});
 
+  	
+
+  	t2.to(this.l_1, .5, 
+        {css:{opacity:'.6'}});
+  	t2.to(this.l_2, .3, 
+        {css:{opacity:'.3'}});
+  	t2.to(this.l_3, .2, 
+        {css:{opacity:'.6'}});
+  	t2.to(this.l_4, .1, 
+        {css:{opacity:'.5'}});
+
+
+  	/*
+	t3.from(this.fun, 2,
+  		{css:{top:'4em', left:'250px'}, scale: .5});
+  	t3.from(this.website, 1.5,
+  		{css:{top:'10em', left:'370px'}});
+  	t3.from(this.apps, 1.5,
+  		{css:{top:'17em', left:'318px'}});
+  	t3.from(this.campaigns, 1.9,
+  		{css:{top:'13em', left:'337px'}, onComplete: enterText});
+  	t3.pause()
+  	*/
+
+	t2.pause();
+
+
+	function timelineDone(){
+		console.log('splash timeline done');
+  		that.projects.css({top:'-44em'});
+		t2.play();
+		that.projectsPage();
+	};
+
+};
+
+Animations.prototype.projectsPage = function(){
+	console.log('projects page');
+
+	var timeline = new TimelineMax({onStart:timelineStart, onComplete:timelineDone, onCompleteScope:this, onReverse:timelineReverse, onReverseComplete:timelineReverseComplete});
 	var that = this;
-	var timeline = new TimelineLite({onComplete:timelineDone, onCompleteScope:that});
 
 	this.controller.addTween('.panel-1',
 	  	timeline.append([
+		      	TweenMax.to(this.img_malena, 1, 
+			       {css:{transform: 'rotate(-90deg)',top:'-600px'},
+			    	ease:Back.easeOut}),
+	    		TweenMax.to(this.projects, 1,
+	    			{css:{top:'0'}, onComplete: showProjects, onReverseComplete: hideProjects}),
+		      	/*
 	    		TweenMax.to(this.pulse_text, .02,
 	    			{css:{opacity:1}, delay: .04, onComplete: showProjects, onReverseComplete: hideProjects}),
-	    		/*
 		    	TweenMax.to(this.tagline , .1, 
 			        {css:{top:'-40em'}}),
-	  	*		*/
-		      	TweenMax.to(this.img_malena, 1.5, 
-			       {css:{transform: 'rotate(-90deg)',top:'-500px'},
-			    	ease:Back.easeOut}),
-		    	TweenMax.from(this.projects, 1.5, 
-			        {css:{top:'-44em'}}),
-		      	/*
 		      	TweenMax.to(this.p_1, .2,
 		      		{css:{height: '200px'}}),
-				*/
 			  	TweenMax.to(this.pulse, 1,
 			  		{css:{opacity:'1'}, delay:.8}),
-		      	TweenMax.from(this.fun, 2,
-		      		{css:{top:'4em', left:'250px'}, scale: .5}),
-		      	TweenMax.from(this.website, 1.5,
-		      		{css:{top:'10em', left:'370px'}}),
-		      	TweenMax.from(this.apps, 1.5,
-		      		{css:{top:'17em', left:'318px'}}),
-		      	TweenMax.from(this.campaigns, 1.9,
-		      		{css:{top:'13em', left:'337px'}, onComplete: enterText}),
+				*/
+		      
 			]),
 	  	900// scroll duration of tween
 
 	);
 
-	function enterText() {
-
+	function timelineStart(){
+		console.log('projects timelinestart');
 	};
+
+	function timelineDone(){
+		console.log('projects timeline done');
+		that.skillsPage();
+	};
+	function timelineReverse(){
+		console.log('projects timeline reverse');
+	};
+	function timelineReverseComplete(){
+		console.log('projects reverse complete');
+	};
+
 
 	function showProjects (){
 		$('.pulse').hover(function(){
@@ -125,36 +163,35 @@ Animations.prototype.splashPage = function(){
 		$('.pulse').unbind();
 		$('ul.project-list').hide();
 	};
-
-	function timelineDone(){
-		this.projectsPage();
-	};
-
 };
 
-Animations.prototype.projectsPage = function(){
-	console.log('projects page');
+Animations.prototype.skillsPage = function(){
+	console.log('skills Page');
 	
-	var that = this;
-	var timeline = new TimelineLite({onComplete:timelineDone, onCompleteScope:that});
+	var timeline = new TimelineMax({onStart:timelineStart, onComplete:timelineDone, onReverse:timelineReverse});
 
 	this.controller.addTween('.panel-2',
 	  	timeline.append([
 	      	TweenMax.to([this.html, this.css, this.js], 8,
-	      		{rotation: 360, delay: 4}),
+	      		{rotation: 360, delay: 0}),
 			]),
-	  	900,
-	  	300 
+	  	1200,
+	  	500
 	);
 
+	function timelineStart(){
+		console.log('skils timeline start');
+	};
+
 	function timelineDone(){
-		this.skillsPage();
+		console.log('skills timeline done');
+	};
+
+	function timelineReverse(){
+		console.log('skills timeline reverse');
 	};
 };
 
-Animations.prototype.skillsPage = function(){
-	this.aboutPage();
-};
 
 Animations.prototype.aboutPage = function(){
 	console.log('about page');
@@ -162,7 +199,7 @@ Animations.prototype.aboutPage = function(){
   	var that = this;
 	var timeline = new TimelineLite({});
 
-	this.controller.addTween('.panel-1',
+	this.controller.addTween('.panel-4',
 	  	timeline.append([
 	    		TweenMax.to(this.s_1, 1,
 	    			{opacity:.2, repeat:-1, yoyo:true}),
