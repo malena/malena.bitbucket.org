@@ -67,7 +67,7 @@ Animations.prototype.splashPage = function(){
 
 	t1.fromTo(this.img_malena, 1.2,
   		{css:{top:'-1300px', left:'-300px', display:'none'}},
-  		{css:{top:'-270px', left:'-145px', display:'block'}, ease:Sine.easeIn});
+  		{css:{top:'-270px', left:'-250px', display:'block'}, ease:Sine.easeIn});
   	t1.fromTo(this.tagline, 1.2, 
         {css:{top:'-1880px', display: 'none'}},
         {css:{top:'0px', display: 'block'}, ease:Back.easeOut});

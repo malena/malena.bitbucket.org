@@ -16,7 +16,7 @@ module.exports = function(grunt) {
 			},
 			css: {
 				files: [
-                        'app/reset.styl', 
+                        'app/static/css/reset.styl', 
                         'app/static/css/base.styl',
                         'app/static/css/layout.styl',
                         'app/static/css/mobile.styl'
