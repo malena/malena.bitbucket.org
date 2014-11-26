@@ -1,8 +1,10 @@
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
     
+    .tagline,
     img.img-malena {
         display: block;
     }
+
 
     blockquote {
         margin: 1.5em 10px;
@@ -76,7 +78,8 @@
             img.img-malena {
                 top: -180px;
                 left: -128px;
-                transform: none;
+                transform: rotate(30deg);
+                -webkit-transform: rotate(30deg);
             }
 
             .tagline {
@@ -84,10 +87,12 @@
                 left: 0px;
                 position: relative;
                 width: 100%
+                display: block
+                font-size: 48px;
 
                 p {
                     float: right;
-                    width: 63%;
+                    width: 56%;
                 }
 
                 .p-4 {
@@ -106,16 +111,22 @@
             }
         }
         .panel-2 {
-            height: 2250px;
+            height: 2000px;
+
+            .panel-inner {
+                top: 10em;
+            }
 
             p {
                 text-align: center;
             }
 
             .panel-2-tree {
-                left: 25px;
-                top: 40px;
+                left: auto;
+                top: 11em;
                 position: relative;
+                width: 72%;
+                margin: auto auto;
             }
 
             header {
@@ -128,6 +139,11 @@
                     width: 100%;
                     margin-bottom: 60px;
                 }
+            }
+
+            .panel-2-grass {
+                height: 2em;
+                margin-top: -1em;
             }
         }
 
@@ -154,8 +170,8 @@
 
         .panel-4 {
             img.mountains {
-                top: -221px;
-                left: auto;
+                top: -243px;
+                left: 0px;
                 z-index: -1;
                 width: 100%;
             }
@@ -182,6 +198,12 @@
     body {
         width: 106%
     }
+
+    .mandrade {
+        .panel-1 .tagline {
+            display: block;
+        }
+    }
 }
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio: 2) {
@@ -197,6 +219,6 @@
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
        only screen and (min-resolution: 144dpi) {
-    /* Style adjustments for viewports that meet the condition */
 
 }
+
