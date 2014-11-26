@@ -60,81 +60,88 @@ Animations.prototype.splashPage = function(){
 
 	var that = this;
 
-	var t1 = new TimelineMax({onComplete:timelineDone});
-	var t2 = new TimelineLite({onComplete:leafOpacity});
-	var t3 = new TimelineLite({});
+	var t1 = new TimelineMax({onComplete:t1done});
+	var t2 = new TimelineMax({onComplete:t2done});
+	var t3 = new TimelineMax({onComplete:t3done});
 
 
 	t1.fromTo(this.img_malena, 1.2,
   		{css:{top:'-1300px', left:'-300px', display:'none'}},
-  		{css:{transform: 'rotate(-30deg)', top:'-270px', left:'-145px', display:'block'}, ease:Sine.easeIn});
+  		{css:{top:'-270px', left:'-145px', display:'block'}, ease:Sine.easeIn});
   	t1.fromTo(this.tagline, 1.2, 
         {css:{top:'-1880px', display: 'none'}},
         {css:{top:'0px', display: 'block'}, ease:Back.easeOut});
 
-  	
 
-  	t2.to(this.l_1, .2, 
+	t2.to(this.fun, 0,
+  		{css:{top:'7em', left:'11em'}, scale: .5});
+  	t2.to(this.website, 0,
+  		{css:{top:'0em', left:'22em'}});
+  	t2.to(this.apps, 0,
+  		{css:{top:'6em', left:'19em'}});
+  	t2.to(this.campaigns, 0,
+  		{css:{top:'13em', left:'337px'}});
+
+  	t3.to(this.l_1, .2, 
         {css:{opacity:'.6'}});
-  	t2.to(this.l_2, .1, 
+  	t3.to(this.l_2, .1, 
         {css:{opacity:'.3'}});
-  	t2.to(this.l_3, .2, 
+  	t3.to(this.l_3, .2, 
         {css:{opacity:'.6'}});
-  	t2.to(this.l_4, .1, 
+  	t3.to(this.l_4, .1, 
         {css:{opacity:'.5'}});
 
+  	t2.pause();
+  	t3.pause();
 
-  	/*
-	t3.from(this.fun, 2,
-  		{css:{top:'4em', left:'250px'}, scale: .5});
-  	t3.from(this.website, 1.5,
-  		{css:{top:'10em', left:'370px'}});
-  	t3.from(this.apps, 1.5,
-  		{css:{top:'17em', left:'318px'}});
-  	t3.from(this.campaigns, 1.9,
-  		{css:{top:'13em', left:'337px'}, onComplete: enterText});
-  	t3.pause()
-  	*/
-
-	t2.pause();
-
-
-	function timelineDone(){
+	function t1done() {
 		console.log('splash timeline done');
   		that.projects.css({top:'-44em'});
 		t2.resume();
 	};
+	function t2done(){
+		t3.resume();
+	};
 
-	function leafOpacity(){
+	function t3done(){
 		that.projectsPage();
 	};
+
 
 };
 
 Animations.prototype.projectsPage = function(){
-	console.log('projects page');
+	console.log('projects page ready');
 
 	var timeline = new TimelineMax({onStart:timelineStart, onComplete:timelineDone, onCompleteScope:this, onReverse:timelineReverse, onReverseComplete:timelineReverseComplete});
 	var that = this;
 
 	this.controller.addTween('.panel-1',
 	  	timeline.append([
-		      	TweenMax.to(this.img_malena, 1, 
-			       {css:{transform: 'rotate(-90deg)',top:'-600px'},
+		      	TweenMax.to(this.img_malena, 1.7, 
+			       {css:{transform: 'rotate(-60deg)',top:'-600px', left: '-400px'},
 			    	ease:Back.easeOut}),
-	    		TweenMax.to(this.projects, 1,
+	    		TweenMax.to(this.projects, 2,
 	    			{css:{top:0}, onComplete: showProjects, onReverseComplete: hideProjects}),
 	    		TweenMax.to(this.pulse_text, .5,
-	    			{css:{opacity:1}, delay: 2, onComplete: showProjects, onReverseComplete: hideProjects}),
+	    			{css:{opacity:1}, delay: 1, onComplete: showProjects, onReverseComplete: hideProjects}),
 			  	TweenMax.to(this.pulse, 1,
 			  		{css:{opacity:1}, delay:1}),
 		    	TweenMax.to(this.tagline , 1, 
 			        {css:{top:'-40em'}}),
+		      	TweenMax.to(this.fun, 2,
+			  		{css:{top:'25em', left:'11em'}, scale: .5}),
+			  	TweenMax.to(this.website, 2,
+			  		{css:{top:'23.5em', left:'27em'}}),
+			  	TweenMax.to(this.apps, 2,
+			  		{css:{top:'11em', left:'9em'}}),
+			  	TweenMax.to(this.campaigns, 2,
+			  		{css:{top:'21em', left:'21em'}}),
 		      	TweenMax.to(this.p_1, 1,
 		      		{css:{height: '200px'}}),
-		      
+					      
 			]),
-	  	700// scroll duration of tween
+	  	650// scroll duration of tween
 
 	);
 
@@ -167,60 +174,57 @@ Animations.prototype.projectsPage = function(){
 };
 
 Animations.prototype.skillsPage = function(){
-	console.log('skills Page');
+	console.log('skills page ready');
 	
-	var timeline = new TimelineMax({onStart:timelineStart, onComplete:timelineDone, onReverse:timelineReverse});
+	var that = this;
+	var timeline = new TimelineMax({onStart:timelineStart, onComplete:timelineDone, onReverseComplete:timelineReverse});
 
 	this.controller.addTween('.panel-2',
 	  	timeline.append([
-	      	TweenMax.to([this.html, this.css, this.js], 8,
-	      		{rotation: 360, delay: 0}),
+	      	TweenMax.to([this.html, this.css, this.js], 9,
+	      		{rotation: 360, delay: 5}),
 			]),
-	  	1200,
-	  	500
+	  	900,
+	  	600
 	);
 
 	function timelineStart(){
-		console.log('skils timeline start');
+		console.log('skills timeline start');
 	};
 
 	function timelineDone(){
 		console.log('skills timeline done');
+		that.aboutPage();
 	};
 
 	function timelineReverse(){
 		console.log('skills timeline reverse');
+		// kill about page animations
+
 	};
 };
 
 
 Animations.prototype.aboutPage = function(){
-	console.log('about page');
+	console.log('about page ready');
 
-  	var that = this;
-	var timeline = new TimelineLite({});
+	var that = this;
 
-	this.controller.addTween('.panel-4',
-	  	timeline.append([
-	    		TweenMax.to(this.s_1, 1,
-	    			{opacity:.2, repeat:-1, yoyo:true}),
-	    		TweenMax.to(this.s_2, 2,
-	    			{opacity:.2, repeat:-1, yoyo:true, delay: 2}),
-	    		TweenMax.to(this.s_3, 3,
-	    			{opacity:.3, repeat:-1, yoyo:true, delay: 4}),
-	    		TweenMax.to(this.s_4, 3,
-	    			{opacity:.7, repeat:-1, yoyo:true, dealy: 1}),
-	    		TweenMax.to(this.s_5, 4,
-	    			{opacity:.4, repeat:-1, yoyo:true, delay: 1}),
-	    		TweenMax.to(this.s_6, 3,
-	    			{opacity:.5, repeat:-1, yoyo:true, delay: 2}),
-	    		TweenMax.to(this.s_7, 3,
-	    			{opacity:.1, repeat:-1, yoyo:true, delay: 3}),
-	    		TweenMax.to(this.s_8, 2,
-	    			{opacity:.2, repeat:-1, yoyo:true, delay: 2})
-
-			]),
-	  	900 // scroll duration of tween
-	);	
+	TweenMax.from(this.s_1, 1,
+		{opacity:.2, repeat:-1, yoyo:true});
+	TweenMax.to(this.s_2, 2,
+		{opacity:.2, repeat:-1, yoyo:true, delay: 2});
+	TweenMax.to(this.s_3, 3,
+		{opacity:.3, repeat:-1, yoyo:true, delay: 4});
+	TweenMax.to(this.s_4, 3,
+		{opacity:.7, repeat:-1, yoyo:true, delay: 1});
+	TweenMax.to(this.s_5, 4,
+		{opacity:.4, repeat:-1, yoyo:true, delay: 1});
+	TweenMax.to(this.s_6, 3,
+		{opacity:.5, repeat:-1, yoyo:true, delay: 2});
+	TweenMax.to(this.s_7, 3,
+		{opacity:.1, repeat:-1, yoyo:true, delay: 3});
+	TweenMax.to(this.s_8, 2,
+		{opacity:.2, repeat:-1, yoyo:true, delay: 2});
 
 };
