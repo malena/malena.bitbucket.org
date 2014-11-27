@@ -3,10 +3,9 @@ function MandradeScrollView(){
 	var animate = new Animations({});
 
     animate.elements = {
-        $panels: $('.panel'),
+        $panel: $('.panel'),
         $star: $('.star'),
-        $resume: $('.resume'),
-        $leaf: $('.img-pulse')
+        $leaf: $('.leaf')
     };
 
 	animate.initializeScrollorama();

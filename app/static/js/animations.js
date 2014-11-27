@@ -2,13 +2,46 @@ function Animations(){};
 
 Animations.prototype.initializeScrollorama = function(){
 
-	// panel 
-	this.p_1 = this.elements.$panels[0],
-	this.p_2 = this.elements.$panels[1],
-	this.p_3 = this.elements.$panels[2], 
-	this.p_4 = this.elements.$panels[3];
+	// Panels 
+	// ==================================================== 
+	this.p_1 = this.elements.$panel[0];
+	this.p_2 = this.elements.$panel[1];
+	this.p_3 = this.elements.$panel[2];
 
-	// stars 
+
+	// Panel 1
+	// ==================================================== 
+	this.img_malena = $(this.p_1).find('.img-malena');
+	this.tagline = $(this.p_1).find('.tagline');
+
+
+	// Panel 2
+	// ==================================================== 
+	this.projects = $(this.p_2).find('.projects');
+	this.fun = $(this.projects).children('.fun');
+	this.websites = $(this.projects).children('.websites');
+	this.campaigns = $(this.projects).children('.campaigns');
+	this.apps = $(this.projects).children('.apps');
+
+	this.leaf = this.elements.$leaf;
+	this.leaf_img = $(this.leaf).find('img');
+	this.leaf_title = $(this.leaf).find('.title');
+
+	this.l_1 = $(this.leaf_img)[0];
+	this.l_2 = $(this.leaf_img)[1];
+	this.l_3 = $(this.leaf_img)[2];
+	this.l_4 = $(this.leaf_img)[3];
+
+
+	// Panel 3
+	// ==================================================== 
+	this.html = $(this.p_3).find('.html .flower');
+	this.css = $(this.p_3).find('.css .flower');
+	this.js = $(this.p_3).find('.js .flower');
+
+
+	// Panel 4
+	// ==================================================== 
 	this.s_1 = this.elements.$star[0];
 	this.s_2 = this.elements.$star[1];
 	this.s_3 = this.elements.$star[2];
@@ -18,45 +51,22 @@ Animations.prototype.initializeScrollorama = function(){
 	this.s_7 = this.elements.$star[6];
 	this.s_8 = this.elements.$star[7];
 
-	// leafs 
-	this.l_1 = this.elements.$leaf[0];
-	this.l_2 = this.elements.$leaf[1];
-	this.l_3 = this.elements.$leaf[2];
-	this.l_4 = this.elements.$leaf[3];
 
-	this.resume = this.elements.$resume;
-	
-	this.img_malena = $(this.p_1).find('.img-malena');
-	this.tagline = $(this.p_1).find('.tagline');
-
-	// projects
-	this.projects = $(this.p_2).find('.projects');
-	this.p2_header = $(this.p_2).find('.header-work');
-
-	this.fun = $(this.p_2).find('.fun');
-	this.website = $(this.p_2).find('.websites');
-	this.campaigns = $(this.p_2).find('.campaigns');
-	this.apps = $(this.p_2).find('.apps');
-
-	this.pulse = $(this.p_2).find('.img-pulse');
-	this.pulse_text = $(this.p_2).find('.span-pulse');
-
-
-	this.html = $(this.resume).find('.resume-html h3');
-	this.css = $(this.resume).find('.resume-css h3');
-	this.js = $(this.resume).find('.resume-js h3');
-
-
+	// Assign Superscrollorama 
+	// ==================================================== 
 	this.controller = $.superscrollorama({
 		triggerAtCenter: false,
 		playoutAnimations: false 
 	});
 
-	this.splashPage();
+
+	// Initialize First Panel
+	// ==================================================== 
+	this.splashPanel();
 };
 
-Animations.prototype.splashPage = function(){
-	console.log('splash page');
+Animations.prototype.splashPanel = function(){
+	console.log('splash ready');
 
 	var that = this;
 
@@ -65,6 +75,7 @@ Animations.prototype.splashPage = function(){
 	var t3 = new TimelineMax({onComplete:t3done});
 
 
+	// page enter animations
 	t1.fromTo(this.img_malena, 1.2,
   		{css:{top:'-1300px', left:'-300px', display:'none'}},
   		{css:{top:'-270px', left:'-250px', display:'block'}, ease:Sine.easeIn});
@@ -72,16 +83,17 @@ Animations.prototype.splashPage = function(){
         {css:{top:'-1880px', display: 'none'}},
         {css:{top:'0px', display: 'block'}, ease:Back.easeOut});
 
-
+	// positioning of leafs 
 	t2.to(this.fun, 0,
   		{css:{top:'7em', left:'11em'}, scale: .5});
-  	t2.to(this.website, 0,
+  	t2.to(this.websites, 0,
   		{css:{top:'0em', left:'22em'}});
   	t2.to(this.apps, 0,
   		{css:{top:'6em', left:'19em'}});
   	t2.to(this.campaigns, 0,
   		{css:{top:'13em', left:'337px'}});
 
+	// display leafs
   	t3.to(this.l_1, .2, 
         {css:{opacity:'.6'}});
   	t3.to(this.l_2, .1, 
@@ -95,23 +107,23 @@ Animations.prototype.splashPage = function(){
   	t3.pause();
 
 	function t1done() {
-		console.log('splash timeline done');
   		that.projects.css({top:'-44em'});
 		t2.resume();
 	};
+
 	function t2done(){
 		t3.resume();
 	};
 
 	function t3done(){
-		that.projectsPage();
+		that.projectsPanel();
 	};
 };
 
-Animations.prototype.projectsPage = function(){
-	console.log('projects page ready');
+Animations.prototype.projectsPanel = function(){
+	console.log('projects ready');
 
-	var timeline = new TimelineMax({onStart:timelineStart, onComplete:timelineDone, onCompleteScope:this, onReverse:timelineReverse, onReverseComplete:timelineReverseComplete});
+	var timeline = new TimelineMax({onComplete:timelineDone, onCompleteScope:this});
 	var that = this;
 
 	this.controller.addTween('.panel-1',
@@ -120,16 +132,16 @@ Animations.prototype.projectsPage = function(){
 			       {css:{transform: 'rotate(-60deg)',top:'-600px', left: '-400px'},
 			    	ease:Back.easeOut}),
 	    		TweenMax.to(this.projects, 2,
-	    			{css:{top:0}, onComplete: showProjects, onReverseComplete: hideProjects}),
-	    		TweenMax.to(this.pulse_text, .5,
+	    			{css:{top:0}}),
+	    		TweenMax.to(this.leaf_title, .5,
 	    			{css:{opacity:1}, delay: 1, onComplete: showProjects, onReverseComplete: hideProjects}),
-			  	TweenMax.to(this.pulse, 1,
+			  	TweenMax.to(this.leaf_img, 1,
 			  		{css:{opacity:1}, delay:1}),
 		    	TweenMax.to(this.tagline , 1, 
 			        {css:{top:'-40em'}}),
 		      	TweenMax.to(this.fun, 2,
 			  		{css:{top:'25em', left:'11em'}, scale: .5}),
-			  	TweenMax.to(this.website, 2,
+			  	TweenMax.to(this.websites, 2,
 			  		{css:{top:'23.5em', left:'27em'}}),
 			  	TweenMax.to(this.apps, 2,
 			  		{css:{top:'11em', left:'9em'}}),
@@ -138,44 +150,31 @@ Animations.prototype.projectsPage = function(){
 		      	TweenMax.to(this.p_1, 1,
 		      		{css:{height: '200px'}}),
 					      
-			]),
+			])	,
 	  	650
 	);
 
-	function timelineStart(){
-		console.log('projects timelinestart');
-	};
-
 	function timelineDone(){
-		console.log('projects timeline done');
-		that.skillsPage();
-	};
-
-	function timelineReverse(){
-		console.log('projects timeline reverse');
-	};
-
-	function timelineReverseComplete(){
-		console.log('projects reverse complete');
+		that.skillsPanel();
 	};
 
 	function showProjects (){
-		$('.pulse').hover(function(){
+		$(that.leaf).hover(function(){
 			$(this).find('ul.project-list').show();
 		});
 	};
 
 	function hideProjects(){
-		$('.pulse').unbind();
+		$(that.leaf).unbind();
 		$('ul.project-list').hide();
 	};
 };
 
-Animations.prototype.skillsPage = function(){
-	console.log('skills page ready');
+Animations.prototype.skillsPanel = function(){
+	console.log('skills ready');
 	
 	var that = this;
-	var timeline = new TimelineMax({onStart:timelineStart, onComplete:timelineDone, onReverseComplete:timelineReverse});
+	var timeline = new TimelineMax({onComplete:timelineDone, onReverseComplete:timelineReverseComplete});
 
 	this.controller.addTween('.panel-2',
 	  	timeline.append([
@@ -186,24 +185,20 @@ Animations.prototype.skillsPage = function(){
 	  	600
 	);
 
-	function timelineStart(){
-		console.log('skills timeline start');
-	};
-
 	function timelineDone(){
 		console.log('skills timeline done');
-		that.aboutPage();
+		that.aboutPanel();
 	};
 
-	function timelineReverse(){
+	function timelineReverseComplete(){
 		console.log('skills timeline reverse');
-		// kill about page animations
+		// kill about Panel animations
 	};
 };
 
 
-Animations.prototype.aboutPage = function(){
-	console.log('about page ready');
+Animations.prototype.aboutPanel = function(){
+	console.log('about ready');
 
 	TweenMax.from(this.s_1, 1,
 		{opacity:.2, repeat:-1, yoyo:true});
