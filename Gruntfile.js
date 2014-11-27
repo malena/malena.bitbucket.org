@@ -40,10 +40,8 @@ module.exports = function(grunt) {
 		uglify : {
 			build: {
 				src: [
-					'app/static/js/scroll.js', 
 					'app/static/js/animations.js', 
-					'app/static/js/project.js', 
-					'public/libs/js/*.js'
+					'app/static/js/project.js'
 				],
 				dest: 'public/dist/js/project.min.js' 
 			}
@@ -84,14 +82,12 @@ module.exports = function(grunt) {
 
     });
 
-    // 3. Where we tell Grunt we plan to use this plug-in.
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-stylus');
     grunt.loadNpmTasks('grunt-contrib-jade');
     grunt.loadNpmTasks('grunt-contrib-connect');
 
-    // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
     grunt.registerTask('serve', ['connect', 'uglify', 'stylus', 'jade', 'watch']);
 
 };

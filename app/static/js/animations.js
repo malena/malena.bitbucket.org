@@ -2,7 +2,7 @@ function Animations(){};
 
 Animations.prototype.initializeScrollorama = function(){
 
-	// paanel 
+	// panel 
 	this.p_1 = this.elements.$panels[0],
 	this.p_2 = this.elements.$panels[1],
 	this.p_3 = this.elements.$panels[2], 
@@ -106,8 +106,6 @@ Animations.prototype.splashPage = function(){
 	function t3done(){
 		that.projectsPage();
 	};
-
-
 };
 
 Animations.prototype.projectsPage = function(){
@@ -141,8 +139,7 @@ Animations.prototype.projectsPage = function(){
 		      		{css:{height: '200px'}}),
 					      
 			]),
-	  	650// scroll duration of tween
-
+	  	650
 	);
 
 	function timelineStart(){
@@ -153,13 +150,14 @@ Animations.prototype.projectsPage = function(){
 		console.log('projects timeline done');
 		that.skillsPage();
 	};
+
 	function timelineReverse(){
 		console.log('projects timeline reverse');
 	};
+
 	function timelineReverseComplete(){
 		console.log('projects reverse complete');
 	};
-
 
 	function showProjects (){
 		$('.pulse').hover(function(){
@@ -200,15 +198,12 @@ Animations.prototype.skillsPage = function(){
 	function timelineReverse(){
 		console.log('skills timeline reverse');
 		// kill about page animations
-
 	};
 };
 
 
 Animations.prototype.aboutPage = function(){
 	console.log('about page ready');
-
-	var that = this;
 
 	TweenMax.from(this.s_1, 1,
 		{opacity:.2, repeat:-1, yoyo:true});
