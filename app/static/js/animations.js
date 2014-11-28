@@ -107,7 +107,7 @@ Animations.prototype.splashPanel = function(){
   	t3.pause();
 
 	function t1done() {
-  		that.projects.css({top:'-44em'});
+  		that.projects.css({top:'-44em', left:'-5em'});
 		t2.resume();
 	};
 

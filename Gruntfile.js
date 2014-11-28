@@ -40,6 +40,9 @@ module.exports = function(grunt) {
 		uglify : {
 			build: {
 				src: [
+					'app/static/js/libs/jquery.js', 
+					'app/static/js/libs/jquery.superscrollorama.js', 
+					'app/static/js/libs/tweenmax.js', 
 					'app/static/js/animations.js', 
 					'app/static/js/project.js'
 				],
