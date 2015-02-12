@@ -38,6 +38,39 @@ $path = '../images/'
 			h3
 				font-size: 13px
 
+	ul.project-list
+		li
+			list-style-type: none
+			text-align: center
+
+	.modal-dialog 
+		position: fixed
+		top: 50% 
+		left: 50% 
+		margin-top: -80px 
+		margin-left: -125px 
+		width: 250px 
+		height: 160px 
+
+		p
+			font-size: 20px 
+			font-weight: 300; 
+		a 
+			color: #7C3E94 
+		p strong 
+			color: #7C3E94 
+			font-weight: 100 
+
+		.modal-content 
+			height: 100%
+			width: 100%
+			display: table;
+			vertical-align: middle;
+
+		.modal-body
+			display: table-cell;
+			vertical-align: middle;
+
 	/*
 	//////////////////////////////////////////////////////////////////////////////////////////////////
 		PANEL 1
@@ -91,6 +124,10 @@ $path = '../images/'
 			p.p-2
 				margin-top: 5em
 
+		.span-pulse a
+			text-decoration: underline;
+		
+
 		.leaf
 			width: 50px
 			height: 50px
@@ -104,18 +141,6 @@ $path = '../images/'
 				opacity: 0 
 				color: red 
 
-			ul.project-list
-				display: none 
-				width: 200px
-				height: auto 
-
-				li
-					list-style-type: none
-					width: 150px 
-
-					a
-						color: #bbb
-						font-size: 13px
 
 		.panel-2-tree
 			top: 5em
@@ -143,19 +168,6 @@ $path = '../images/'
 					-webkit-transform: rotate(-80deg) 
 					transform: rotate(-80deg)
 
-				.hangman
-					top: 33px
-					left: -91px	
-				.calculator
-					top: 68px 
-					left: -59px
-				.training
-					top: -35px
-					left: -36px
-				.googlemaps
-					left: -153px
-					top: -9px
-
 			.websites
 				top: 380px 
 				left: 486px 
@@ -168,30 +180,6 @@ $path = '../images/'
 					-webkit-transform: rotate(-45deg) 
 					transform: rotate(-45deg)
 
-				.gibsons
-					top: -25px
-					left: 70px
-
-				.shel
-					top: 10px
-					left: 90px
-
-				.home
-					top: 55px
-					left: 104px
-
-				.royal
-					top: 135px
-					left: 50px
-
-				.gm
-					top: 95px
-					left: 105px
-
-				.mead
-					top: 170px
-					left: 0px
-
 			.apps
 				top: 140px 
 				left: 200px 
@@ -199,20 +187,6 @@ $path = '../images/'
 				.span-pulse
 					top: 5px
 					left: -40px
-
-
-				.jumptools
-					top: 44px
-					left: -50px
-
-				.socialscape
-					top: -32px
-					left: -80px 
-
-				.pine 
-					top: -50px
-					left: 0px
-
 
 			.campaigns
 				top: 348px
@@ -226,15 +200,6 @@ $path = '../images/'
 				.span-pulse
 					top: 8px
 					left: 59px
-
-				.shoppers
-					top: 54px
-					left: 10px
-
-				.holt
-					top: -35px
-					left: -10px
-
 
 	.panel-2-grass
 		background-image: url($path + 'flowers-border.png') 
@@ -393,6 +358,7 @@ $path = '../images/'
 		.stars
 			position: absolute
 			top: -400px
+			left: 0px
 
 			.star	
 				position: absolute
@@ -401,42 +367,42 @@ $path = '../images/'
 				height: 30px;
 
 			.star-1
-				left: 800px
+				left: 900px
 				top: 30px
 				background-position: top left;
 
 			.star-2
-				left: 830px
+				left: 930px
 				top: 213px
 				background-position: 0px 60px;
 
 			.star-3
-				left: 600px
+				left: 700px
 				top: 160px
 				background-position: 0px 90px;
 
 			.star-4
-				left: 370px
+				left: 470px
 				top: 180px
 				background-position: 0px 120px;
 
 			.star-5
-				left: 400px
+				left: 500px
 				top: 0px
 				background-position: 0px 150px;
 
 			.star-6
-				left: 200px
+				left: 300px
 				top: 100px
 				background-position: 0px 180px;
 
 			.star-7
-				left: 0px
+				left: 100px
 				top: 200px
 				background-position: 0px 210px;
 
 			.star-8
-				left: -100px
+				left: 0px
 				top: 100px
 				background-position: 0px 240px;
 

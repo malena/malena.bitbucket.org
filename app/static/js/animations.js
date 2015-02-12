@@ -134,7 +134,7 @@ Animations.prototype.projectsPanel = function(){
 	    		TweenMax.to(this.projects, 2,
 	    			{css:{top:'50px'}}),
 	    		TweenMax.to(this.leaf_title, .5,
-	    			{css:{opacity:1}, delay: 1, onComplete: showProjects, onReverseComplete: hideProjects}),
+	    			{css:{opacity:1}, delay: 1}),
 			  	TweenMax.to(this.leaf_img, 1,
 			  		{css:{opacity:1}, delay:1}),
 		    	TweenMax.to(this.tagline , 1, 
@@ -158,16 +158,6 @@ Animations.prototype.projectsPanel = function(){
 		that.skillsPanel();
 	};
 
-	function showProjects (){
-		$(that.leaf).hover(function(){
-			$(this).find('ul.project-list').show();
-		});
-	};
-
-	function hideProjects(){
-		$(that.leaf).unbind();
-		$('ul.project-list').hide();
-	};
 };
 
 Animations.prototype.skillsPanel = function(){

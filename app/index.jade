@@ -18,7 +18,46 @@ html
 			ga('create', 'UA-32158459-1', 'auto'); 
 			ga('send', 'pageview');
 
-	body(class="mandrade", ng-app="mandrade")
+	body(class="mandrade")
+		.modal.fade(id="Websites" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
+			.modal-dialog 
+				.modal-content 
+					.modal-body 
+						ul.project-list
+							li.gibsons: a(href="http://www.gibsonsfinest.ca/", target="_blank") Gibsons Finest
+							li.shel: a(href="http://www.shelsilverstein.com/", target="_blank") Shel Silverstein
+							li.home: a(href="http://www.homedepot.ca/", target="_blank") Home Depot
+							li.royal: a(href="http://www.royallepage.ca/", target="_blank") Royal LePage 
+							li.gm: a(href="http://www.gm.ca/", target="_blank") GM
+							li.mead: a(href="http://www.meadjohnson.com/", target="_blank") Mead Johnson
+
+		.modal.fade(id="Experiments" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
+			.modal-dialog 
+				.modal-content 
+					.modal-body 
+						ul.project-list
+							li.hangman: a(href="http://malena.github.io/angular-hangman/#/", target="_blank") Hangman
+							li.calculator: a(href="http://malena.github.io/javascript-experiments/calculator/", target="_blank") Calculator
+							li.training: a(href="http://malena.github.io/training/", target="_blank") Training
+							li.googlemaps: a(href="http://malena.github.io/javascript-experiments/google_maps/", target="_blank") Google Map Tabs
+
+		.modal.fade(id="Apps" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
+			.modal-dialog 
+				.modal-content 
+					.modal-body 
+						ul.project-list
+							li.jumptools: a(href="http://www.jumptools.com/", target="_blank") Jumptools
+							li.socialscape: a(href="https://socialsca.pe/#/entries", target="_blank") socialsca.pe
+							li.pine: a(href="http://www.pinehq.com", target="_blank") PINE 
+
+		.modal.fade(id="Campaigns" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
+			.modal-dialog 
+				.modal-content 
+					.modal-body 
+						ul.project-list
+							li.holt: a(href="http://www.holtrenfrew.com/", target="_blank") Holt Renfrew
+							li.shoppers: a(href="http://www.shoppersdrugmart.ca/", target="_blank") Shoppers Drug Mart
+
 
 		.panel.panel-1
 			.panel-inner.splash
@@ -43,40 +82,23 @@ html
 
 				.projects
 					.leaf.fun
-						span.title(class="span-pulse") Experiments 
+						span.title(class="span-pulse"): a(data-toggle="modal", data-target="#Experiments") Experiments
 						img(class="img-pulse" src="/public/dist/images/leaf.png", width="50", height="44")
-						ul.project-list
-							li.hangman: a(href="http://malena.github.io/angular-hangman/#/", target="_blank") Hangman
-							li.calculator: a(href="http://malena.github.io/javascript-experiments/calculator/", target="_blank") Calculator
-							li.training: a(href="http://malena.github.io/training/", target="_blank") Training
-							li.googlemaps: a(href="http://malena.github.io/javascript-experiments/google_maps/", target="_blank") Google Map Tabs
-
+						
 					.leaf.websites
-						span.title(class="span-pulse") Websites 
+						span.title(class="span-pulse"): a(data-toggle="modal", data-target="#Websites") Websites 
 						img(class="img-pulse" src="/public/dist/images/leaf.png", width="50", height="44")
-						ul.project-list
-							li.gibsons: a(href="http://www.gibsonsfinest.ca/", target="_blank") Gibsons Finest
-							li.shel: a(href="http://www.shelsilverstein.com/", target="_blank") Shel Silverstein
-							li.home: a(href="http://www.homedepot.ca/", target="_blank") Home Depot
-							li.royal: a(href="http://www.royallepage.ca/", target="_blank") Royal LePage 
-							li.gm: a(href="http://www.gm.ca/", target="_blank") GM
-							li.mead: a(href="http://www.meadjohnson.com/", target="_blank") Mead Johnson
+						
 
 					.leaf.apps
-						span.title(class="span-pulse") Apps 
+						span.title(class="span-pulse"): a(data-toggle="modal", data-target="#Apps") Apps 
 						img(class="img-pulse" src="/public/dist/images/leaf.png", width="50", height="44")
-						ul.project-list
-							li.jumptools: a(href="http://www.jumptools.com/", target="_blank") Jumptools
-							li.socialscape: a(href="https://socialsca.pe/#/entries", target="_blank") socialsca.pe
-							li.pine: a(href="https://socialsca.pe/#/entries", target="_blank") PINE 
+						
 
 					.leaf.campaigns
-						span.title(class="span-pulse") Campaigns 
+						span.title(class="span-pulse"): a(data-toggle="modal", data-target="#Campaigns") Campaigns 
 						img(class="img-pulse" src="/public/dist/images/leaf.png", width="50", height="44")
-						ul.project-list
-							li.holt: a(href="http://www.holtrenfrew.com/", target="_blank") Holt Renfrew
-							li.shoppers: a(href="http://www.shoppersdrugmart.ca/", target="_blank") Shoppers Drug Mart
-
+						
 				.panel-2-tree
 					img.tree-top(src="/public/dist/images/tree-full.png", width="642", height="907")
 
@@ -147,4 +169,6 @@ html
 				a.blog(href="http://www.mandrade.com/blog", target="_blank") www.mandrade.com/blog
 
 		
+	script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js")
+	script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js")
 	script(src="/public/dist/js/project.min.js")
