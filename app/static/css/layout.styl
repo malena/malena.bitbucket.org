@@ -38,6 +38,39 @@ $path = '../images/'
 			h3
 				font-size: 13px
 
+	ul.project-list
+		li
+			list-style-type: none
+			text-align: center
+
+	.modal-dialog 
+		position: fixed
+		top: 50% 
+		left: 50% 
+		margin-top: -80px 
+		margin-left: -125px 
+		width: 250px 
+		height: 160px 
+
+		p
+			font-size: 20px 
+			font-weight: 300; 
+		a 
+			color: #7C3E94 
+		p strong 
+			color: #7C3E94 
+			font-weight: 100 
+
+		.modal-content 
+			height: 100%
+			width: 100%
+			display: table;
+			vertical-align: middle;
+
+		.modal-body
+			display: table-cell;
+			vertical-align: middle;
+
 	/*
 	//////////////////////////////////////////////////////////////////////////////////////////////////
 		PANEL 1
@@ -84,12 +117,16 @@ $path = '../images/'
 			top: 23em
 
 		header
-			top: 6em
-			width: 275px
+			top: 12em
+			width: 300px
 			right: 0px
 
 			p.p-2
 				margin-top: 5em
+
+		.span-pulse a
+			text-decoration: underline;
+		
 
 		.leaf
 			width: 50px
@@ -104,21 +141,9 @@ $path = '../images/'
 				opacity: 0 
 				color: red 
 
-			ul.project-list
-				display: none 
-				width: 200px
-				height: auto 
-
-				li
-					list-style-type: none
-					width: 150px 
-
-					a
-						color: #bbb
-						font-size: 13px
 
 		.panel-2-tree
-			top: 4em
+			top: 5em
 			position: relative 
 
 		.projects
@@ -135,29 +160,13 @@ $path = '../images/'
 				left: 210px
 
 				.span-pulse
-					top: 43px
-					left: 15px	
+					top: 20px
+					left: 55px	
 
 				.img-pulse
-					-ms-transform: rotate(-30deg) 
-					-webkit-transform: rotate(-30deg) 
-					transform: rotate(-30deg)
-
-				.hangman
-					top: 17px
-					left: -181px	
-				.calculator
-					top: 115px 
-					left: -157px
-				.training
-					top: -35px
-					left: -174px
-				.googlemaps
-					left: -153px
-					top: -76px
-				.animatedinput
-					left: -27px
-					top: 91px
+					-ms-transform: rotate(-80deg) 
+					-webkit-transform: rotate(-80deg) 
+					transform: rotate(-80deg)
 
 			.websites
 				top: 380px 
@@ -167,70 +176,30 @@ $path = '../images/'
 					top: 55px
 
 				.img-pulse
-					-ms-transform: rotate(-80deg) 
-					-webkit-transform: rotate(-80deg) 
-					transform: rotate(-80deg)
-
-				.gibsons
-					top: -175px
-					left: 70px
-
-				.shel
-					top: -100px
-					left: 180px
-				.home
-					top: -30px
-					left: 150px
-
-				.royal
-					top: 10px
-					left: 160px
-
-				.gm
-					top: 110px
-					left: 128px
-
-				.mead
-					top: 60px
-					left: 180px
+					-ms-transform: rotate(-45deg) 
+					-webkit-transform: rotate(-45deg) 
+					transform: rotate(-45deg)
 
 			.apps
 				top: 140px 
 				left: 200px 
 
 				.span-pulse
-					top: 30px
-					left: -30px
-
-
-				.jumptools
-					top: 44px
-					left: -133px
-
-				.socialscape
-					top: -32px
-					left: -105px 
+					top: 5px
+					left: -40px
 
 			.campaigns
 				top: 348px
 				left: 385px 
 
 				.img-pulse
-					-ms-transform: rotate(-45deg) 
-					-webkit-transform: rotate(-45deg) 
-					transform: rotate(-45deg)
+					-ms-transform: rotate(90deg) 
+					-webkit-transform: rotate(90deg) 
+					transform: rotate(90deg)
 
 				.span-pulse
-					top: -15px
-					left: 40px
-
-				.shoppers
-					top: -96px
-					left: -108px
-
-				.holt
-					top: -125px
-
+					top: 8px
+					left: 59px
 
 	.panel-2-grass
 		background-image: url($path + 'flowers-border.png') 
@@ -389,6 +358,7 @@ $path = '../images/'
 		.stars
 			position: absolute
 			top: -400px
+			left: 0px
 
 			.star	
 				position: absolute
@@ -397,42 +367,42 @@ $path = '../images/'
 				height: 30px;
 
 			.star-1
-				left: 800px
+				left: 900px
 				top: 30px
 				background-position: top left;
 
 			.star-2
-				left: 830px
+				left: 930px
 				top: 213px
 				background-position: 0px 60px;
 
 			.star-3
-				left: 600px
+				left: 700px
 				top: 160px
 				background-position: 0px 90px;
 
 			.star-4
-				left: 370px
+				left: 470px
 				top: 180px
 				background-position: 0px 120px;
 
 			.star-5
-				left: 400px
+				left: 500px
 				top: 0px
 				background-position: 0px 150px;
 
 			.star-6
-				left: 200px
+				left: 300px
 				top: 100px
 				background-position: 0px 180px;
 
 			.star-7
-				left: 0px
+				left: 100px
 				top: 200px
 				background-position: 0px 210px;
 
 			.star-8
-				left: -100px
+				left: 0px
 				top: 100px
 				background-position: 0px 240px;
 

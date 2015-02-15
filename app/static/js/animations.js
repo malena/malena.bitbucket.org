@@ -134,19 +134,19 @@ Animations.prototype.projectsPanel = function(){
 	    		TweenMax.to(this.projects, 2,
 	    			{css:{top:'50px'}}),
 	    		TweenMax.to(this.leaf_title, .5,
-	    			{css:{opacity:1}, delay: 1, onComplete: showProjects, onReverseComplete: hideProjects}),
+	    			{css:{opacity:1}, delay: 1}),
 			  	TweenMax.to(this.leaf_img, 1,
 			  		{css:{opacity:1}, delay:1}),
 		    	TweenMax.to(this.tagline , 1, 
 			        {css:{top:'-40em'}}),
 		      	TweenMax.to(this.fun, 2,
-			  		{css:{top:'25em', left:'11em'}, scale: .5}),
+			  		{css:{top:'26.5em', left:'14em'}, scale: .5}),
 			  	TweenMax.to(this.websites, 2,
-			  		{css:{top:'23.5em', left:'27em'}}),
+			  		{css:{top:'21em', left:'30em'}}),
 			  	TweenMax.to(this.apps, 2,
-			  		{css:{top:'11em', left:'9em'}}),
+			  		{css:{top:'11.5em', left:'9em'}}),
 			  	TweenMax.to(this.campaigns, 2,
-			  		{css:{top:'21em', left:'21em'}}),
+			  		{css:{top:'6.5em', left:'33em'}}),
 		      	TweenMax.to(this.p_1, 1,
 		      		{css:{height: '200px'}}),
 					      
@@ -158,16 +158,6 @@ Animations.prototype.projectsPanel = function(){
 		that.skillsPanel();
 	};
 
-	function showProjects (){
-		$(that.leaf).hover(function(){
-			$(this).find('ul.project-list').show();
-		});
-	};
-
-	function hideProjects(){
-		$(that.leaf).unbind();
-		$('ul.project-list').hide();
-	};
 };
 
 Animations.prototype.skillsPanel = function(){
