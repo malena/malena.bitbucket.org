@@ -56,7 +56,7 @@ module.exports = function(grunt) {
 			},
 			compile: {
 				files: {
-					'public/dist/css/project.min.css' : 'app/static/css/*.styl'
+					'public/dist/css/project.min.css' : 'app/static/css/settings.styl'
 				}
 			}
 		},

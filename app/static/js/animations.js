@@ -132,7 +132,7 @@ Animations.prototype.projectsPanel = function(){
 			       {css:{transform: 'rotate(-60deg)',top:'-600px', left: '-400px'},
 			    	ease:Back.easeOut}),
 	    		TweenMax.to(this.projects, 2,
-	    			{css:{top:'50px'}}),
+	    			{css:{top:'50px', left:'-10em'}}),
 	    		TweenMax.to(this.leaf_title, .5,
 	    			{css:{opacity:1}, delay: 1}),
 			  	TweenMax.to(this.leaf_img, 1,
