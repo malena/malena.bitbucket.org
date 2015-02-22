@@ -49,6 +49,7 @@
 
         p {
             font-size: 49px
+            text-align: center
         }
 
         .panel header {
@@ -63,55 +64,53 @@
             }
         }
 
+
+
         .c5 {
             padding-left: 0px;
         }
 
         .panel-1 {
-            height: 1700px;
+            height: 2500px;
+            padding-top: 0;
 
-            h3.test {
-                font-size: 22px;
-                margin-bottom: 30px;
+            .panel-inner {
+                margin-top: 0;
+                padding-top: 0;
+            }
+
+            header {
+                h1.title {
+                    margin-top: 60px;
+                    font-size: 2.6em;
+                    text-align: center;
+                }
+
+                h2 {
+                    font-size: 1em;
+                }
             }
 
             img.img-malena {
+                display: none;
                 top: -180px;
                 left: -128px;
                 transform: rotate(30deg);
                 -webkit-transform: rotate(30deg);
             }
 
-            .tagline {
+            header.tagline {
                 top: 0px; 
                 left: 0px;
                 position: relative;
                 width: 100%
                 display: block
                 font-size: 48px;
-
-                p {
-                    float: right;
-                    width: 56%;
-                }
-
-                .p-4 {
-                    width: 100%;
-                    float: right;
-                    color: #737373;
-                    text-align: center;
-                    font-size: 44px;
-                }
-
-                .p-2 {
-
-                    float: right;
-                }
-
             }
         }
+
         .panel-2 {
-            height: 2000px;
+            height: 2960px;
 
             .panel-inner {
                 top: 10em;
@@ -148,10 +147,13 @@
         }
 
         .panel-3 {
-            height: 2700px;
+            height: 3500px;
 
-            .panel-3-header {
+            header {
+                position: relative;
                 width: 100%;
+                top: 600px
+
                 h2, p {
                     width: 100%;
                     text-align: center;
@@ -159,7 +161,7 @@
             }
 
             .resume {
-                top: 1350px;
+                top: 2070px;
                 left: 30px;
 
                 ul {
@@ -170,7 +172,7 @@
 
         .panel-4 {
             img.mountains {
-                top: -243px;
+                top: -267px;
                 left: 0px;
                 z-index: -1;
                 width: 100%;
