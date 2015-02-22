@@ -16,9 +16,11 @@ module.exports = function(grunt) {
 			},
 			css: {
 				files: [
+                        'app/static/css/settings.styl', 
                         'app/static/css/reset.styl', 
                         'app/static/css/base.styl',
                         'app/static/css/layout.styl',
+                        'app/static/css/modal.styl',
                         'app/static/css/mobile.styl'
                         ],
 				tasks: ['stylus'],
@@ -40,9 +42,8 @@ module.exports = function(grunt) {
 		uglify : {
 			build: {
 				src: [
-					'app/static/js/libs/jquery.js', 
 					'app/static/js/libs/jquery.superscrollorama.js', 
-					'app/static/js/libs/tweenmax.js', 
+                    'app/static/js/libs/tweenmax.js', 
 					'app/static/js/animations.js', 
 					'app/static/js/project.js'
 				],
