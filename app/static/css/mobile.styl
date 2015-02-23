@@ -1,4 +1,8 @@
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+
+    .mandrade {
+     
+    } 
     
     .tagline,
     img.img-malena {
@@ -112,6 +116,16 @@
         .panel-2 {
             height: 2960px;
 
+            .projects {
+                left: 245px;
+                bottom: 165px;
+
+                .leaf .img-pulse,
+                .leaf .span-pulse {
+                    opacity: 1
+                }
+            }
+
             .panel-inner {
                 top: 10em;
             }
@@ -144,6 +158,8 @@
                 height: 2em;
                 margin-top: -1em;
             }
+
+
         }
 
         .panel-3 {
@@ -197,14 +213,32 @@
 
 
 @media only screen and (min-device-width: 594px) and (max-device-width: 1200px) {
-    body {
-        width: 106%
-    }
 
     .mandrade {
-        .panel-1 .tagline {
+
+        .panel-2 {
+            .leaf .img-pulse,
+            .leaf .span-pulse {
+                opacity: 1
+            }
+        }
+
+        .panel-1 img.img-malena {
+            display: block;
+            left: -260px;
+        }
+
+        .panel header {
+            right: 0px;
+        }
+
+        .panel-1 header.tagline {
             display: block;
         }
+    }
+
+    img.mountains {
+        width: 1050px;
     }
 }
 
@@ -214,7 +248,7 @@
         transform: rotate(-30deg);
     }
 
-    .tagline {
+    header.tagline {
         display: block;
     }
 }
