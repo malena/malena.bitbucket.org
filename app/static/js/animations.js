@@ -26,6 +26,7 @@ Animations.prototype.initializeScrollorama = function(){
 	this.leaf = this.elements.$leaf;
 	this.leaf_img = $(this.leaf).find('img');
 	this.leaf_title = $(this.leaf).find('.title');
+	this.leaf_anchor = $(this.leaf_title).children('a');
 
 	this.l_1 = $(this.leaf_img)[0];
 	this.l_2 = $(this.leaf_img)[1];
@@ -133,7 +134,7 @@ Animations.prototype.projectsPanel = function(){
 			    	ease:Back.easeOut}),
 	    		TweenMax.to(this.projects, 2,
 	    			{css:{top:'50px', left:'-10em'}}),
-	    		TweenMax.to(this.leaf_title, .5,
+	    		TweenMax.to([this.leaf_title, this.leaf_anchor], .5,
 	    			{css:{opacity:1}, delay: 1}),
 			  	TweenMax.to(this.leaf_img, 1,
 			  		{css:{opacity:1}, delay:1}),
