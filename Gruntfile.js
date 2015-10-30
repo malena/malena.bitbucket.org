@@ -30,7 +30,7 @@ module.exports = function(grunt) {
 				}
 			},
 			html: {
-				files: ['app/index.jade'],
+				files: ['app/*.jade'],
 				tasks: ['jade'],
 				options: {
 					livereload: true,
@@ -70,7 +70,8 @@ module.exports = function(grunt) {
 					}
 				},
 				files: {
-					'index.html' : 'app/index.jade'
+					'index.html' : 'app/index.jade',
+                    'templates.html' : 'app/templates.jade'
 				}
 			}
 		},
