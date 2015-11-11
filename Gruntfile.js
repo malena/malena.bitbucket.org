@@ -16,12 +16,13 @@ module.exports = function(grunt) {
 			},
 			css: {
 				files: [
+                        'app/static/css/index.styl', 
                         'app/static/css/settings.styl', 
                         'app/static/css/reset.styl', 
                         'app/static/css/base.styl',
                         'app/static/css/layout.styl',
                         'app/static/css/modal.styl',
-                        'app/static/css/mobile.styl'
+                        'app/static/css/mobile-minimal.styl'
                         ],
 				tasks: ['stylus'],
 				options: {
@@ -57,7 +58,7 @@ module.exports = function(grunt) {
 			},
 			compile: {
 				files: {
-					'public/dist/css/project.min.css' : 'app/static/css/settings.styl'
+					'public/dist/css/project.min.css' : 'app/static/css/index.styl'
 				}
 			}
 		},
@@ -93,6 +94,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jade');
     grunt.loadNpmTasks('grunt-contrib-connect');
 
-    grunt.registerTask('serve', ['connect', 'uglify', 'stylus', 'jade', 'watch']);
+    grunt.registerTask('default', ['connect', 'uglify', 'stylus', 'jade', 'watch']);
 
 };

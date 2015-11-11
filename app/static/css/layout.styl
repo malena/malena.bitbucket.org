@@ -22,7 +22,7 @@ $path = '../images/'
 
 		header
 			position: absolute
-			right: -30px
+			right: 0px
 			width: 460px
 
 			h2
@@ -177,6 +177,7 @@ $path = '../images/'
 		background-color: #000
 		z-index: 2
 		height: 1770px
+		overflow-x: hidden
 
 		header
 			color: #f1f0f0
@@ -284,6 +285,7 @@ $path = '../images/'
 		img.curls
 			margin: 0 
 			position: relative
+			max-width: 800px
 
 	/*
 	//////////////////////////////////////////////////////////////////////////////////////////////////
@@ -303,20 +305,21 @@ $path = '../images/'
 			position: absolute
 			top: -400px
 			left: 0px
+			width: 980px
 
 			.star	
-				position: absolute
+				position: relative
 				background-image: url($path + 'stars.png');
 				width: 30px;
 				height: 30px;
 
 			.star-1
-				left: 900px
+				left: 20px
 				top: 30px
 				background-position: top left;
 
 			.star-2
-				left: 930px
+				left: 40px
 				top: 213px
 				background-position: 0px 60px;
 
@@ -327,7 +330,7 @@ $path = '../images/'
 
 			.star-4
 				left: 437px
-				top: 180px
+				top: 30px
 				background-position: 0px 120px;
 
 			.star-5
@@ -342,7 +345,7 @@ $path = '../images/'
 
 			.star-7
 				left: 100px
-				top: 200px
+				top: 100px
 				background-position: 0px 210px;
 
 			.star-8
@@ -366,9 +369,9 @@ $path = '../images/'
 
 		img.mountains
 			top: -267px
-			left: -60px
 			position: absolute
 			z-index: -1
+			width: 100%;
 
 		.blog
 			width: 100%
